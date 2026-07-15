@@ -150,8 +150,11 @@ async function children(req, res) {
     const { error } = await supabaseAdmin
       .from('child_profiles')
       .update({ status: 'archived', updated_at: new Date().toISOString() })
-      .eq('id', childId);
+      .eq('id', childId)
+      .eq('parent_user_id', context.user.id);
     if (error) throw error;
+    const { error: invalidateError } = await supabaseAdmin.rpc('invalidate_child_sessions', { p_child_id: childId });
+    if (invalidateError) throw invalidateError;
     return sendJson(res, 200, { success: true });
   }
 
@@ -172,15 +175,25 @@ async function children(req, res) {
     if (!AVATARS.has(avatarKey)) return sendJson(res, 400, { error: 'Invalid avatar.' });
     updates.avatar_key = avatarKey;
   }
-  if (req.body?.status === 'active') updates.status = 'active';
+  if (req.body?.status === 'active' && ownedChild.status !== 'active') {
+    const { count, error: countError } = await supabaseAdmin.from('child_profiles').select('id', { count: 'exact', head: true }).eq('parent_user_id', context.user.id).eq('status', 'active');
+    if (countError) throw countError;
+    if ((count || 0) >= MAX_CHILDREN) return sendJson(res, 409, { error: `This membership supports up to ${MAX_CHILDREN} active child profiles.` });
+    updates.status = 'active';
+  }
 
   if (Object.keys(updates).length) {
     updates.updated_at = new Date().toISOString();
-    const { error } = await supabaseAdmin.from('child_profiles').update(updates).eq('id', childId);
+    const { error } = await supabaseAdmin.from('child_profiles').update(updates).eq('id', childId).eq('parent_user_id', context.user.id);
     if (error) {
       if (error.code === '23505') return sendJson(res, 409, { error: 'Use a different child name for this family.' });
       throw error;
     }
+  }
+
+  if (updates.status === 'active') {
+    const { error: invalidateError } = await supabaseAdmin.rpc('invalidate_child_sessions', { p_child_id: childId });
+    if (invalidateError) throw invalidateError;
   }
 
   if (req.body?.pin !== undefined) {
