@@ -8,6 +8,43 @@ const sb = window.supabase.createClient(
 
 window.GGA_AUTH_STATE = { role: 'guest', child: null, parent: null };
 
+const ACTIVE_CHILD_ID_KEY = 'gga_active_child_id';
+const CHILD_DISPLAY_CACHE_KEYS = [
+  'gga_gem_balance', 'gga_gems_habits', 'gga_gems_feelings',
+  'gga_gems_leadership', 'gga_daily_streak'
+];
+
+function clearChildDisplayCache() {
+  CHILD_DISPLAY_CACHE_KEYS.forEach(key => localStorage.removeItem(key));
+  delete window.GGA_WALLET;
+}
+
+function setActiveChildId(childId) {
+  const next = childId ? String(childId) : '';
+  const current = localStorage.getItem(ACTIVE_CHILD_ID_KEY) || '';
+  if (current && next && current !== next) clearChildDisplayCache();
+  if (next) localStorage.setItem(ACTIVE_CHILD_ID_KEY, next);
+  else localStorage.removeItem(ACTIVE_CHILD_ID_KEY);
+}
+
+function childStorageKey(base) {
+  const childId = localStorage.getItem(ACTIVE_CHILD_ID_KEY) || 'guest';
+  return `${base}:${childId}`;
+}
+
+function safeLocalDestination(value, fallback = null) {
+  if (!value || typeof value !== 'string') return fallback;
+  if (!value.startsWith('/') || value.startsWith('//') || value.includes('\\')) return fallback;
+  try {
+    const target = new URL(value, window.location.origin);
+    return target.origin === window.location.origin
+      ? `${target.pathname}${target.search}${target.hash}`
+      : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 async function fetchJson(url, options = {}) {
   const response = await fetch(url, {
     credentials: 'same-origin',
@@ -31,9 +68,20 @@ async function parentAuthHeader() {
 
 async function getChildSession() {
   try {
-    const response = await fetch('/api/child/session', { credentials: 'same-origin', cache: 'no-store' });
-    if (!response.ok) return null;
-    return await response.json();
+    const response = await fetch('/api/child/auth?action=session', {
+      credentials: 'same-origin',
+      cache: 'no-store'
+    });
+    if (!response.ok) {
+      if (response.status === 401) {
+        setActiveChildId(null);
+        clearChildDisplayCache();
+      }
+      return null;
+    }
+    const data = await response.json();
+    if (data?.active && data.child?.id) setActiveChildId(data.child.id);
+    return data;
   } catch {
     return null;
   }
@@ -66,7 +114,11 @@ async function checkLoginState() {
   const palaceTab = document.getElementById('palaceTab');
 
   if (childSession?.active) {
-    window.GGA_AUTH_STATE = { role: 'child', child: childSession.child, parent: parentSession?.user || null };
+    window.GGA_AUTH_STATE = {
+      role: 'child',
+      child: childSession.child,
+      parent: parentSession?.user || null
+    };
     setAuthButton(authBtn, {
       icon: 'fa-user-group',
       label: childSession.child.displayName,
@@ -81,6 +133,9 @@ async function checkLoginState() {
     document.documentElement.dataset.userRole = 'child';
     return true;
   }
+
+  setActiveChildId(null);
+  clearChildDisplayCache();
 
   if (parentSession) {
     window.GGA_AUTH_STATE = { role: 'parent', child: null, parent: parentSession.user };
@@ -118,25 +173,29 @@ async function checkLoginState() {
 async function handleSignOut() {
   const childSession = await getChildSession();
   if (childSession?.active) {
-    await fetch('/api/child/logout', { method: 'POST', credentials: 'same-origin' });
+    await fetch('/api/child/auth?action=logout', { method: 'POST', credentials: 'same-origin' });
+    setActiveChildId(null);
+    clearChildDisplayCache();
     window.location.href = 'child-login.html';
     return;
   }
-  await sb.auth.signOut();
+  await sb.auth.signOut({ scope: 'local' });
+  setActiveChildId(null);
+  clearChildDisplayCache();
   sessionStorage.clear();
   window.location.href = 'sign-in.html';
 }
 
 async function signOutAll() {
-  await fetch('/api/child/logout', { method: 'POST', credentials: 'same-origin' }).catch(() => {});
-  await sb.auth.signOut();
+  await fetch('/api/child/auth?action=logout', { method: 'POST', credentials: 'same-origin' }).catch(() => {});
+  await sb.auth.signOut({ scope: 'local' });
+  setActiveChildId(null);
+  clearChildDisplayCache();
   sessionStorage.clear();
   window.location.href = 'sign-in.html';
 }
 
 async function checkMembershipStatus() {
-  // A child session is independently authenticated by its signed, HTTP-only cookie.
-  // It must not depend on a parent Supabase session being present on the same device.
   const childSession = await getChildSession();
   if (childSession?.active) {
     return {
@@ -200,11 +259,18 @@ async function openBillingPortal() {
     });
     window.location.href = result.url;
   } catch (error) {
+    if (error.status === 404) {
+      window.location.href = 'signup.html?membership=required';
+      return;
+    }
     alert(error.message || 'Billing settings could not be opened.');
   }
 }
 
 async function resolveParentDestination() {
+  await fetch('/api/child/auth?action=logout', { method: 'POST', credentials: 'same-origin' }).catch(() => {});
+  setActiveChildId(null);
+  clearChildDisplayCache();
   const pendingPlan = localStorage.getItem('gga_pending_plan');
   if (pendingPlan) {
     localStorage.removeItem('gga_pending_plan');
@@ -253,6 +319,10 @@ window.getChildSession = getChildSession;
 window.getEntitlements = getEntitlements;
 window.parentAuthHeader = parentAuthHeader;
 window.ggaFetchJson = fetchJson;
+window.safeLocalDestination = safeLocalDestination;
+window.ggaChildStorageKey = childStorageKey;
+window.ggaSetActiveChildId = setActiveChildId;
+window.ggaClearChildDisplayCache = clearChildDisplayCache;
 
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', checkLoginState);
 else checkLoginState();
