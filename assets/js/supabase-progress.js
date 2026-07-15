@@ -5,7 +5,7 @@ const SOURCE_TO_ROOM = {
   leadership: 'Ruby Rise'
 };
 
-function cacheWallet(wallet) {
+function cacheWallet(wallet, childId = localStorage.getItem('gga_active_child_id')) {
   if (!wallet) return;
   window.GGA_WALLET = {
     gemBalance: Number(wallet.gemBalance ?? wallet.gem_balance ?? 0),
@@ -15,17 +15,29 @@ function cacheWallet(wallet) {
     leadership: Number(wallet.leadership ?? wallet.gems_leadership ?? 0),
     streak: Number(wallet.current_streak ?? wallet.streak ?? 0)
   };
-  // Display cache only. Purchases and awards never trust these values.
-  localStorage.setItem('gga_gem_balance', String(window.GGA_WALLET.gemBalance));
-  localStorage.setItem('gga_gems_habits', String(window.GGA_WALLET.habits));
-  localStorage.setItem('gga_gems_feelings', String(window.GGA_WALLET.feelings));
-  localStorage.setItem('gga_gems_leadership', String(window.GGA_WALLET.leadership));
-  localStorage.setItem('gga_daily_streak', String(window.GGA_WALLET.streak));
+  if (childId) {
+    localStorage.setItem(`gga_wallet_cache:${childId}`, JSON.stringify(window.GGA_WALLET));
+  }
+}
+
+function loadCachedWallet() {
+  const childId = localStorage.getItem('gga_active_child_id');
+  if (!childId) return null;
+  try {
+    const cached = JSON.parse(localStorage.getItem(`gga_wallet_cache:${childId}`) || 'null');
+    if (cached && Number.isFinite(Number(cached.gemBalance))) {
+      window.GGA_WALLET = cached;
+      return cached;
+    }
+  } catch {
+    localStorage.removeItem(`gga_wallet_cache:${childId}`);
+  }
+  return null;
 }
 
 async function progressAwardGem(source, activityTitle, durationMinutes = 0) {
   try {
-    const response = await fetch('/api/child/complete-activity', {
+    const response = await fetch('/api/child/progress?action=complete', {
       method: 'POST',
       credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json' },
@@ -46,10 +58,14 @@ async function progressAwardGem(source, activityTitle, durationMinutes = 0) {
 
 async function progressFetch() {
   try {
-    const response = await fetch('/api/child/dashboard', { credentials: 'same-origin', cache: 'no-store' });
+    const response = await fetch('/api/child/progress?action=dashboard', {
+      credentials: 'same-origin',
+      cache: 'no-store'
+    });
     if (!response.ok) return null;
     const data = await response.json();
-    cacheWallet(data.wallet);
+    if (data.child?.id && window.ggaSetActiveChildId) window.ggaSetActiveChildId(data.child.id);
+    cacheWallet(data.wallet, data.child?.id);
     return {
       habits: window.GGA_WALLET.habits,
       feelings: window.GGA_WALLET.feelings,
@@ -76,3 +92,4 @@ window.progressPushGems = progressPushGems;
 window.progressMergeGuestGems = progressMergeGuestGems;
 window.progressPushStreak = progressPushStreak;
 window.cacheWallet = cacheWallet;
+window.loadCachedWallet = loadCachedWallet;
