@@ -130,7 +130,7 @@ export function getChildSession(req) {
 }
 
 export function setChildSessionCookie(res, token) {
-  const secure = /^https:\/\//i.test(process.env.APP_URL || '');
+  const secure = /^https:\/\//i.test(process.env.APP_URL || '') || process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
   const cookie = [
     `${CHILD_COOKIE}=${encodeURIComponent(token)}`,
     'Path=/',
@@ -143,7 +143,7 @@ export function setChildSessionCookie(res, token) {
 }
 
 export function clearChildSessionCookie(res) {
-  const secure = /^https:\/\//i.test(process.env.APP_URL || '');
+  const secure = /^https:\/\//i.test(process.env.APP_URL || '') || process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
   const cookie = [
     `${CHILD_COOKIE}=`,
     'Path=/',
