@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "2.110.5",
-    "resend": "3.5.0",
     "stripe": "14.25.0"
   },
   "devDependencies": {
