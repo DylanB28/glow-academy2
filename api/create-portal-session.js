@@ -20,6 +20,7 @@ export default async function handler(req, res) {
     if (!data?.stripe_customer_id) return sendJson(res, 404, { error: 'No billing account was found.' });
 
     const appUrl = String(process.env.APP_URL || '').replace(/\/$/, '');
+    if (!/^https?:\/\//.test(appUrl)) throw new Error('APP_URL is not configured.');
     const portal = await stripe.billingPortal.sessions.create({
       customer: data.stripe_customer_id,
       return_url: `${appUrl}/profile.html`
