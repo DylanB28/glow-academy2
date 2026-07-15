@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -473,7 +474,7 @@
       .contact-modal-content{padding:32px;}
     }
   </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.5"></script>
 <script src="/assets/supabase-config.js"></script>
 <script src="/assets/js/auth.js"></script>
 </head>
@@ -634,7 +635,7 @@
           <div style="font-size:48px;flex-shrink:0;">3️⃣</div>
           <div>
             <h3 style="margin:0 0 12px;font-size:26px;color:var(--ink);">Earn Gems & Unlock Treasures</h3>
-            <p style="margin:0;font-size:19px;color:var(--slate);line-height:1.7;">Every completed activity earns you 1 gem! Collect 50 for your First Palace Pick 💍, 150 for your Room Refresh 👑, and 300 for your Royal Collection 🏰!</p>
+            <p style="margin:0;font-size:19px;color:var(--slate);line-height:1.7;">Every completed activity earns you 1 gem! Collect 50 for your Palace Starter Goal 💍, 150 for your Room Builder Goal 👑, and 300 for your Royal Collector Goal 🏰!</p>
           </div>
         </div>
       </div>
@@ -979,14 +980,14 @@ window.toggleFAQ=function(element){
 };
 
 function updateGemDisplay(){
-  const total=Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);
+  const total=Number(window.GGA_WALLET?.gemBalance ?? window.loadCachedWallet?.()?.gemBalance ?? 0);
   const gemTotal = document.getElementById('gemTotal');
   if (gemTotal) gemTotal.textContent = total;
 
   const GEM_MILESTONES=[
-    {gems:20,reward:"First Palace Pick"},
-    {gems:75,reward:"Room Refresh"},
-    {gems:150,reward:"Royal Collection"}
+    {gems:20,reward:"Palace Starter Goal"},
+    {gems:75,reward:"Room Builder Goal"},
+    {gems:150,reward:"Royal Collector Goal"}
   ];
 
   const next=GEM_MILESTONES.find(m=>m.gems>total)||GEM_MILESTONES[GEM_MILESTONES.length-1];
