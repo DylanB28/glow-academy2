@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -249,7 +250,7 @@
       .sound-lounge-grid{grid-template-columns:1fr !important;}
     }
   </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.5"></script>
 <script src="/assets/supabase-config.js"></script>
 <script src="/assets/js/auth.js"></script>
 </head>
@@ -793,7 +794,7 @@
 
     // ── GEM COUNTER ──
     function updateGemCount(){
-      const count=['habits','feelings','leadership'].reduce((a,s)=>a+(parseInt(localStorage.getItem('gga_gems_'+s)||'0',10)||0),0);
+      const cached=window.loadCachedWallet?.();const count=Number(cached?.lifetimeGems||0);
       const el=document.getElementById('gemTotal');if(el)el.textContent=count;
     }
     updateGemCount();
