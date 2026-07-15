@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -468,19 +469,19 @@
           <div class="gem-journey-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
             <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--gold);border-radius:16px;">
               <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">💍</div>
-              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--gold);">First Palace Pick</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--gold);">Palace Starter Goal</div>
               <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">20 Gems</div>
               <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Choose your first shop item!</p>
             </div>
             <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--rose);border-radius:16px;">
               <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">👑</div>
-              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--rose);">Room Refresh</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--rose);">Room Builder Goal</div>
               <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">75 Gems</div>
               <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Build a room that feels like you!</p>
             </div>
             <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--purple);border-radius:16px;">
               <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">🏰</div>
-              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--purple);">Royal Collection</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--purple);">Royal Collector Goal</div>
               <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">150 Gems</div>
               <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Keep collecting — the shop can keep growing!</p>
             </div>
@@ -499,7 +500,7 @@
   <div class="gem-toast" id="gemToast"><div class="gem-toast-content"><div class="gem-toast-icon">💎</div><div class="gem-toast-text"><div class="gem-toast-title">Gem earned!</div><div class="gem-toast-subtitle" id="gemToastSub">Amazing work! Keep shining!</div></div><button class="gem-toast-close" id="closeGemToast" aria-label="Close">×</button></div></div>
   <div class="contact-modal" id="thirdClickModal" style="display:none;"><div class="contact-modal-content" style="max-width:500px;text-align:center;padding:48px 40px;"><button class="modal-close" onclick="event.stopPropagation(); closeThirdClickModal();" aria-label="Close modal" style="position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;padding:0;">×</button><div style="font-size:64px;margin-bottom:16px;">✨</div><h2 style="margin:0 0 12px;font-size:28px;color:var(--rose);font-family:'Pacifico',cursive;font-weight:400;">Ready to Start Your Gem Journey?</h2><p style="margin:0 0 20px;color:var(--slate);font-size:17px;line-height:1.6;">You've used your 3 free activities! 💎 A parent can create the family membership, then you can earn gems and choose from 100 palace items.</p><div style="background:linear-gradient(135deg,rgba(233,30,99,.08),white);border:2px solid var(--rose);border-radius:16px;padding:16px;margin-bottom:24px;"><p style="margin:0;font-size:15px;color:var(--ink);font-weight:600;">✓ Access all 40+ activities<br>✓ Earn gems forever<br>✓ Decorate and save your own palace<br>✓ Track your 7-day challenges</p></div><div style="display:flex;gap:12px;flex-direction:column;"><button onclick="startCheckout(window.GGA_PRICES.monthly); closeThirdClickModal();" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;box-shadow:0 8px 20px rgba(233,30,99,.3);font-family:inherit;">Unlock Unlimited 💎</button><a href="sign-in.html" onclick="closeThirdClickModal()" style="display:inline-block;padding:16px 32px;background:white;color:var(--rose);border:3px solid var(--rose);border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;text-align:center;">Sign In</a></div></div></div>
   <script src="assets/supabase-config.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.5"></script>
   <script src="/assets/js/config.js"></script>
   <script src="/assets/js/auth.js"></script>
   <script src="/assets/js/supabase-progress.js"></script>
@@ -508,12 +509,12 @@
     let userIsMember = false;
     
     function getFreeCompletionCount() {
-      const stored = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_KEY) || '0', 10);
-      const timestamp = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY) || '0', 10);
+      const stored = parseInt(localStorage.getItem(ggaChildStorageKey(ACTIVITY_COMPLETION_KEY)) || '0', 10);
+      const timestamp = parseInt(localStorage.getItem(ggaChildStorageKey(ACTIVITY_COMPLETION_TIMESTAMP_KEY)) || '0', 10);
       const now = Date.now();
       if (timestamp > 0 && (now - timestamp) > RESET_TIMEOUT_MS) {
-        localStorage.setItem(ACTIVITY_COMPLETION_KEY, '0');
-        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        localStorage.setItem(ggaChildStorageKey(ACTIVITY_COMPLETION_KEY), '0');
+        localStorage.setItem(ggaChildStorageKey(ACTIVITY_COMPLETION_TIMESTAMP_KEY), String(now));
         return 0;
       }
       return stored;
@@ -524,8 +525,8 @@
       if (completions < FREE_ACTIVITY_COMPLETIONS) {
         const now = Date.now();
         const newCount = completions + 1;
-        localStorage.setItem(ACTIVITY_COMPLETION_KEY, String(newCount));
-        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        localStorage.setItem(ggaChildStorageKey(ACTIVITY_COMPLETION_KEY), String(newCount));
+        localStorage.setItem(ggaChildStorageKey(ACTIVITY_COMPLETION_TIMESTAMP_KEY), String(now));
         console.log('💎 COMPLETION RECORDED:', newCount, 'of', FREE_ACTIVITY_COMPLETIONS);
       } else {
         console.log('⚠️ Completion limit reached, not recording');
@@ -577,14 +578,14 @@
         userIsLoggedIn = await checkLoginState();
         const status = await checkMembershipStatus();
         userIsMember = status.isMember && status.role === 'child';
-        if (userIsMember) { await progressFetch(); updateGemDisplay(); }
+        if (userIsMember) { await progressFetch(); await syncChallenges(); updateGemDisplay(); renderChallenges(); }
       } catch(e) {}
     })();
 
     const SESSION_ACTIVITY_KEY = 'gga_last_activity_ts';
     let timerRunning = false;
     
-    function getGemTotal(){return Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);}
+    function getGemTotal(){return Number(window.GGA_WALLET?.gemBalance ?? window.loadCachedWallet?.()?.gemBalance ?? 0);}
     
     function updateGemDisplay(){
       const total=getGemTotal();
@@ -697,10 +698,10 @@
     const MOOD_EMOJIS = {excited: '🎉',happy: '😊',okay: '😌',tired: '😴',unsure: '🤔',cozy: '🥰'};
     
     function storeMoodHistory(mood) {
-      const history = JSON.parse(localStorage.getItem('gga_mood_history') || '[]');
+      const history = JSON.parse(localStorage.getItem(ggaChildStorageKey('gga_mood_history')) || '[]');
       history.unshift(mood);
       if (history.length > 7) history.pop();
-      localStorage.setItem('gga_mood_history', JSON.stringify(history));
+      localStorage.setItem(ggaChildStorageKey('gga_mood_history'), JSON.stringify(history));
     }
 
     let timerInterval=null,timerAwarded=false;
@@ -708,7 +709,7 @@
     const ACTIVE_TIMER_ACTIVITY_KEY = 'gga_active_timer_activity';
     const ACTIVE_TIMER_START_TIME_KEY = 'gga_active_timer_start_time';
     const ACTIVE_TIMER_DURATION_KEY = 'gga_active_timer_duration';
-    const ACTIVE_TIMER_LOCAL_KEY = 'gga_active_timer_local';
+    const ACTIVE_TIMER_LOCAL_KEY = ggaChildStorageKey('gga_active_timer_local');
     
     function checkActiveTimer() {
       let activeTimer = sessionStorage.getItem(ACTIVE_TIMER_SESSION_KEY);
@@ -823,36 +824,26 @@
     function playSpecialChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<4;i++){setTimeout(()=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=523.25+(i*200);osc.type='sine';gain.gain.setValueAtTime(.15,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+1);},i*150);}}catch(e){}}
 
     function getTodayDate(){const d=new Date();return d.toISOString().split('T')[0];}
-    function getChallengesData(){const d=localStorage.getItem('gga_habit_challenges_data');return d?JSON.parse(d):[];}
-    function setChallengesData(d){localStorage.setItem('gga_habit_challenges_data',JSON.stringify(d));}
-    function addChallenge(habit){
+    let serverChallenges=null;
+    function getChallengesData(){if(Array.isArray(serverChallenges))return serverChallenges;try{const d=localStorage.getItem(ggaChildStorageKey('gga_habit_challenges_data'));return d?JSON.parse(d):[]}catch{return []}}
+    function setChallengesData(d){if(!userIsMember)localStorage.setItem(ggaChildStorageKey('gga_habit_challenges_data'),JSON.stringify(d));}
+    async function syncChallenges(){if(!userIsMember)return;try{const result=await ggaFetchJson('/api/child/progress?action=challenges&room=habits');serverChallenges=result.challenges||[];localStorage.removeItem(ggaChildStorageKey('gga_habit_challenges_data'))}catch(error){showGemToast('Challenge progress could not be loaded. Please try again.')}}
+    async function addChallenge(habit){
       const challenges=getChallengesData();
       if(challenges.find(c=>c.habit===habit)){showGemToast('⚠️ You are already tracking this challenge!');return;}
-      challenges.push({habit,lastMarkedDate:'',currentDay:0});
-      setChallengesData(challenges);
-      renderChallenges();
+      if(userIsMember){try{await ggaFetchJson('/api/child/progress?action=challenges',{method:'POST',body:JSON.stringify({room:'habits',challengeName:habit})});await syncChallenges();renderChallenges()}catch(error){showGemToast(error.message)}return;}
+      challenges.push({habit,lastMarkedDate:'',currentDay:0});setChallengesData(challenges);renderChallenges();
     }
-    function removeChallenge(idx){
-      const challenges=getChallengesData();
-      challenges.splice(idx,1);
-      setChallengesData(challenges);
-      renderChallenges();
+    async function removeChallenge(idx){
+      const challenges=getChallengesData(),challenge=challenges[idx];if(!challenge)return;
+      if(userIsMember&&challenge.id){try{await ggaFetchJson('/api/child/progress?action=challenges',{method:'DELETE',body:JSON.stringify({challengeId:challenge.id})});await syncChallenges();renderChallenges()}catch(error){showGemToast(error.message)}return;}
+      challenges.splice(idx,1);setChallengesData(challenges);renderChallenges();
     }
-    function markDay(habitIndex){
-      const challenges=getChallengesData();
-      if(!challenges[habitIndex]){return;}
-      const today=getTodayDate();
-      if(challenges[habitIndex].lastMarkedDate===today){showGemToast('⏰ You already marked today! Come back tomorrow to mark the next day.');return;}
-      challenges[habitIndex].currentDay++;
-      challenges[habitIndex].lastMarkedDate=today;
-      showGemToast(`🌟 Day ${challenges[habitIndex].currentDay} complete! Amazing work on "${challenges[habitIndex].habit}"!`);playChime();
-      if(challenges[habitIndex].currentDay===7){
-        showGemToast('🏆 7-DAY HABIT CHALLENGE COMPLETE! Choose your next challenge.');
-        playSpecialChime();
-        challenges.splice(habitIndex,1);
-      }
-      setChallengesData(challenges);
-      renderChallenges();
+    async function markDay(habitIndex){
+      const challenges=getChallengesData(),challenge=challenges[habitIndex];if(!challenge)return;const today=getTodayDate();
+      if(challenge.lastMarkedDate===today){showGemToast('⏰ You already marked today! Come back tomorrow to mark the next day.');return;}
+      if(userIsMember&&challenge.id){try{const result=await ggaFetchJson('/api/child/progress?action=challenges',{method:'PATCH',body:JSON.stringify({challengeId:challenge.id})});if(result.alreadyMarked){showGemToast('⏰ You already marked today! Come back tomorrow.');return}if(result.completed){showGemToast(`🏆 7-DAY CHALLENGE COMPLETE! +${result.bonusGems} bonus gems`);playSpecialChime();if(window.GGA_WALLET){window.GGA_WALLET.gemBalance=result.gemBalance;window.GGA_WALLET.lifetimeGems+=result.bonusGems}}else{showGemToast(`🌟 Day ${result.currentDay} complete! Amazing work on "${challenge.habit}"!`);playChime()}await syncChallenges();renderChallenges();updateGemDisplay()}catch(error){showGemToast(error.message)}return;}
+      challenge.currentDay++;challenge.lastMarkedDate=today;showGemToast(`🌟 Day ${challenge.currentDay} complete! Amazing work on "${challenge.habit}"!`);playChime();if(challenge.currentDay===7){showGemToast('🏆 7-DAY CHALLENGE COMPLETE!');playSpecialChime();challenges.splice(habitIndex,1)}setChallengesData(challenges);renderChallenges();
     }
     function renderChallenges(){
       const container=document.getElementById('challengesContainer');
