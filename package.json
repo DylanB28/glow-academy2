@@ -9,12 +9,15 @@
     "test": "npm run validate"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.43.0",
-    "resend": "^3.2.0",
-    "stripe": "^14.17.0"
+    "@supabase/supabase-js": "2.110.5",
+    "resend": "3.5.0",
+    "stripe": "14.25.0"
   },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "sharp": "^0.33.5"
+    "live-server": "1.2.2",
+    "sharp": "0.33.5"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
