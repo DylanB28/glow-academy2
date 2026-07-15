@@ -1,12 +1,31 @@
-import { Resend } from 'resend';
 import { cleanText, requestFingerprint, requireMethod, sendJson, supabaseAdmin } from './_lib/server.js';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>'"]/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
   }[character]));
+}
+
+async function sendSupportEmail({ name, email, message }) {
+  if (!process.env.RESEND_API_KEY) throw new Error('RESEND_API_KEY is not configured.');
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      from: process.env.CONTACT_FROM_EMAIL || 'Gem Glow Academy <hello@gemglowacademy.com>',
+      to: [process.env.CONTACT_TO_EMAIL || 'contactmightyminds@gmail.com'],
+      subject: `Gem Glow support message from ${name}`,
+      reply_to: email,
+      html: `<h2>New support message</h2><p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Message:</strong></p><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`
+    })
+  });
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({}));
+    throw new Error(error.message || 'Email delivery failed.');
+  }
 }
 
 export default async function handler(req, res) {
@@ -37,20 +56,14 @@ export default async function handler(req, res) {
       return sendJson(res, 429, { error: 'Too many messages. Please try again later.' });
     }
 
-    const delivery = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL || 'Gem Glow Academy <hello@gemglowacademy.com>',
-      to: process.env.CONTACT_TO_EMAIL || 'contactmightyminds@gmail.com',
-      subject: `Gem Glow support message from ${name}`,
-      replyTo: email,
-      html: `<h2>New support message</h2><p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Message:</strong></p><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`
-    });
-    if (delivery?.error) throw new Error(delivery.error.message || 'Email delivery failed.');
+    await sendSupportEmail({ name, email, message });
 
     const emailHash = requestFingerprint(req, [email, 'email']);
-    await supabaseAdmin.from('contact_submissions').insert([
+    const { error: auditError } = await supabaseAdmin.from('contact_submissions').insert([
       { fingerprint, email_hash: emailHash },
       { fingerprint: globalFingerprint, email_hash: emailHash }
     ]);
+    if (auditError) throw auditError;
     return sendJson(res, 200, { success: true });
   } catch (error) {
     console.error('[contact]', error);
