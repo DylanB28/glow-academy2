@@ -1,0 +1,3 @@
+// Supabase Global Config (Production Safe)
+window.TEP_SUPABASE_URL = "https://gpdeezzkvdmuvlgngafh.supabase.co";
+window.TEP_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdwZGVlenprdmRtdXZsZ25nYWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzMjg2NjAsImV4cCI6MjA4NjkwNDY2MH0.mqTa66VDJQW3dV38fPVXA2xHyIbxKBWLlqoOMUYr_dw";
