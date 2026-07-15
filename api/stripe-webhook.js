@@ -26,7 +26,10 @@ async function resolveUserId(subscription, fallbackUserId = null) {
   return data?.user_id || null;
 }
 
-async function storeSubscription(subscription, userId) {
+async function storeSubscription(subscription, userId, eventCreated = 0) {
+  const { data: current, error: currentError } = await supabaseAdmin.from('subscriptions').select('last_event_created').eq('user_id', userId).maybeSingle();
+  if (currentError) throw currentError;
+  if (Number(current?.last_event_created || 0) > Number(eventCreated || 0)) return;
   const priceId = subscription.items.data[0]?.price?.id || null;
   const currentPeriodEnd = subscription.current_period_end
     ? new Date(subscription.current_period_end * 1000).toISOString()
@@ -40,7 +43,8 @@ async function storeSubscription(subscription, userId) {
     plan_code: subscription.metadata?.plan_code || null,
     current_period_end: currentPeriodEnd,
     cancel_at_period_end: Boolean(subscription.cancel_at_period_end),
-    updated_at: new Date().toISOString()
+    updated_at: new Date().toISOString(),
+    last_event_created: Number(eventCreated || 0)
   }, { onConflict: 'user_id' });
   if (error) throw error;
 
@@ -85,7 +89,7 @@ export default async function handler(req, res) {
       const userId = session.client_reference_id || session.metadata?.user_id;
       if (userId && session.subscription) {
         const subscription = await stripe.subscriptions.retrieve(session.subscription);
-        await storeSubscription(subscription, userId);
+        await storeSubscription(subscription, userId, event.created);
       }
     }
 
@@ -97,7 +101,7 @@ export default async function handler(req, res) {
       const subscription = event.data.object;
       const userId = await resolveUserId(subscription);
       if (!userId) throw new Error(`No user found for Stripe customer ${subscription.customer}`);
-      await storeSubscription(subscription, userId);
+      await storeSubscription(subscription, userId, event.created);
     }
 
     if (['invoice.payment_failed', 'invoice.paid'].includes(event.type)) {
@@ -105,7 +109,7 @@ export default async function handler(req, res) {
       if (invoice.subscription) {
         const subscription = await stripe.subscriptions.retrieve(invoice.subscription);
         const userId = await resolveUserId(subscription);
-        if (userId) await storeSubscription(subscription, userId);
+        if (userId) await storeSubscription(subscription, userId, event.created);
       }
     }
 
