@@ -54,10 +54,11 @@ export default async function handler(req, res) {
     }
 
     if (!customerId) {
+      const customerKey = crypto.createHash('sha256').update(`customer:${auth.user.id}`).digest('hex');
       const customer = await stripe.customers.create({
         email: auth.user.email,
         metadata: { user_id: auth.user.id }
-      });
+      }, { idempotencyKey: customerKey });
       customerId = customer.id;
       const { error: customerSaveError } = await supabaseAdmin
         .from('billing_customers')
