@@ -22,14 +22,16 @@ async function syncSubscription(session, userId) {
     price_id: priceId,
     plan_code: planCode,
     current_period_end: periodEnd,
-    updated_at: new Date().toISOString()
+    updated_at: new Date().toISOString(),
+    last_event_created: Math.floor(Date.now() / 1000)
   }, { onConflict: 'user_id' });
   if (error) throw error;
 
-  await supabaseAdmin.from('billing_customers').upsert({
+  const { error: customerError } = await supabaseAdmin.from('billing_customers').upsert({
     user_id: userId,
     stripe_customer_id: String(session.customer)
   }, { onConflict: 'user_id' });
+  if (customerError) throw customerError;
 
   return subscription;
 }
