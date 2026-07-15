@@ -13,6 +13,11 @@ const walk = directory => fs.readdirSync(directory, { withFileTypes: true }).fla
 const files = walk(root);
 const htmlFiles = files.filter(file => file.endsWith('.html'));
 const jsFiles = files.filter(file => file.endsWith('.js') || file.endsWith('.mjs'));
+const vercelFunctions = files.filter(file => {
+  const relative = path.relative(root, file).replaceAll('\\', '/');
+  return relative.startsWith('api/') && relative.endsWith('.js') && !relative.startsWith('api/_');
+});
+if (vercelFunctions.length > 12) failures.push(`Vercel Hobby supports at most 12 functions; found ${vercelFunctions.length}.`);
 
 for (const file of jsFiles) {
   try { execFileSync(process.execPath, ['--check', file], { stdio: 'pipe' }); }
@@ -53,7 +58,7 @@ else {
   const itemSection = sql.match(/insert into public\.reward_items[\s\S]*?on conflict\(item_key\)/i)?.[0] || '';
   const itemCount = (itemSection.match(/^\s*\('/gm) || []).length;
   if (itemCount !== 100) failures.push(`Reward catalogue must contain exactly 100 items; found ${itemCount}.`);
-  for (const required of ['complete_child_activity', 'purchase_reward_item', 'save_child_palace', 'rotate_child_pin']) {
+  for (const required of ['complete_child_activity', 'purchase_reward_item', 'save_child_palace', 'rotate_child_pin', 'invalidate_child_sessions', 'checkin_child_challenge']) {
     if (!sql.includes(`function public.${required}`)) failures.push(`SQL function missing: ${required}`);
   }
 }
@@ -77,3 +82,19 @@ if (failures.length) {
 }
 console.log(`Validation passed: ${htmlFiles.length} HTML files, ${jsFiles.length} JavaScript files, 100 palace items.`);
 if (warnings.length) console.warn(`Warnings:\n- ${warnings.join('\n- ')}`);
+
+const STALE_ENDPOINTS = ['/api/child/login','/api/child/logout','/api/child/session','/api/child/dashboard','/api/child/rewards','/api/child/buy-item','/api/child/complete-activity','/api/parent/children','/api/parent/profile'];
+const allTextFiles = walk(root).filter(file => /\.(html|js|mjs)$/.test(file) && path.basename(file) !== 'validate-project.mjs');
+const combined = allTextFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n');
+for (const endpoint of STALE_ENDPOINTS) if (combined.includes(endpoint)) failures.push(`Stale API endpoint remains: ${endpoint}`);
+if (combined.includes('@supabase/supabase-js@2"')) failures.push('Supabase browser SDK must be pinned to an exact version.');
+if (combined.includes('window.resetGGA')) failures.push('Production debug reset remains.');
+const apiFunctions = walk(path.join(root, 'api')).filter(file => file.endsWith('.js') && !file.replaceAll('\\','/').includes('/_'));
+if (apiFunctions.length > 12) failures.push(`Vercel Hobby supports no more than 12 functions; found ${apiFunctions.length}.`);
+const testArtifacts = walk(root).filter(file => /(^|\/)test(\.|$)/i.test(path.relative(root,file).replaceAll('\\','/')) && !file.includes('node_modules'));
+if (testArtifacts.length) failures.push(`Temporary test artefacts remain: ${testArtifacts.map(f=>path.relative(root,f)).join(', ')}`);
+if (failures.length) {
+  console.error(`\nProduction validation failed (${failures.length}):\n- ${failures.join('\n- ')}\n`);
+  process.exit(1);
+}
+console.log(`Production checks: ${apiFunctions.length} Vercel functions, no stale endpoints or test artefacts.`);
