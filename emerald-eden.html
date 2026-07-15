@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emerald Eden – Gem Glow Academy</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="description" content="Join Emerald Eden at Gem Glow Academy - where girls aged 9-12 build positive habits through fun activities, earn magical gems, and unlock their inner sparkle!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gemglowacademy.com/emerald-eden.html" />
+  <link rel="alternate" hreflang="en-us" href="https://www.gemglowacademy.com/emerald-eden.html" />
+  <meta property="og:title" content="Emerald Eden – Gem Glow Academy" />
+  <meta property="og:description" content="Join Emerald Eden at Gem Glow Academy - where girls aged 9-12 build positive habits through fun activities, earn magical gems, and unlock their inner sparkle!" />
+  <meta property="og:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta property="og:url" content="https://www.gemglowacademy.com/emerald-eden.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gem Glow Academy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Emerald Eden – Gem Glow Academy" />
+  <meta name="twitter:description" content="Join Emerald Eden at Gem Glow Academy - where girls aged 9-12 build positive habits through fun activities, earn magical gems, and unlock their inner sparkle!" />
+  <meta name="twitter:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta name="twitter:site" content="@gemglowacademy" />
+  <meta name="twitter:creator" content="@gemglowacademy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    html { scroll-behavior: smooth; }
+        body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#FFF5F8 0%,#F3E5F5 100%);background-attachment:fixed;font-weight:400;}
+    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,215,0,.03) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(233,30,99,.03) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(156,39,176,.02) 0%,transparent 50%);pointer-events:none;z-index:0;}
+    .container{width:min(1120px,92vw);margin:auto}
+    .hero-section{padding:80px 0 60px;}
+    .hero-title{font-size:83px;}
+    @keyframes gemPulse{0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);}}
+    .sparkle{display:inline-block;animation:sparkle 2s ease-in-out infinite;color:#50C878;filter:drop-shadow(0 0 6px #50C878);}
+    .gem-streak{font-size:12px;color:#f59e0b;font-weight:600;margin-top:4px;text-align:center;}
+    main{min-height:55vh;padding-bottom:80px;}
+    .card{background:white;border:2px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadowSoft);margin-bottom:40px;position:relative;overflow:hidden;}
+    .card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,215,0,.05) 0%,transparent 70%);pointer-events:none;}
+    .card>*{position:relative;}
+    .card h2{margin:0 0 16px;font-size:32px;color:var(--ink);font-weight:700;}
+    .card h3{margin:0 0 12px;font-size:24px;}
+    .card p{margin:0 0 16px;font-size:19px;color:var(--slate);}
+    .hero-section{padding:60px 0 48px;}
+    .hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:60px;align-items:start;}
+    .hero-title{font-size:83px;margin:0;font-weight:450;color:var(--rose);}
+    .hero-path-list{display:flex;flex-direction:column;gap:18px;align-items:stretch;margin-top:10px;}
+    .hero-path-item{padding:18px 20px;border-radius:20px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .3s ease;width:100%;}
+    .glow-mood-block{padding:24px 0;margin-bottom:40px;}
+    .glow-mood-shell{padding:28px;border-radius:var(--radius);border:2px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(252,228,236,.3));box-shadow:var(--shadowSoft);}
+    .glow-mood-head h3{margin:0 0 8px;font-size:26px;color:var(--rose);font-weight:700;}
+    .glow-mood-head p{margin:0;color:var(--slate);font-weight:500;font-size:17px;}
+    .glow-mood-row{margin:20px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;padding:10px 0;}
+    .glow-mood-item{display:grid;justify-items:center;gap:12px;padding:24px 16px;border-radius:20px;border:3px solid var(--line);background:white;cursor:pointer;user-select:none;transition:all .3s ease;min-height:200px;}
+    .glow-mood-item:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(233,30,99,.15);border-color:var(--pink);}
+    .glow-mood-item.active{border-color:var(--rose);background:linear-gradient(135deg,rgba(233,30,99,.12),rgba(255,255,255,.95));box-shadow:0 12px 28px rgba(233,30,99,.25);}
+    .glow-mood-emoji{font-size:56px;line-height:1;filter:drop-shadow(0 4px 8px rgba(233,30,99,.1));}
+    .glow-mood-label{font-weight:700;color:var(--ink);font-size:17px;text-align:center;}
+    .glow-mood-relatable{font-size:13px;color:var(--slate);font-weight:500;text-align:center;font-style:italic;}
+    .glow-activities-wrap{margin:24px 0 0;display:none;}
+    .glow-activities-wrap.show{display:block;}
+    .glow-activities-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+    .glow-tasks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .glow-task-card{padding:24px;border:3px solid var(--line);border-radius:20px;background:white;transition:all .3s ease;display:flex;flex-direction:column;position:relative;min-height:100%;}
+    .glow-task-time{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--gold);padding-bottom:12px;margin-bottom:12px;border-bottom:2px solid var(--gold);}
+    .glow-task-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .glow-task-icon{font-size:36px;flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(233,30,99,.2));}
+    .glow-task-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);border-color:var(--rose);}
+    .glow-task-content{flex:1;display:flex;flex-direction:column;}
+    .glow-task-content h4{margin:0 0 8px;font-size:22px;font-weight:700;color:var(--ink);}
+    .glow-task-content p{margin:0 0 auto;font-size:18px;color:var(--slate);line-height:1.65;padding-bottom:16px;}
+    .glow-start-btn{padding:14px 24px;border-radius:14px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;font-weight:700;font-size:16px;transition:all .3s ease;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);margin-top:auto;}
+    .glow-start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+    .glow-path-card{padding:32px 28px;border-radius:20px;border:3px solid transparent;cursor:pointer;transition:all .3s ease;background:white;}
+    .glow-path-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);}
+    .glow-path-card.morning{border-color:rgba(255,107,157,.2);background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(255,255,255,.95));}
+    .glow-path-card.morning:hover{border-color:var(--coral);}
+    .glow-path-card.kindness{border-color:rgba(240,98,146,.2);background:linear-gradient(135deg,rgba(240,98,146,.08),rgba(255,255,255,.95));}
+    .glow-path-card.kindness:hover{border-color:var(--pink);}
+    .glow-path-card.gratitude{border-color:rgba(156,39,176,.2);background:linear-gradient(135deg,rgba(156,39,176,.08),rgba(255,255,255,.95));}
+    .glow-path-card.gratitude:hover{border-color:var(--purple);}
+    .glow-path-card.wellness{border-color:rgba(78,205,196,.2);background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(255,255,255,.95));}
+    .glow-path-card.wellness:hover{border-color:var(--mint);}
+    .challenge-tracker{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:24px;}
+    .challenge-day{padding:20px 12px;border-radius:16px;border:3px solid var(--line);background:white;text-align:center;transition:all .3s ease;cursor:not-allowed;font-family:inherit;}
+    .challenge-day.today{border-color:var(--emerald);background:linear-gradient(135deg,rgba(80,200,120,.08),white);cursor:pointer;}
+    .challenge-day.today:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(80,200,120,.15);}
+    .challenge-day.completed{border-color:var(--gold);background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,255,255,.95));}
+    .challenge-day-num{font-size:14px;font-weight:700;color:var(--slate);margin-bottom:8px;}
+    .challenge-day-emoji{font-size:32px;margin-bottom:8px;filter:grayscale(100%);opacity:.3;transition:all .3s ease;}
+    .challenge-day.completed .challenge-day-emoji,.challenge-day.today .challenge-day-emoji{filter:grayscale(0%);opacity:1;}
+    .challenge-day-label{font-size:12px;font-weight:600;color:var(--slate);}
+    .sound-card:hover{transform:translateY(-4px) !important;box-shadow:0 12px 28px rgba(233,30,99,.15) !important;}
+    .sound-playing-badge{display:none;position:absolute;top:10px;right:10px;width:10px;height:10px;border-radius:50%;background:var(--rose);animation:sparkle 1s ease-in-out infinite;}
+    .floating-sparkle-btn{position:fixed;bottom:30px;left:30px;z-index:9998;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;border:3px solid var(--gold);background:white;box-shadow:0 14px 30px rgba(255,215,0,.25);cursor:pointer;transition:all .3s ease;font-family:inherit;}
+    .floating-sparkle-btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,215,0,.35);}
+    .floating-sparkle-btn .fab-ic{font-size:20px;color:var(--gold);}
+    .floating-sparkle-btn .fab-txt{font-weight:700;font-size:16px;color:var(--ink);}
+    .gem-toast{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2000;display:none;background:white;border:3px solid var(--gold);border-radius:20px;padding:28px 32px;box-shadow:0 22px 50px rgba(255,215,0,.35);min-width:400px;max-width:92vw;}
+    .gem-toast-content{display:flex;align-items:center;gap:16px;}
+    .gem-toast-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--amber));display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(255,215,0,.3);}
+    .gem-toast-text{flex:1;}
+    .gem-toast-title{font-weight:700;font-size:20px;color:var(--ink);margin-bottom:4px;}
+    .gem-toast-subtitle{font-size:16px;color:var(--slate);font-weight:500;}
+    .gem-toast-close{background:transparent;border:none;color:var(--slate);font-size:24px;cursor:pointer;padding:4px 8px;opacity:.7;}
+    .gem-toast-close:hover{opacity:1;}
+    .timer-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .timer-modal.show{display:flex;}
+    .timer-content{background:white;border-radius:24px;border:3px solid var(--rose);padding:40px;max-width:500px;width:90%;box-shadow:0 20px 60px rgba(233,30,99,.3);text-align:center;position:relative;}
+    .timer-content h3{margin:0 0 12px;font-size:28px;color:var(--rose);font-weight:700;}
+    .timer-content p{margin:0 0 24px;font-size:17px;color:var(--slate);line-height:1.6;}
+    .timer-display{font-size:72px;font-weight:700;color:var(--rose);margin:24px 0;letter-spacing:-2px;font-family:monospace;}
+    .timer-close{padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:16px;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);transition:all .3s ease;}
+    .timer-close:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+    .modal-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:999px;border:2px solid var(--line);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:var(--slate);transition:all .2s ease;z-index:10;}
+    .modal-x:hover{background:rgba(233,30,99,.08);border-color:var(--rose);transform:scale(1.1);}
+    .roulette-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .roulette-modal.show{display:flex;}
+    .roulette-content{background:white;border-radius:24px;border:3px solid var(--gold);padding:24px;max-width:500px;width:95%;box-shadow:0 20px 60px rgba(255,215,0,.3);text-align:center;position:relative;}
+    .roulette-wheel-container{position:relative;width:240px;height:240px;margin:20px auto;}
+    .roulette-wheel{width:100%;height:100%;border-radius:50%;border:5px solid var(--gold);background:conic-gradient(var(--coral) 0deg 30deg,var(--pink) 30deg 60deg,var(--purple) 60deg 90deg,var(--mint) 90deg 120deg,var(--lavender) 120deg 150deg,var(--gold) 150deg 180deg,var(--sky) 180deg 210deg,var(--rose) 210deg 240deg,#FF8FA3 240deg 270deg,#BA68C8 270deg 300deg,#80DEEA 300deg 330deg,#FFB6C1 330deg 360deg);box-shadow:0 0 0 8px white,0 12px 40px rgba(255,215,0,.3);transition:transform .5s ease;}
+    .roulette-wheel.spinning{animation:spin 3s cubic-bezier(.17,.67,.12,.99);}
+    .roulette-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:35px solid var(--rose);z-index:10;}
+    .roulette-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:5;}
+    .roulette-result{margin-top:20px;padding:18px;background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(233,30,99,.1));border-radius:16px;border:2px solid var(--gold);display:none;}
+    .roulette-result.show{display:block;}
+    .roulette-result-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:8px;}
+    .roulette-result-activity{font-size:16px;color:var(--slate);margin-bottom:16px;}
+    .roulette-btn{padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--ink);border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:17px;margin-top:12px;transition:all .3s ease;}
+    .roulette-btn:disabled{opacity:.5;cursor:not-allowed;}
+    .contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{background:white;border-radius:24px;padding:48px;max-width:580px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);position:relative;}
+    .modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;}
+    .modal-close:hover{background:var(--line);color:var(--ink);}
+    .contact-form{display:flex;flex-direction:column;gap:20px;}
+    .form-group{display:flex;flex-direction:column;gap:8px;}
+    .form-group label{font-weight:600;color:var(--ink);font-size:16px;}
+    .form-group input,.form-group textarea{padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit;font-size:16px;color:var(--ink);transition:all .2s ease;}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(233,30,99,.1);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-submit{padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:12px;}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,30,99,.3);}
+    .form-message{padding:16px;border-radius:12px;font-size:16px;font-weight:600;margin-top:16px;display:none;}
+    .form-message.success{background:rgba(34,197,94,.1);color:#16a34a;border:2px solid rgba(34,197,94,.3);display:block;}
+    .form-message.error{background:rgba(239,68,68,.1);color:#dc2626;border:2px solid rgba(239,68,68,.3);display:block;}
+    @media(max-width:968px){
+      #hamburgerBtn{display:block;}#hamburgerBtnNav{display:none;}
+      .nav-links{display:none;}.nav-actions{display:none;}
+      .brand{font-size:25px;}.brand img{width:70px;height:70px;}
+      .hero-grid{grid-template-columns:1fr;gap:24px;}.hero-title{font-size:52px !important;}
+      .glow-tasks-grid{grid-template-columns:1fr 1fr;}
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);}
+      .sound-library-grid{grid-template-columns:repeat(3,1fr) !important;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:768px){
+      .container{width:94vw;}main{padding-bottom:80px;}section{padding-top:24px !important;padding-bottom:24px !important;}
+      h1,.hero-title{font-size:38px !important;}h2,.card h2{font-size:22px !important;}h3{font-size:18px !important;}p,.card p{font-size:16px !important;}
+      .card{padding:18px;margin-bottom:24px;}
+      .glow-mood-shell{padding:16px;}.glow-mood-row{grid-template-columns:repeat(2,1fr);gap:10px;}
+      .glow-tasks-grid{grid-template-columns:1fr;gap:12px;}
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);gap:8px;}
+      .sound-library-grid{grid-template-columns:repeat(2,1fr) !important;gap:10px !important;}
+    }
+    @media(max-width:720px){
+      .inline-3col{grid-template-columns:1fr !important;}
+      .inline-2col{grid-template-columns:1fr !important;}
+      .gem-journey-grid{grid-template-columns:1fr !important;}
+    }
+    @media(max-width:540px){
+      .container{width:96vw;}.card{padding:14px;}
+      h1,.hero-title{font-size:30px !important;}h2,.card h2{font-size:20px !important;}
+      .glow-mood-row{grid-template-columns:1fr;}
+      .sound-library-grid{grid-template-columns:1fr !important;}
+      .timer-display{font-size:44px !important;}
+      .challenge-tracker{grid-template-columns:repeat(2,1fr) !important;gap:6px;}
+    }
+    .contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{background:white;border-radius:24px;padding:48px;max-width:580px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);position:relative;}
+    .modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;}
+    .modal-close:hover{background:var(--line);color:var(--ink);}
+    .contact-form{display:flex;flex-direction:column;gap:20px;}
+    .form-group{display:flex;flex-direction:column;gap:8px;}
+    .form-group label{font-weight:600;color:var(--ink);font-size:16px;}
+    .form-group input,.form-group textarea{padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit;font-size:16px;color:var(--ink);transition:all .2s ease;}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(233,30,99,.1);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-submit{padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:12px;}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,30,99,.3);}
+    .form-message{padding:16px;border-radius:12px;font-size:16px;font-weight:600;margin-top:16px;display:none;}
+    .form-message.success{background:rgba(34,197,94,.1);color:#16a34a;border:2px solid rgba(34,197,94,.3);display:block;}
+    .form-message.error{background:rgba(239,68,68,.1);color:#dc2626;border:2px solid rgba(239,68,68,.3);display:block;}
+    .challenge-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;}
+    .challenge-row select{width:100%;box-sizing:border-box;}
+    @media(max-width:480px){
+      .challenge-row{grid-template-columns:1fr;}
+      .challenge-row button{width:100%;}
+    }
+    .select-wrap{position:relative;}
+    .select-wrap::after{content:'';position:absolute;right:16px;top:50%;width:8px;height:8px;transform:translateY(-75%) rotate(45deg);border-right:2.5px solid #777;border-bottom:2.5px solid #777;pointer-events:none;}
+    .select-wrap select{appearance:none;-webkit-appearance:none;}
+  </style>
+</head>
+<body>
+  <div class="dashboard-tab palace-link" id="palaceTab" style="display:none;"><a href="palace.html" aria-label="My Palace"><span>💎</span><span>My Palace</span></a></div>
+  <div class="gem-counter" id="gemCounter" role="region" aria-live="polite" aria-label="Gem counter">
+    <div class="gem-counter-inner">
+      <div class="gem-counter-amount"><span class="gem-icon">💎</span><span class="gem-total-number" id="gemTotal">0</span></div>
+      <div id="streakDisplay" class="gem-streak"></div>
+      <div class="gem-progress"><div class="gem-progress-bar" id="gemProgressBar" style="height:0%"></div></div>
+      <div class="gem-milestone" id="gemMilestone">Next: Ring at 50</div>
+    </div>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-home ic-home"></i> Home</a>
+    <a class="nav-link active" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+    <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+    <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+    <a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring ic-support"></i> Support</a>
+    <a class="nav-link" id="signOutBtnMobile" style="display:flex;cursor:pointer;"><i class="fa-solid fa-spinner fa-spin"></i></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <picture>
+  <source srcset="assets/logo-96.webp" type="image/webp">
+  <img src="assets/logo-96.png" alt="Gem Glow Academy logo" width="85" height="85" onerror="this.style.display='none'">
+</picture>
+        <span>Gem Glow</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link active" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+        <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+        <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn" id="authBtn" type="button" style="display:flex;padding:10px 20px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:16px;align-items:center;gap:8px;"><i class="fa-solid fa-spinner fa-spin"></i></button>
+        <button class="hamburger-btn" id="hamburgerBtnNav" aria-label="Open menu" style="margin-left:12px;"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section" role="region" aria-label="Emerald Eden Hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;">
+              <i class="fa-solid fa-gem ic-habits" style="font-size:56px;"></i>
+              <h1 class="hero-title">Emerald Eden</h1>
+              <i class="fa-solid fa-gem ic-habits" style="font-size:56px;"></i>
+            </div>
+            <p style="font-size:20px;color:var(--slate);line-height:1.8;font-weight:500;margin-bottom:28px;">Build strong, positive habits that make you shine!<br>Every small action earns you beautiful gems.<br>Collect enough to unlock your ring, crown, and palace!</p>
+          </div>
+          <div class="hero-path-list">
+            <div class="hero-path-item" onclick="document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{selectGlowPath('morning')},500)" style="background:linear-gradient(135deg,rgba(255,107,157,.12),white);border:3px solid rgba(255,107,157,.3);" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='translateX(0)'">
+              <span style="font-size:32px;">🌅</span><span style="font-weight:700;font-size:17px;color:var(--ink);">Morning Glow: Start your day bright</span>
+            </div>
+            <div class="hero-path-item" onclick="document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{selectGlowPath('kindness')},500)" style="background:linear-gradient(135deg,rgba(240,98,146,.12),white);border:3px solid rgba(240,98,146,.3);" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='translateX(0)'">
+              <span style="font-size:32px;">💝</span><span style="font-weight:700;font-size:17px;color:var(--ink);">Kindness Glow: Spread joy &amp; care</span>
+            </div>
+            <div class="hero-path-item" onclick="document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{selectGlowPath('gratitude')},500)" style="background:linear-gradient(135deg,rgba(156,39,176,.12),white);border:3px solid rgba(156,39,176,.3);" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='translateX(0)'">
+              <span style="font-size:32px;">🙏</span><span style="font-weight:700;font-size:17px;color:var(--ink);">Gratitude Glow: Count your blessings</span>
+            </div>
+            <div class="hero-path-item" onclick="document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{selectGlowPath('wellness')},500)" style="background:linear-gradient(135deg,rgba(78,205,196,.12),white);border:3px solid rgba(78,205,196,.3);" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='translateX(0)'">
+              <span style="font-size:32px;">🌸</span><span style="font-weight:700;font-size:17px;color:var(--ink);">Wellness Glow: Take care of you</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card">
+          <h2>Why are positive habits so magical? ✨</h2>
+          <p style="font-size:18px;color:var(--slate);margin-bottom:24px;">Habits are like tiny seeds you plant every day. At first, you can't see much happening. But with care and consistency, they grow into beautiful flowers!</p>
+          <div class="inline-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px;">
+            <div style="padding:24px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(255,255,255,.95));border:3px solid rgba(255,107,157,.2);border-radius:20px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:14px;">🌱</div>
+              <h3 style="margin:0 0 10px;font-size:19px;color:var(--ink);">Week 1: Planting</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">It might feel tricky at first. Your brain is learning something new! Keep going — you're building something beautiful.</p>
+            </div>
+            <div style="padding:24px;background:linear-gradient(135deg,rgba(156,39,176,.08),rgba(255,255,255,.95));border:3px solid rgba(156,39,176,.2);border-radius:20px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:14px;">🌿</div>
+              <h3 style="margin:0 0 10px;font-size:19px;color:var(--ink);">Week 2–3: Growing</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Look at you go! It's getting easier. Your new habit is starting to feel natural and you're building confidence.</p>
+            </div>
+            <div style="padding:24px;background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(255,255,255,.95));border:3px solid rgba(78,205,196,.2);border-radius:20px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:14px;">🌺</div>
+              <h3 style="margin:0 0 10px;font-size:19px;color:var(--ink);">Week 4+: Blooming</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Your habit is part of who you are now! You're glowing, and everyone can see how amazing you've become.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="glow-mood-block" id="activitiesStart">
+      <div class="container">
+        <div class="glow-mood-shell">
+          <div class="glow-mood-head">
+            <h3>How are you feeling today? 🌈</h3>
+            <p>Choose the feeling that matches your mood right now, and we'll show you the perfect activities!</p>
+          </div>
+          <div class="glow-mood-row" role="group" aria-label="Mood selector">
+            <button class="glow-mood-item" type="button" data-mood="excited"><div class="glow-mood-emoji">🎉</div><div class="glow-mood-label">Super Excited!<br><span class="glow-mood-relatable">"I'm ready to go!"</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="happy"><div class="glow-mood-emoji">😊</div><div class="glow-mood-label">Happy<br><span class="glow-mood-relatable">"Feeling good!"</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="okay"><div class="glow-mood-emoji">😌</div><div class="glow-mood-label">Just Okay<br><span class="glow-mood-relatable">"Doing fine"</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="tired"><div class="glow-mood-emoji">😴</div><div class="glow-mood-label">A Bit Tired<br><span class="glow-mood-relatable">"Need energy"</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="unsure"><div class="glow-mood-emoji">🤔</div><div class="glow-mood-label">Not Sure<br><span class="glow-mood-relatable">"What should I do?"</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="cozy"><div class="glow-mood-emoji">🥰</div><div class="glow-mood-label">Feeling Cozy<br><span class="glow-mood-relatable">"Calm and comfy"</span></div></button>
+          </div>
+          <div class="glow-activities-wrap" id="glowActivitiesWrap">
+            <div class="glow-activities-title"><span>💫</span><span id="glowMoodTitle">Perfect activities for you</span></div>
+            <div class="glow-tasks-grid" id="glowTasksGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(80,200,120,.08),white);border-color:var(--emerald);">
+          <div style="text-align:center;margin-bottom:24px;">
+            <h2 style="color:var(--emerald);font-size:34px;margin-bottom:10px;">🌟 7-Day Habit Challenge 🌟</h2>
+            <p style="font-size:18px;color:var(--slate);">Choose a habit and complete it for 7 days in a row! Click each day when you finish.</p>
+          </div>
+          <div style="padding:18px;background:rgba(80,200,120,.05);border-radius:16px;border:2px solid rgba(80,200,120,.3);margin-bottom:20px;">
+            <label style="display:block;font-weight:700;color:var(--ink);font-size:17px;margin-bottom:10px;">Choose Your Daily Habit:</label>
+            <div class="challenge-row">
+              <div class="select-wrap">
+                <select id="challengeDropdown" style="padding:14px 48px 14px 16px;border:3px solid var(--emerald);border-radius:12px;font-size:16px;font-family:inherit;font-weight:600;color:var(--ink);background-color:white;cursor:pointer;">
+                  <option value="">-- Select a Challenge --</option>
+                  <option value="Morning Glow: Wake up 30 mins earlier">🌅 Morning Glow: Wake up 30 mins earlier</option>
+                  <option value="Hydration Hero: Drink 8 glasses of water daily">💧 Hydration Hero: Drink 8 glasses of water daily</option>
+                  <option value="Movement Magic: 10 mins of movement (dance, walk, yoga)">🏃 Movement Magic: 10 mins of movement (dance, walk, yoga)</option>
+                  <option value="Kindness Quest: Do one act of kindness daily">💝 Kindness Quest: Do one act of kindness daily</option>
+                  <option value="Gratitude Glow: Write 3 things you're grateful for">🙏 Gratitude Glow: Write 3 things you're grateful for</option>
+                  <option value="Reading Ritual: Read for 15 minutes">📚 Reading Ritual: Read for 15 minutes</option>
+                  <option value="Sleep Sparkle: Get 8 hours of sleep">😴 Sleep Sparkle: Get 8 hours of sleep</option>
+                  <option value="Mindfulness Moment: 5 mins of breathing/meditation">🧘 Mindfulness Moment: 5 mins of breathing/meditation</option>
+                  <option value="Creative Spark: Create something (draw, write, build)">🎨 Creative Spark: Create something (draw, write, build)</option>
+                  <option value="Tidy Treasure: Spend 10 mins organizing your space">✨ Tidy Treasure: Spend 10 mins organizing your space</option>
+                </select>
+              </div>
+              <button id="addChallengeBtn" type="button" style="display:none;padding:13px 24px;background:linear-gradient(135deg,var(--emerald),var(--mint));color:white;border:none;border-radius:14px;font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;box-shadow:0 6px 16px rgba(80,200,120,.3);white-space:nowrap;">+ Add</button>
+            </div>
+          </div>
+          <div id="challengesContainer"></div>
+          <div style="margin-top:20px;padding:18px;background:rgba(255,215,0,.2);border-radius:14px;border:3px solid var(--gold);text-align:center;">
+            <p style="margin:0;font-size:18px;color:var(--ink);font-weight:700;">🏆 Complete all 7 days and celebrate your consistency with a new challenge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(233,30,99,.04),rgba(255,215,0,.04),white);border-color:var(--rose);">
+          <div style="text-align:center;margin-bottom:28px;">
+            <h2 style="color:var(--rose);font-size:34px;margin-bottom:10px;font-family:'Pacifico',cursive;font-weight:400;">🎵 The Glow Lounge 🎵</h2>
+            <p style="font-size:18px;color:var(--slate);">Play a background sound to help you focus and get into your habit groove!</p>
+          </div>
+          <div class="sound-library-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;">
+            <div class="sound-card" data-sound="/assets/audio/arpeggio-focus.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(233,30,99,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div class="sound-emoji" style="font-size:40px;margin-bottom:10px;">🎹</div>
+              <div class="sound-name" style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Sparkle Keys</div>
+              <div class="sound-desc" style="font-size:12px;color:var(--muted);">Uplifting melodies to get you glowing ✨</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="/assets/audio/chill-focus.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(233,30,99,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div class="sound-emoji" style="font-size:40px;margin-bottom:10px;">😌</div>
+              <div class="sound-name" style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Golden Hour</div>
+              <div class="sound-desc" style="font-size:12px;color:var(--muted);">Warm, dreamy vibes for calm habits 🌅</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="/assets/audio/piano-focus.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(233,30,99,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div class="sound-emoji" style="font-size:40px;margin-bottom:10px;">🎶</div>
+              <div class="sound-name" style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Crystal Garden</div>
+              <div class="sound-desc" style="font-size:12px;color:var(--muted);">Soft piano notes to keep you blooming 🌸</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="/assets/audio/frequency-focus.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(233,30,99,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div class="sound-emoji" style="font-size:40px;margin-bottom:10px;">✨</div>
+              <div class="sound-name" style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Magic Frequency</div>
+              <div class="sound-desc" style="font-size:12px;color:var(--muted);">Enchanted tones to unlock your focus 💎</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="/assets/audio/forest.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(233,30,99,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div class="sound-emoji" style="font-size:40px;margin-bottom:10px;">🍃</div>
+              <div class="sound-name" style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Whispering Forest</div>
+              <div class="sound-desc" style="font-size:12px;color:var(--muted);">Gentle nature sounds to soothe your mind 🍃</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+          </div>
+          <div style="margin-top:18px;text-align:center;">
+            <p style="margin:0;font-size:14px;color:var(--muted);font-weight:500;">🎧 Click any sound to play · Click again to stop · Sounds loop for 7 minutes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:40px 0;" id="glowPaths">
+      <div class="container">
+        <div class="card">
+          <div style="text-align:center;margin-bottom:32px;">
+            <h2 style="font-size:34px;color:var(--rose);margin-bottom:10px;">Choose Your Glow Path 🌟</h2>
+            <p style="font-size:18px;color:var(--slate);">Each path has special activities to help you build amazing habits. Pick the one that feels right today!</p>
+          </div>
+          <div class="inline-2col" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:36px;">
+            <div class="glow-path-card morning" data-path="morning" onclick="handleActivityClick('selectGlowPath','morning')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--coral),#FF8FA3);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;">🌅</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Morning Glow</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Start your day with brightness and purpose!</p>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Build morning habits that help you wake up happy and ready for an amazing day.</p>
+            </div>
+            <div class="glow-path-card kindness" data-path="kindness" onclick="handleActivityClick('selectGlowPath','kindness')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--pink),#F48FB1);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;">💝</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Kindness Glow</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Spread joy and make the world brighter!</p>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Practice kindness to yourself and others. Small acts of care create ripples of happiness.</p>
+            </div>
+            <div class="glow-path-card gratitude" data-path="gratitude" onclick="handleActivityClick('selectGlowPath','gratitude')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--purple),#AB47BC);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;">🙏</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Gratitude Glow</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Notice and appreciate all the good around you!</p>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Learn to see the beauty in everyday moments and feel grateful for all that you have.</p>
+            </div>
+            <div class="glow-path-card wellness" data-path="wellness" onclick="handleActivityClick('selectGlowPath','wellness')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--mint),#80DEEA);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;">🌸</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Wellness Glow</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Take wonderful care of your mind and body!</p>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Build habits that help you feel healthy, strong, and peaceful every single day.</p>
+            </div>
+          </div>
+          <div id="pathwayActivities" style="display:none;margin-top:32px;">
+            <h3 id="pathwayTitle" style="margin:0 0 20px;font-size:26px;font-weight:700;color:var(--rose);text-align:center;"></h3>
+            <div class="glow-tasks-grid" id="glowTasksGridPathway"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:8px 0 48px;">
+      <div class="container">
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,.08),white);border:2px solid var(--gold);border-radius:var(--radius);padding:20px;box-shadow:var(--shadowSoft);">
+          <div style="text-align:center;margin-bottom:16px;">
+            <h2 style="color:var(--gold);font-size:32px;margin:0 0 4px;font-weight:700;font-family:'Pacifico',cursive;">✨ Your Gem Journey ✨</h2>
+            <p style="font-size:14px;color:var(--slate);margin:0;">Spend gems on 100 items and make your palace your own!</p>
+          </div>
+          <div class="gem-journey-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--gold);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">💍</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--gold);">First Palace Pick</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">20 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Choose your first shop item!</p>
+            </div>
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--rose);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">👑</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--rose);">Room Refresh</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">75 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Build a room that feels like you!</p>
+            </div>
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--purple);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">🏰</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--purple);">Royal Collection</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">150 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Keep collecting — the shop can keep growing!</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:10px;background:rgba(255,215,0,.1);border-radius:10px;border:2px solid var(--gold);">
+            <p style="margin:0;text-align:center;font-size:13px;color:var(--ink);font-weight:600;">💎 Each activity earns 1 gem — timer must reach 0 to collect! ✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <button class="floating-sparkle-btn" id="dailySparkleFab" type="button" aria-label="Spin activity roulette" onclick="handleActivityClick('openRoulette')"><span class="fab-ic">✨</span><span class="fab-txt">Spin the Wheel!</span></button>
+  <button class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top"><i class="fas fa-arrow-up"></i></button>
+  <div class="timer-modal" id="timerModal"><div class="timer-content"><button class="modal-x" onclick="closeTimerWithoutCheck()" aria-label="Close">×</button><h3 id="timerTitle"></h3><p id="timerDesc"></p><p style="margin:0 0 16px;color:var(--slate);font-size:14px;line-height:1.5;">💎 Your gem is earned when the timer reaches 0. Stay with it!</p><div class="timer-display" id="timerDisplay">0:00</div><button class="timer-close" onclick="closeTimerWithoutCheck()">Close</button></div></div>
+  <div class="roulette-modal" id="rouletteModal"><div class="roulette-content"><button class="modal-x" onclick="closeRoulette()" aria-label="Close">×</button><h2 style="font-size:26px;color:var(--gold);margin:0 0 8px;font-weight:700;">🎡 Activity Roulette! 🎡</h2><p style="font-size:15px;color:var(--slate);margin:0 0 16px;">Spin the wheel and let fate choose your next habit adventure!</p><div class="roulette-wheel-container"><div class="roulette-pointer"></div><div class="roulette-wheel" id="rouletteWheel"><div class="roulette-center"><button class="roulette-btn" id="rouletteSpinBtn" style="width:90px;padding:8px 10px;font-size:13px;border-radius:999px;">Spin!</button></div></div></div><div class="roulette-result" id="rouletteResult"><div class="roulette-result-title" id="rouletteResultTitle"></div><div class="roulette-result-activity" id="rouletteResultActivity"></div><button class="glow-start-btn" id="rouletteStartBtn" onclick="handleRouletteStart()">Start This Activity ✨</button></div></div></div>
+  <div class="gem-toast" id="gemToast"><div class="gem-toast-content"><div class="gem-toast-icon">💎</div><div class="gem-toast-text"><div class="gem-toast-title">Gem earned!</div><div class="gem-toast-subtitle" id="gemToastSub">Amazing work! Keep shining!</div></div><button class="gem-toast-close" id="closeGemToast" aria-label="Close">×</button></div></div>
+  <div class="contact-modal" id="thirdClickModal" style="display:none;"><div class="contact-modal-content" style="max-width:500px;text-align:center;padding:48px 40px;"><button class="modal-close" onclick="event.stopPropagation(); closeThirdClickModal();" aria-label="Close modal" style="position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;padding:0;">×</button><div style="font-size:64px;margin-bottom:16px;">✨</div><h2 style="margin:0 0 12px;font-size:28px;color:var(--rose);font-family:'Pacifico',cursive;font-weight:400;">Ready to Start Your Gem Journey?</h2><p style="margin:0 0 20px;color:var(--slate);font-size:17px;line-height:1.6;">You've used your 3 free activities! 💎 A parent can create the family membership, then you can earn gems and choose from 100 palace items.</p><div style="background:linear-gradient(135deg,rgba(233,30,99,.08),white);border:2px solid var(--rose);border-radius:16px;padding:16px;margin-bottom:24px;"><p style="margin:0;font-size:15px;color:var(--ink);font-weight:600;">✓ Access all 40+ activities<br>✓ Earn gems forever<br>✓ Decorate and save your own palace<br>✓ Track your 7-day challenges</p></div><div style="display:flex;gap:12px;flex-direction:column;"><button onclick="startCheckout(window.GGA_PRICES.monthly); closeThirdClickModal();" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;box-shadow:0 8px 20px rgba(233,30,99,.3);font-family:inherit;">Unlock Unlimited 💎</button><a href="sign-in.html" onclick="closeThirdClickModal()" style="display:inline-block;padding:16px 32px;background:white;color:var(--rose);border:3px solid var(--rose);border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;text-align:center;">Sign In</a></div></div></div>
+  <script src="assets/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/supabase-progress.js"></script>
+  <script>
+    let userIsLoggedIn = false;
+    let userIsMember = false;
+    
+    function getFreeCompletionCount() {
+      const stored = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_KEY) || '0', 10);
+      const timestamp = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY) || '0', 10);
+      const now = Date.now();
+      if (timestamp > 0 && (now - timestamp) > RESET_TIMEOUT_MS) {
+        localStorage.setItem(ACTIVITY_COMPLETION_KEY, '0');
+        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        return 0;
+      }
+      return stored;
+    }
+    
+    function recordFreeCompletion() {
+      const completions = getFreeCompletionCount();
+      if (completions < FREE_ACTIVITY_COMPLETIONS) {
+        const now = Date.now();
+        const newCount = completions + 1;
+        localStorage.setItem(ACTIVITY_COMPLETION_KEY, String(newCount));
+        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        console.log('💎 COMPLETION RECORDED:', newCount, 'of', FREE_ACTIVITY_COMPLETIONS);
+      } else {
+        console.log('⚠️ Completion limit reached, not recording');
+      }
+    }
+    
+    function checkIfFreeCompletionLimitExceeded() {
+      return getFreeCompletionCount() >= FREE_ACTIVITY_COMPLETIONS;
+    }
+    
+    function closeThirdClickModal() {
+      document.getElementById('thirdClickModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    
+    function showThirdClickUpsell() {
+      document.getElementById('thirdClickModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function handleActivityClick(action, param = '') {
+      if (action === 'showGlowPath') {
+        showGlowPath(param);
+      } else if (action === 'selectGlowPath') {
+        selectGlowPath(param);
+      } else if (action === 'openRoulette') {
+        openRoulette();
+      }
+    }
+    
+    function handleRouletteStart() {
+      if (!userIsMember && checkIfFreeCompletionLimitExceeded()) {
+        if (window.gtag) {
+          gtag('event', 'upsell_trigger', { source: 'roulette' });
+        }
+        showThirdClickUpsell();
+        return;
+      }
+      if (currentRouletteActivity) {
+        if (!userIsMember) recordFreeCompletion();
+        if (window.gtag) { gtag('event', 'activity_start', { activity: currentRouletteActivity.title }); }
+        closeRoulette();
+        startTimer(currentRouletteActivity.title, currentRouletteActivity.desc, currentRouletteActivity.mins);
+      }
+    }
+    
+    (async () => {
+      try {
+        userIsLoggedIn = await checkLoginState();
+        const status = await checkMembershipStatus();
+        userIsMember = status.isMember && status.role === 'child';
+        if (userIsMember) { await progressFetch(); updateGemDisplay(); }
+      } catch(e) {}
+    })();
+
+    const SESSION_ACTIVITY_KEY = 'gga_last_activity_ts';
+    let timerRunning = false;
+    
+    function getGemTotal(){return Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);}
+    
+    function updateGemDisplay(){
+      const total=getGemTotal();
+      const streak = parseInt(localStorage.getItem('gga_daily_streak')||'0',10);
+      document.getElementById('gemTotal').textContent = total;
+      document.getElementById('streakDisplay').textContent = streak > 0 ? `🔥 ${streak} day streak` : '';
+      const next=GEM_MILESTONES.find(m=>m.gems>total)||GEM_MILESTONES[GEM_MILESTONES.length-1];
+      const prev=GEM_MILESTONES.filter(m=>m.gems<=total).pop();
+      const start=prev?prev.gems:0,end=next.gems;
+      const range = end - start;
+      const pct = range === 0 ? 100 : ((total - start) / range) * 100;
+      document.getElementById('gemProgressBar').style.height=Math.min(100,Math.max(0,pct))+'%';
+      document.getElementById('gemMilestone').textContent=total>=150?'100 palace items are waiting in the shop':`Next glow goal: ${next.reward} at ${next.gems}`;
+    }
+    
+    function showGemToast(subtitle){const toast=document.getElementById('gemToast'),sub=document.getElementById('gemToastSub');if(!toast)return;if(subtitle)sub.textContent=subtitle;toast.style.display='block';toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';requestAnimationFrame(()=>{toast.style.transition='opacity .3s ease,transform .3s ease';toast.style.opacity='1';toast.style.transform='translate(-50%,-50%) scale(1)';});setTimeout(()=>hideGemToast(),3500);}
+    function hideGemToast(){const toast=document.getElementById('gemToast');if(!toast)return;toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';setTimeout(()=>{toast.style.display='none';},300);}
+    document.getElementById('closeGemToast')?.addEventListener('click',hideGemToast);
+    
+    
+    
+    function createGemSparkle() {
+      const container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.top = '200px';
+      container.style.right = '30px';
+      container.style.pointerEvents = 'none';
+      container.style.zIndex = '9999';
+      for (let i = 0; i < 6; i++) {
+        const gem = document.createElement('div');
+        gem.textContent = '💎';
+        gem.style.position = 'absolute';
+        gem.style.fontSize = '24px';
+        gem.style.opacity = '1';
+        gem.style.animation = `gemFloat${i} 900ms ease-out forwards`;
+        const angle = (i / 6) * Math.PI * 2;
+        const distance = 80;
+        const x = Math.cos(angle) * distance;
+        const y = Math.sin(angle) * distance;
+        let style = document.getElementById('gemSparkleStyles');
+        if(!style){
+          style = document.createElement('style');
+          style.id = 'gemSparkleStyles';
+          document.head.appendChild(style);
+        }
+        style.textContent += `@keyframes gemFloat${i} {0% { transform: translate(0,0) scale(1); opacity:1; }100% { transform: translate(${x}px, ${y - 100}px) scale(0.3); opacity:0; }}`;
+        container.appendChild(gem);
+      }
+      document.body.appendChild(container);
+      setTimeout(() => container.remove(), 900);
+    }
+    
+    async function awardGem(title, durationMinutes = 0){
+      const result = await progressAwardGem('habits', title, durationMinutes);
+      if (!result.ok) {
+        if (result.status === 401) {
+          showGemToast('🔐 Sign in with your child PIN to save this activity and earn gems.');
+          setTimeout(() => { window.location.href = 'child-login.html'; }, 1200);
+        } else if (result.status === 402) {
+          showGemToast('Ask your parent to reactivate the family membership.');
+        } else {
+          showGemToast('We could not save this activity, so no gem was changed. Please try again.');
+        }
+        return;
+      }
+      const n = result.wallet.gemBalance;
+      updateGemDisplay();
+      if (result.duplicate) {
+        showGemToast(`✓ "${title}" is complete. You already earned its gem today.`);
+        playChime();
+        return;
+      }
+      if (typeof createGemSparkle === 'function') createGemSparkle();
+      showGemToast(`💎 +1 gem for "${title}" — ${n} gems available to spend`);
+      playChime();
+    }
+
+    const ALL_ACTIVITIES=[{icon:'🌅',title:"Morning Stretch",mins:3,desc:"Wake up your body with gentle stretches."},{icon:'🛏️',title:"Bed Making Magic",mins:2,desc:"Make your bed — the first accomplishment of your day!"},{icon:'💧',title:"Water First",mins:1,desc:"Drink a glass of water first thing in the morning."},{icon:'💌',title:"Compliment Someone",mins:2,desc:"Give a genuine compliment to someone today!"},{icon:'🤝',title:"Help Without Asking",mins:5,desc:"Look for ways to help at home without being asked."},{icon:'📔',title:"Gratitude Journal",mins:4,desc:"Write 3 things you're grateful for."},{icon:'🌟',title:"Thanks Before Bed",mins:3,desc:"Think of 3 good things that happened today."},{icon:'💪',title:"Movement Joy",mins:8,desc:"Move your body in a way you enjoy!"},{icon:'🧘',title:"Mindful Breathing",mins:5,desc:"Sit quietly and just breathe."},{icon:'🌸',title:"Self-Care Check",mins:4,desc:"Have you eaten? Had water? Stretched? Rested?"},{icon:'📖',title:"Journal Time",mins:5,desc:"Write about your day and how you're feeling."},{icon:'🧘‍♀️',title:"Calm Breathing",mins:3,desc:"Sit comfortably and breathe slowly. In for 4, out for 6."}];
+    let currentRouletteActivity=null,lastActivityIndex=-1,isSpinning=false;
+    function openRoulette(){document.getElementById('rouletteModal').classList.add('show');document.getElementById('rouletteResult').classList.remove('show');}
+    function closeRoulette(){document.getElementById('rouletteModal').classList.remove('show');isSpinning=false;}
+    function spinRoulette(){if(isSpinning)return;isSpinning=true;const wheel=document.getElementById('rouletteWheel'),spinBtn=document.getElementById('rouletteSpinBtn'),result=document.getElementById('rouletteResult');spinBtn.disabled=true;result.classList.remove('show');let ni;do{ni=Math.floor(Math.random()*ALL_ACTIVITIES.length);}while(ni===lastActivityIndex&&ALL_ACTIVITIES.length>1);lastActivityIndex=ni;currentRouletteActivity=ALL_ACTIVITIES[ni];const deg=360/ALL_ACTIVITIES.length,offset=Math.random()*deg,tr=(ni*deg)+offset+1080;wheel.style.transform='rotate(0deg)';wheel.classList.add('spinning');playChime();setTimeout(()=>{wheel.classList.remove('spinning');wheel.style.transform=`rotate(${tr}deg)`;document.getElementById('rouletteResultTitle').textContent=`${currentRouletteActivity.icon} ${currentRouletteActivity.title}`;document.getElementById('rouletteResultActivity').textContent=currentRouletteActivity.desc;result.classList.add('show');spinBtn.disabled=false;isSpinning=false;playSpecialChime();},3000);}
+    document.getElementById('rouletteSpinBtn')?.addEventListener('click',spinRoulette);
+
+    const MOOD_ACTIVITIES={excited:[{icon:'🌟',title:"Morning Star Routine",mins:5,desc:"Create your perfect morning routine!"},{icon:'💝',title:"Kindness Surprise",mins:3,desc:"Do something kind for someone without being asked."},{icon:'📝',title:"Goal Sparkle",mins:4,desc:"Write down 3 things you want to accomplish today."}],happy:[{icon:'🙏',title:"Gratitude Stars",mins:3,desc:"Write down 3 things you're grateful for today."},{icon:'💪',title:"Body Glow",mins:5,desc:"Do some fun exercise! Dance, skip, do jumping jacks."},{icon:'🌈',title:"Rainbow Organizer",mins:6,desc:"Organize one area of your room by colour!"}],okay:[{icon:'💧',title:"Water Reminder",mins:2,desc:"Drink a full glass of water and feel refreshed."},{icon:'📚',title:"Reading Time",mins:10,desc:"Read a chapter of your favourite book."},{icon:'🎨',title:"Creative Expression",mins:8,desc:"Draw, colour, or create something beautiful."}],tired:[{icon:'😴',title:"Bedtime Routine",mins:5,desc:"Plan your perfect bedtime routine."},{icon:'🧘',title:"Calm Breathing",mins:3,desc:"Sit comfortably and breathe slowly."},{icon:'🌙',title:"Evening Tidy",mins:5,desc:"Spend 5 minutes tidying your space before bed."}],unsure:[{icon:'🌸',title:"Self-Care Check",mins:4,desc:"Check in with yourself — have you eaten? Had water?"},{icon:'📖',title:"Journal Time",mins:5,desc:"Write about your day and how you're feeling."},{icon:'🎯',title:"Small Win",mins:3,desc:"Choose one tiny task and complete it right now."}],cozy:[{icon:'☕',title:"Cozy Corner",mins:5,desc:"Create a cozy reading or relaxing corner."},{icon:'🌺',title:"Beauty Moment",mins:4,desc:"Notice something beautiful around you."},{icon:'💌',title:"Love Note",mins:3,desc:"Write a kind note to yourself or someone you love."}]};
+
+    const GLOW_PATH_DATA={morning:{title:'Morning Glow Activities',activities:[{icon:'🌅',title:"Morning Stretch",mins:3,desc:"Wake up your body with gentle stretches."},{icon:'🛏️',title:"Bed Making Magic",mins:2,desc:"Make your bed as soon as you get up!"},{icon:'💧',title:"Water First",mins:1,desc:"Drink a glass of water first thing."},{icon:'🪥',title:"Sparkle Smile",mins:3,desc:"Brush your teeth and smile at yourself in the mirror."},{icon:'👗',title:"Outfit Prep",mins:5,desc:"Choose your outfit for the next day the night before."},{icon:'☀️',title:"Sunshine Greeting",mins:2,desc:"Look out the window or step outside for fresh air."},{icon:'📅',title:"Day Planner",mins:4,desc:"Plan your day — write 3 things you want to do."},{icon:'🎒',title:"Pack & Ready",mins:5,desc:"Pack your bag the night before so mornings are easy."},{icon:'💖',title:"Morning Affirmation",mins:2,desc:"Say 3 positive things about yourself out loud!"}]},kindness:{title:'Kindness Glow Activities',activities:[{icon:'💌',title:"Compliment Someone",mins:2,desc:"Give a genuine, specific compliment to someone."},{icon:'🤝',title:"Help Without Asking",mins:5,desc:"Look for ways to help at home without being asked."},{icon:'✉️',title:"Thank You Note",mins:4,desc:"Write a thank you note to someone who helped you."},{icon:'🎁',title:"Share Something",mins:3,desc:"Share something you have with someone who needs it."},{icon:'👂',title:"Listen Fully",mins:5,desc:"Really listen when someone is talking — no distractions."},{icon:'🌻',title:"Kindness to Animals",mins:4,desc:"Be extra kind and gentle to a pet or animal."},{icon:'🧡',title:"Family Time",mins:10,desc:"Spend quality time with your family without screens."},{icon:'😊',title:"Smile Challenge",mins:3,desc:"Smile genuinely at 5 different people today."},{icon:'💝',title:"Self-Kindness",mins:4,desc:"Be kind to yourself — you deserve it!"}]},gratitude:{title:'Gratitude Glow Activities',activities:[{icon:'📔',title:"Gratitude Journal",mins:4,desc:"Write 3 things you're grateful for today."},{icon:'🌟',title:"Thanks Before Bed",mins:3,desc:"Think of 3 good things that happened today."},{icon:'📸',title:"Gratitude Photos",mins:5,desc:"Take photos of 3 things you're grateful for."},{icon:'🎨',title:"Draw Your Blessings",mins:6,desc:"Draw things in your life you're thankful for."},{icon:'💫',title:"Appreciation List",mins:4,desc:"Write a list of people you appreciate and why."},{icon:'🌈',title:"Good Things Hunt",mins:5,desc:"Look for and list 5 good things around you right now."},{icon:'🙏',title:"Thank You Time",mins:3,desc:"Tell someone in person thank you for something."},{icon:'✨',title:"Sparkle Jar",mins:5,desc:"Write good moments on slips of paper and save them."},{icon:'🌸',title:"Nature Thanks",mins:6,desc:"Spend time outside noticing beautiful nature."}]},wellness:{title:'Wellness Glow Activities',activities:[{icon:'💧',title:"Hydration Helper",mins:2,desc:"Fill your water bottle and drink it all!"},{icon:'🥗',title:"Healthy Snack",mins:4,desc:"Choose a fruit, veggie, or healthy snack."},{icon:'🧘',title:"Mindful Breathing",mins:5,desc:"Sit quietly and focus on your breath."},{icon:'🛀',title:"Bedtime Routine",mins:8,desc:"Create a calm bedtime routine — no screens!"},{icon:'🌙',title:"Sleep Schedule",mins:3,desc:"Set a consistent bedtime and wake-up time."},{icon:'💪',title:"Movement Joy",mins:8,desc:"Move your body in a way that makes you happy!"},{icon:'📱',title:"Screen Break",mins:10,desc:"Take a full break from all screens."},{icon:'🌿',title:"Fresh Air Time",mins:6,desc:"Step outside and breathe fresh air."},{icon:'🧼',title:"Self-Care Ritual",mins:7,desc:"Practice your full self-care routine with love."}]}};
+
+    function startActivityWithGating(title, desc, mins) {
+      if (userIsMember) { startTimer(title, desc, mins); return; }
+      const currentCount = getFreeCompletionCount();
+      if (currentCount >= FREE_ACTIVITY_COMPLETIONS) {
+        if (window.gtag) { gtag('event', 'upsell_trigger', { source: 'task' }); }
+        showThirdClickUpsell();
+        return;
+      }
+      recordFreeCompletion();
+      if (window.gtag) { gtag('event', 'activity_start', { activity: title }); }
+      startTimer(title, desc, mins);
+    }
+
+    function taskCardHTML(a){const t=String(a.title).replace(/'/g,"\\'").replace(/"/g,"&quot;"),d=String(a.desc).replace(/'/g,"\\'").replace(/"/g,"&quot;");return`<div class="glow-task-card"><div class="glow-task-time"><i class="fa-solid fa-clock"></i> ${a.mins} min</div><div class="glow-task-header"><div class="glow-task-icon">${a.icon}</div></div><div class="glow-task-content"><h4>${a.title}</h4><p>${a.desc}</p><button class="glow-start-btn" onclick="startActivityWithGating('${t}','${d}',${a.mins})">Start Activity ✨</button></div></div>`;}
+
+    document.querySelectorAll('.glow-mood-item').forEach(btn=>{btn.addEventListener('click',function(){const mood=this.dataset.mood;document.querySelectorAll('.glow-mood-item').forEach(b=>b.classList.remove('active'));this.classList.add('active');const label=this.querySelector('.glow-mood-label').textContent.split('!')[0].trim();document.getElementById('glowMoodTitle').textContent=`Perfect for feeling ${label.toLowerCase()}`;document.getElementById('glowTasksGrid').innerHTML=(MOOD_ACTIVITIES[mood]||[]).map(taskCardHTML).join('');document.getElementById('glowActivitiesWrap').classList.add('show');storeMoodHistory(mood);});});
+
+    window.selectGlowPath=function(path){const data=GLOW_PATH_DATA[path];if(!data)return;document.querySelectorAll('.glow-path-card').forEach(c=>{c.style.transform='none';c.style.boxShadow='none';});const sel=document.querySelector(`[data-path="${path}"]`);if(sel){sel.style.transform='translateY(-6px)';sel.style.boxShadow='0 16px 40px rgba(233,30,99,.2)';}document.getElementById('pathwayTitle').textContent=data.title;document.getElementById('glowTasksGridPathway').innerHTML=data.activities.map(taskCardHTML).join('');document.getElementById('pathwayActivities').style.display='block';setTimeout(()=>{document.getElementById('pathwayActivities').scrollIntoView({behavior:'smooth',block:'start'});},100);};
+    
+    window.showGlowPath=function(path){selectGlowPath(path);setTimeout(()=>{document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'});},100);};
+
+    const MOOD_EMOJIS = {excited: '🎉',happy: '😊',okay: '😌',tired: '😴',unsure: '🤔',cozy: '🥰'};
+    
+    function storeMoodHistory(mood) {
+      const history = JSON.parse(localStorage.getItem('gga_mood_history') || '[]');
+      history.unshift(mood);
+      if (history.length > 7) history.pop();
+      localStorage.setItem('gga_mood_history', JSON.stringify(history));
+    }
+
+    let timerInterval=null,timerAwarded=false;
+    const ACTIVE_TIMER_SESSION_KEY = 'gga_active_timer_session';
+    const ACTIVE_TIMER_ACTIVITY_KEY = 'gga_active_timer_activity';
+    const ACTIVE_TIMER_START_TIME_KEY = 'gga_active_timer_start_time';
+    const ACTIVE_TIMER_DURATION_KEY = 'gga_active_timer_duration';
+    const ACTIVE_TIMER_LOCAL_KEY = 'gga_active_timer_local';
+    
+    function checkActiveTimer() {
+      let activeTimer = sessionStorage.getItem(ACTIVE_TIMER_SESSION_KEY);
+      let startTime = parseInt(sessionStorage.getItem(ACTIVE_TIMER_START_TIME_KEY) || '0', 10);
+      let duration = parseInt(sessionStorage.getItem(ACTIVE_TIMER_DURATION_KEY) || '0', 10);
+      let activity = sessionStorage.getItem(ACTIVE_TIMER_ACTIVITY_KEY);
+      if (!activeTimer || activeTimer !== '1') {
+        const localBackup = localStorage.getItem(ACTIVE_TIMER_LOCAL_KEY);
+        if (localBackup) {
+          try {
+            const backup = JSON.parse(localBackup);
+            activeTimer = '1';
+            startTime = backup.startTime;
+            duration = backup.duration;
+            activity = backup.activity;
+            sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '1');
+            sessionStorage.setItem(ACTIVE_TIMER_START_TIME_KEY, String(startTime));
+            sessionStorage.setItem(ACTIVE_TIMER_DURATION_KEY, String(duration));
+            sessionStorage.setItem(ACTIVE_TIMER_ACTIVITY_KEY, activity);
+          } catch (e) {
+            localStorage.removeItem(ACTIVE_TIMER_LOCAL_KEY);
+            return { active: false };
+          }
+        }
+      }
+      if (activeTimer === '1') {
+        if (startTime > 0 && duration > 0) {
+          const elapsed = Math.floor((Date.now() - startTime) / 1000);
+          const remaining = Math.max(0, (duration * 60) - elapsed);
+          if (remaining > 0) {
+            return { active: true, remaining, activity, duration };
+          }
+        }
+      }
+      return { active: false };
+    }
+    
+    window.startTimer=function(title,desc,minutes){
+      if(timerRunning)return;
+      if(timerInterval)return;
+      const activeCheck = checkActiveTimer();
+      if (activeCheck.active) {
+        showGemToast('⏱ Timer already running! Finish it first.');
+        return;
+      }
+      timerRunning = true;
+      const startTime = Date.now();
+      sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '1');
+      sessionStorage.setItem(ACTIVE_TIMER_START_TIME_KEY, String(startTime));
+      sessionStorage.setItem(ACTIVE_TIMER_DURATION_KEY, String(minutes));
+      sessionStorage.setItem(ACTIVE_TIMER_ACTIVITY_KEY, title);
+      localStorage.setItem(ACTIVE_TIMER_LOCAL_KEY, JSON.stringify({startTime, duration: minutes, activity: title}));
+      const modal=document.getElementById('timerModal');
+      document.getElementById('timerTitle').textContent=title;
+      document.getElementById('timerDesc').textContent=desc;
+      modal.classList.add('show');
+      timerAwarded=false;
+      let seconds=minutes*60;
+      const update=()=>{const m=Math.floor(seconds/60),s=seconds%60;document.getElementById('timerDisplay').textContent=`${m}:${s.toString().padStart(2,'0')}`;};
+      update();
+      if(timerInterval)clearInterval(timerInterval);
+      timerInterval=setInterval(()=>{
+        seconds--;
+        if(seconds<=0){
+          seconds=0;
+          update();
+          clearInterval(timerInterval);
+          timerInterval=null;
+          timerRunning = false;
+          sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '0');
+          sessionStorage.removeItem(ACTIVE_TIMER_START_TIME_KEY);
+          sessionStorage.removeItem(ACTIVE_TIMER_DURATION_KEY);
+          sessionStorage.removeItem(ACTIVE_TIMER_ACTIVITY_KEY);
+          localStorage.removeItem(ACTIVE_TIMER_LOCAL_KEY);
+          document.getElementById('timerDisplay').textContent='Complete! 💎';
+          if(!timerAwarded){timerAwarded=true;awardGem(title, minutes);}
+          return;
+        }
+        update();
+      },1000);
+    };
+    window.closeTimer=function(){
+      if(timerRunning && !timerAwarded){
+        showGemToast('⏱ Finish the timer to earn your gem');
+        return;
+      }
+      if(timerInterval)clearInterval(timerInterval);
+      timerInterval=null;
+      timerRunning = false;
+      timerAwarded=false;
+      sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '0');
+      sessionStorage.removeItem(ACTIVE_TIMER_START_TIME_KEY);
+      sessionStorage.removeItem(ACTIVE_TIMER_DURATION_KEY);
+      sessionStorage.removeItem(ACTIVE_TIMER_ACTIVITY_KEY);
+      localStorage.removeItem(ACTIVE_TIMER_LOCAL_KEY);
+      document.getElementById('timerModal').classList.remove('show');
+    };
+    window.closeTimerWithoutCheck=function(){
+      if(timerInterval)clearInterval(timerInterval);
+      timerInterval=null;
+      timerRunning = false;
+      timerAwarded=false;
+      sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '0');
+      sessionStorage.removeItem(ACTIVE_TIMER_START_TIME_KEY);
+      sessionStorage.removeItem(ACTIVE_TIMER_DURATION_KEY);
+      sessionStorage.removeItem(ACTIVE_TIMER_ACTIVITY_KEY);
+      localStorage.removeItem(ACTIVE_TIMER_LOCAL_KEY);
+      document.getElementById('timerModal').classList.remove('show');
+    };
+
+    function playChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=880;osc.type='sine';gain.gain.setValueAtTime(.2,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.01,ctx.currentTime+.5);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+.5);}catch(e){}}
+    function playSpecialChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<4;i++){setTimeout(()=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=523.25+(i*200);osc.type='sine';gain.gain.setValueAtTime(.15,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+1);},i*150);}}catch(e){}}
+
+    function getTodayDate(){const d=new Date();return d.toISOString().split('T')[0];}
+    function getChallengesData(){const d=localStorage.getItem('gga_habit_challenges_data');return d?JSON.parse(d):[];}
+    function setChallengesData(d){localStorage.setItem('gga_habit_challenges_data',JSON.stringify(d));}
+    function addChallenge(habit){
+      const challenges=getChallengesData();
+      if(challenges.find(c=>c.habit===habit)){showGemToast('⚠️ You are already tracking this challenge!');return;}
+      challenges.push({habit,lastMarkedDate:'',currentDay:0});
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function removeChallenge(idx){
+      const challenges=getChallengesData();
+      challenges.splice(idx,1);
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function markDay(habitIndex){
+      const challenges=getChallengesData();
+      if(!challenges[habitIndex]){return;}
+      const today=getTodayDate();
+      if(challenges[habitIndex].lastMarkedDate===today){showGemToast('⏰ You already marked today! Come back tomorrow to mark the next day.');return;}
+      challenges[habitIndex].currentDay++;
+      challenges[habitIndex].lastMarkedDate=today;
+      showGemToast(`🌟 Day ${challenges[habitIndex].currentDay} complete! Amazing work on "${challenges[habitIndex].habit}"!`);playChime();
+      if(challenges[habitIndex].currentDay===7){
+        showGemToast('🏆 7-DAY HABIT CHALLENGE COMPLETE! Choose your next challenge.');
+        playSpecialChime();
+        challenges.splice(habitIndex,1);
+      }
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function renderChallenges(){
+      const container=document.getElementById('challengesContainer');
+      const challenges=getChallengesData();
+      const today=getTodayDate();
+      const dayEmojis=['⭐','✨','💫','🌟','⚡','🔥','👑'];
+      const dayNames=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+      container.innerHTML='';
+      challenges.forEach((c,idx)=>{
+        const card=document.createElement('div');
+        card.style.cssText='margin-bottom:24px;padding:18px;background:white;border-radius:16px;border:3px solid var(--purple);box-shadow:0 4px 12px rgba(156,39,176,.15);position:relative;';
+        const header=document.createElement('div');
+        header.style.cssText='display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:8px;';
+        const title=document.createElement('h4');
+        title.textContent=c.habit;
+        title.style.cssText='margin:0;font-size:18px;font-weight:700;color:var(--ink);flex:1;';
+        const removeBtn=document.createElement('button');
+        removeBtn.type='button';
+        removeBtn.innerHTML='&times;';
+        removeBtn.title='Remove challenge';
+        removeBtn.style.cssText='background:none;border:none;font-size:22px;line-height:1;color:#aaa;cursor:pointer;padding:0 2px;flex-shrink:0;transition:color .2s;';
+        removeBtn.onmouseover=()=>{removeBtn.style.color='#e53935';};
+        removeBtn.onmouseout=()=>{removeBtn.style.color='#aaa';};
+        removeBtn.onclick=(e)=>{e.preventDefault();e.stopPropagation();removeChallenge(idx);};
+        header.appendChild(title);header.appendChild(removeBtn);
+        card.appendChild(header);
+        const tracker=document.createElement('div');
+        tracker.className='challenge-tracker';
+        for(let day=1;day<=7;day++){
+          const isCompleted=day<=c.currentDay;
+          const isToday=day===c.currentDay+1&&c.lastMarkedDate!==today;
+          const dayBox=document.createElement('button');
+          dayBox.type='button';
+          dayBox.className='challenge-day'+(isCompleted?' completed':isToday?' today':'');
+          dayBox.disabled=!isToday;
+          if(isToday){dayBox.onclick=(e)=>{e.preventDefault();e.stopPropagation();markDay(idx);};}
+          const num=document.createElement('div');num.className='challenge-day-num';num.textContent='Day '+day;
+          const emoji=document.createElement('div');emoji.className='challenge-day-emoji';emoji.textContent=dayEmojis[day-1];
+          const label=document.createElement('div');label.className='challenge-day-label';label.textContent=dayNames[day-1];
+          dayBox.appendChild(num);dayBox.appendChild(emoji);dayBox.appendChild(label);
+          tracker.appendChild(dayBox);
+        }
+        card.appendChild(tracker);
+        container.appendChild(card);
+      });
+    }
+    document.getElementById('challengeDropdown')?.addEventListener('change',function(){
+      const addBtn=document.getElementById('addChallengeBtn');
+      if(addBtn)addBtn.style.display=this.value?'block':'none';
+    });
+    document.getElementById('addChallengeBtn')?.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      const select=document.getElementById('challengeDropdown');
+      if(!select.value){showGemToast('⚠️ Choose a challenge first!');return;}
+      addChallenge(select.value);
+      select.value='';
+      this.style.display='none';
+    });
+
+    let currentAudio=null,currentCard=null,soundStopTimer=null;
+    function toggleSound(card){
+      const src=card.dataset.sound,badge=card.querySelector('.sound-playing-badge');
+      if(currentAudio&&currentCard===card){
+        currentAudio.pause();
+        currentAudio.currentTime=0;
+        currentAudio=null;
+        currentCard=null;
+        card.style.borderColor='rgba(233,30,99,.18)';
+        card.style.background='white';
+        card.style.transform='';
+        card.style.boxShadow='';
+        if(badge)badge.style.display='none';
+        if(soundStopTimer){clearTimeout(soundStopTimer);soundStopTimer=null;}
+        return;
+      }
+      if(currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime=0;
+        if(currentCard){
+          currentCard.style.borderColor='rgba(233,30,99,.18)';
+          currentCard.style.background='white';
+          currentCard.style.transform='';
+          currentCard.style.boxShadow='';
+          const pb=currentCard.querySelector('.sound-playing-badge');
+          if(pb)pb.style.display='none';
+        }
+      }
+      currentAudio=new Audio(src);
+      currentAudio.loop=true;
+      currentAudio.volume=0.6;
+      currentAudio.play().catch(err=>{showGemToast('🎵 Audio not available');card.style.opacity='0.5';currentAudio=null;});
+      currentCard=card;
+      if(soundStopTimer)clearTimeout(soundStopTimer);
+      soundStopTimer=setTimeout(()=>{
+        if(currentAudio){
+          currentAudio.pause();
+          currentAudio.currentTime=0;
+          currentAudio=null;
+        }
+        if(currentCard){
+          currentCard.style.borderColor='rgba(233,30,99,.18)';
+          currentCard.style.background='white';
+          currentCard.style.transform='';
+          currentCard.style.boxShadow='';
+          currentCard.style.opacity='1';
+          const pb=currentCard.querySelector('.sound-playing-badge');
+          if(pb)pb.style.display='none';
+          currentCard=null;
+        }
+        soundStopTimer=null;
+      },SOUND_DURATION_MS);
+      card.style.borderColor='var(--rose)';
+      card.style.background='linear-gradient(135deg,rgba(233,30,99,.08),white)';
+      card.style.transform='translateY(-4px)';
+      card.style.boxShadow='0 12px 28px rgba(233,30,99,.18)';
+      if(badge)badge.style.display='block';
+    }
+
+    const hamburgerBtn=document.getElementById('hamburgerBtn'),hamburgerBtnNav=document.getElementById('hamburgerBtnNav'),mobileMenu=document.getElementById('mobileMenu'),menuOverlay=document.getElementById('menuOverlay');
+    function toggleMobileMenu(){mobileMenu.classList.toggle('active');menuOverlay.classList.toggle('active');document.body.style.overflow=mobileMenu.classList.contains('active')?'hidden':'';}
+    hamburgerBtn?.addEventListener('click',toggleMobileMenu);hamburgerBtnNav?.addEventListener('click',toggleMobileMenu);menuOverlay?.addEventListener('click',toggleMobileMenu);
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(l=>l.addEventListener('click',toggleMobileMenu));
+
+    const backToTopBtn=document.getElementById('backToTopBtn');
+    window.addEventListener('scroll',()=>backToTopBtn.classList.toggle('show',window.scrollY>300));
+    backToTopBtn?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    document.addEventListener('DOMContentLoaded',async function(){
+      updateGemDisplay();
+      renderChallenges();
+      const activeCheck = checkActiveTimer();
+      if (activeCheck.active && activeCheck.remaining > 0) {
+        const activity = activeCheck.activity || 'Activity';
+        timerRunning = true;
+        const modal = document.getElementById('timerModal');
+        document.getElementById('timerTitle').textContent = activity;
+        document.getElementById('timerDesc').textContent = 'Resuming your activity...';
+        modal.classList.add('show');
+        timerAwarded = false;
+        let seconds = activeCheck.remaining;
+        const update = () => {
+          const m = Math.floor(seconds / 60);
+          const s = seconds % 60;
+          document.getElementById('timerDisplay').textContent = `${m}:${s.toString().padStart(2, '0')}`;
+        };
+        update();
+        if (timerInterval) clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+          seconds--;
+          if (seconds <= 0) {
+            seconds = 0;
+            update();
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerRunning = false;
+            sessionStorage.setItem(ACTIVE_TIMER_SESSION_KEY, '0');
+            sessionStorage.removeItem(ACTIVE_TIMER_START_TIME_KEY);
+            sessionStorage.removeItem(ACTIVE_TIMER_DURATION_KEY);
+            sessionStorage.removeItem(ACTIVE_TIMER_ACTIVITY_KEY);
+            localStorage.removeItem(ACTIVE_TIMER_LOCAL_KEY);
+            document.getElementById('timerDisplay').textContent = 'Complete! 💎';
+            if (!timerAwarded) {
+              timerAwarded = true;
+              awardGem(activity, activeCheck.duration || 0);
+            }
+            return;
+          }
+          update();
+        }, 1000);
+      }
+      setTimeout(() => {
+        const m = document.querySelector('[data-mood="happy"]');
+        if (m) m.click();
+      }, 500);
+    });
+  </script>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand"><div class="brand" style="color:#FFF;font-size:28px;"><span>💎</span><span>Gem Glow Academy</span></div><div class="tagline">Shine Bright, Build Strong!</div></div>
+        <div class="foot-col"><h4>Explore</h4><div class="foot-links"><a href="about-us.html">About Us</a><a href="privacy.html">Privacy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="support.html">Support</a></div></div>
+        <div class="foot-col"><h4>Contact</h4><div class="contact-pill" role="button" id="askQuestionBtn"><span>Ask a question</span><i class="fa-solid fa-arrow-right"></i></div><div class="foot-links" style="margin-top:14px;"><a href="#" aria-label="Instagram">Instagram</a><a href="palace.html" aria-label="My Palace">My Palace</a></div></div>
+      </div>
+      <div style="text-align:center;margin:10px 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);color:#F8BBD0;font-size:16px;">© 2026 Gem Glow Academy. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <h2 style="margin:0 0 12px;font-size:28px;color:var(--ink);">Get in Touch</h2>
+      <p style="margin:0 0 28px;color:var(--slate);font-size:17px;">Have a question or need support? We're here to help!</p>
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+        <div class="form-group"><label for="contactName">Name *</label><input type="text" id="contactName" name="name" required placeholder="Your name"></div>
+        <div class="form-group"><label for="contactEmail">Email *</label><input type="email" id="contactEmail" name="email" required placeholder="your@email.com"></div>
+        <div class="form-group"><label for="contactMessage">Message *</label><textarea id="contactMessage" name="message" required placeholder="How can we help you?"></textarea></div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openContactModal(){document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';}
+    function closeContactModal(){document.getElementById('contactModal').classList.remove('active');document.body.style.overflow='';document.getElementById('contactForm').reset();document.getElementById('formMessage').style.display='none';}
+    async function handleContactSubmit(event){
+      event.preventDefault();
+      const form = event.currentTarget;
+      const submitBtn = document.getElementById('submitBtn');
+      const messageDiv = document.getElementById('formMessage');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      messageDiv.style.display = 'none';
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value,
+            website: form.querySelector('[name="website"]')?.value || ''
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || 'Failed to send');
+        messageDiv.className = 'form-message success';
+        messageDiv.textContent = "✓ Message sent successfully. We'll get back to you soon.";
+        messageDiv.style.display = 'block';
+        setTimeout(() => closeContactModal(), 1800);
+      } catch (error) {
+        messageDiv.className = 'form-message error';
+        messageDiv.textContent = error.message || 'Failed to send. Please try again.';
+        messageDiv.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    }
+    document.getElementById('askQuestionBtn')?.addEventListener('click',openContactModal);
+    document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal();});
+  </script>
+
+</body>
+</html>

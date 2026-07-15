@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gem Glow Academy - Build Habits & Earn Gems</title>
+  <meta name="description" content="Gem Glow Academy helps children aged 9-12 build positive habits through engaging activities. Earn gems, unlock treasures, and discover your inner sparkle!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gemglowacademy.com/" />
+  <link rel="alternate" hreflang="en-us" href="https://www.gemglowacademy.com/" />
+  <meta property="og:title" content="Gem Glow Academy - Build Habits & Earn Gems" />
+  <meta property="og:description" content="Gem Glow Academy helps children aged 9-12 build positive habits through engaging activities. Earn gems, unlock treasures, and discover your inner sparkle!" />
+  <meta property="og:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta property="og:url" content="https://www.gemglowacademy.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gem Glow Academy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gem Glow Academy - Build Habits & Earn Gems" />
+  <meta name="twitter:description" content="Gem Glow Academy helps children aged 9-12 build positive habits through engaging activities. Earn gems, unlock treasures, and discover your inner sparkle!" />
+  <meta name="twitter:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta name="twitter:site" content="@gemglowacademy" />
+  <meta name="twitter:creator" content="@gemglowacademy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+
+
+
+
+
+    body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#FFF5F8 0%,#F3E5F5 100%);background-attachment:fixed;font-weight:400;position:relative;overflow-x:hidden;}
+    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,215,0,.03) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(233,30,99,.03) 0%,transparent 50%);pointer-events:none;z-index:0;}
+    .container{width:min(1120px,92vw);margin:auto;}
+    @keyframes diamondRain{0%{transform:translateY(-100px) rotate(0deg);opacity:1;}100%{transform:translateY(100vh) rotate(360deg);opacity:0;}}
+    .falling-diamond{position:fixed;font-size:22px;pointer-events:none;z-index:0;animation:diamondRain linear infinite;left:var(--left-pos);}
+
+    /* ── SIDE TABS ── */
+    
+
+    .gem-counter-title{font-size:11px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.4px;opacity:0;max-height:0;overflow:hidden;transition:all .3s;}
+    .gem-counter:hover .gem-counter-title{opacity:1;max-height:30px;}
+
+    /* ── FLOATING BTN ── */
+    .floating-sparkle-btn{position:fixed;bottom:24px;left:24px;z-index:9998;display:flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;border:3px solid var(--gold);background:white;box-shadow:0 12px 28px rgba(255,215,0,.25);cursor:pointer;transition:all .3s;font-family:inherit;}
+    .floating-sparkle-btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,215,0,.35);}
+    .fab-ic{font-size:18px;color:var(--gold);}
+    .fab-txt{font-weight:700;font-size:15px;color:var(--ink);}
+
+    .auth-btn{padding:9px 18px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:15px;display:flex;align-items:center;gap:7px;transition:all .3s;}
+    .auth-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,30,99,.3);}
+
+    /* ── CARDS / LAYOUT ── */
+    .card{background:white;border:2px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadowSoft);margin-bottom:32px;position:relative;overflow:hidden;}
+    .card::before{content:'';position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle,rgba(255,215,0,.05) 0%,transparent 70%);pointer-events:none;}
+    .card>*{position:relative;}
+    .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:14px;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(233,30,99,.3);transition:all .3s;}
+    .cta-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(233,30,99,.4);}
+
+    /* ── HOW IT WORKS GRID ── */
+    .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .how-step{text-align:center;}
+    .how-num{font-size:48px;margin:0 auto 14px;font-weight:700;}
+
+    /* ── WHY HABITS GRID ── */
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .why-card{padding:24px;border-radius:18px;border:3px solid;text-align:center;}
+
+    /* ── TREASURES ── */
+    .treasures-showcase{display:flex;align-items:flex-end;justify-content:center;gap:60px;flex-wrap:wrap;}
+    .treasure-item{text-align:center;}
+    @keyframes treasureBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+    .treasure-emoji{font-size:100px;margin-bottom:12px;animation:treasureBounce .8s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(233,30,99,.25));}
+    .treasure-item:nth-child(2) .treasure-emoji{animation-delay:.2s;}
+    .treasure-item:nth-child(3) .treasure-emoji{animation-delay:.4s;}
+    .treasure-label{font-size:17px;font-weight:700;color:var(--ink);}
+    .treasure-gems{font-size:15px;color:var(--slate);font-weight:600;}
+
+    /* ── INSIGHT CARDS ── */
+    .insight-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .insight-card{padding:26px;background:white;border:3px solid var(--line);border-radius:22px;transition:all .3s;display:flex;flex-direction:column;justify-content:space-between;min-height:300px;}
+    .insight-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(233,30,99,.2);border-color:var(--rose);}
+    .insight-icon{font-size:44px;margin-bottom:12px;}
+    .insight-card h3{margin:0 0 10px;font-size:21px;}
+    .insight-card p{margin:0;font-size:15px;color:var(--slate);line-height:1.6;}
+    .insight-btn{display:inline-block;margin-top:16px;padding:11px 18px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;transition:all .3s;align-self:flex-start;}
+    .insight-btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(233,30,99,.3);}
+
+    /* ── TESTIMONIAL SLIDER ── */
+    .slider-section-wrap{position:relative;max-width:640px;margin:0 auto;}
+    .slider-container{overflow:hidden;border-radius:24px;width:100%;}
+    .slider-wrapper{display:flex;transition:transform .5s ease-in-out;width:100%;}
+    .slide{min-width:100%;width:100%;flex-shrink:0;box-sizing:border-box;}
+    .testimonial-content{padding:36px 40px;background:white;border:3px solid var(--line);border-radius:24px;text-align:center;box-shadow:0 8px 24px rgba(233,30,99,.08);box-sizing:border-box;width:100%;}
+    .testimonial-content p{margin:0;font-size:17px;color:var(--slate);line-height:1.8;white-space:normal;word-break:break-word;overflow-wrap:anywhere;}
+    .slider-controls{display:flex;justify-content:center;gap:14px;margin-top:20px;}
+    .slider-btn{width:44px;height:44px;border-radius:50%;border:3px solid var(--rose);background:white;cursor:pointer;font-size:22px;font-weight:bold;color:var(--rose);transition:all .3s;display:flex;align-items:center;justify-content:center;line-height:1;}
+    .slider-btn:hover{background:var(--rose);color:white;}
+    .slider-dots{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap;}
+    .dot{width:11px;height:11px;border-radius:50%;background:var(--line);cursor:pointer;transition:all .3s;}
+    .dot.active{background:var(--rose);width:28px;border-radius:5px;}
+
+    /* ── CTA SECTION ── */
+    .cta-section{background:linear-gradient(135deg,rgba(233,30,99,.08),rgba(156,39,176,.08));border:3px solid var(--line);border-radius:28px;padding:50px 32px;text-align:center;margin-top:50px;}
+
+    /* ── MODALS ── */
+    .sign-in-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.95);backdrop-filter:blur(8px);z-index:2000;align-items:center;justify-content:center;padding:20px;}
+    .sign-in-modal.active{display:flex;}
+    .sign-in-content{background:white;border-radius:36px;padding:36px 24px;max-width:420px;width:100%;box-shadow:0 24px 80px rgba(156,39,176,.4);text-align:center;}
+    @keyframes modalSlideIn{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+    .sign-in-content{animation:modalSlideIn .3s ease;}
+    .sign-in-icon{font-size:38px;margin-bottom:10px;}
+    .sign-in-content h2{margin:0 0 8px;font-size:26px;}
+    .sign-in-content p{margin:0 0 20px;color:var(--slate);font-size:16px;line-height:1.6;}
+    .sign-in-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+    .sign-in-btn{padding:13px 16px;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;border:none;}
+    .sign-up-btn{background:linear-gradient(135deg,var(--rose),var(--pink));color:white;box-shadow:0 8px 24px rgba(233,30,99,.3);}
+    .sign-up-btn:hover{transform:translateY(-3px);}
+    .sign-in-btn-outline{background:white;color:var(--rose);border:3px solid var(--rose);}
+    .sign-in-btn-outline:hover{background:rgba(233,30,99,.05);}
+    .sign-in-close{padding:8px 16px;background:transparent;color:var(--slate);border:none;cursor:pointer;font-size:14px;font-weight:600;text-decoration:underline;}
+    .sign-in-close:hover{color:var(--rose);}
+
+    .roulette-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);padding:20px;}
+    .roulette-modal.show{display:flex;}
+    .roulette-content{background:white;border-radius:22px;border:3px solid var(--gold);padding:32px 24px;max-width:520px;width:100%;box-shadow:0 20px 60px rgba(255,215,0,.3);text-align:center;position:relative;}
+    .roulette-wheel-container{position:relative;width:260px;height:260px;margin:24px auto;}
+    .roulette-wheel{width:100%;height:100%;border-radius:50%;border:5px solid var(--gold);background:conic-gradient(#FF6B9D 0deg 45deg,#F06292 45deg 90deg,#9C27B0 90deg 135deg,#4ECDC4 135deg 180deg,#BA68C8 180deg 225deg,#FFD700 225deg 270deg,#87CEEB 270deg 315deg,#E91E63 315deg 360deg);box-shadow:0 0 0 6px white,0 12px 40px rgba(255,215,0,.3);}
+    .roulette-wheel.spinning{animation:spin 3s cubic-bezier(.17,.67,.12,.99);}
+    .roulette-pointer{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:28px solid var(--rose);filter:drop-shadow(0 4px 8px rgba(233,30,99,.3));z-index:10;}
+    .roulette-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:5;}
+    .glow-start-btn{padding:14px 24px;border-radius:14px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;font-weight:700;font-size:16px;transition:all .3s ease;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);margin-top:8px;}
+    .glow-start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+    .roulette-btn{padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--ink);border:none;cursor:pointer;border-radius:12px;font-weight:700;font-size:17px;box-shadow:0 6px 16px rgba(255,215,0,.3);transition:all .3s;margin-top:14px;}
+    .roulette-btn:hover{transform:translateY(-2px);}
+    .roulette-btn:disabled{opacity:.5;cursor:not-allowed;}
+    .roulette-result{margin-top:20px;padding:18px;background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(233,30,99,.1));border-radius:16px;border:2px solid var(--gold);display:none;}
+    .roulette-result.show{display:block;}
+    .roulette-result-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:8px;}
+    .roulette-result-activity{font-size:16px;color:var(--slate);margin-bottom:0;}
+    .modal-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--slate);transition:all .2s;}
+    .modal-x:hover{background:rgba(233,30,99,.08);border-color:var(--rose);}
+    /* Timer Modal */
+    .timer-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .timer-modal.show{display:flex;}
+    .timer-content{background:white;border-radius:24px;border:3px solid var(--rose);padding:40px;max-width:500px;width:90%;box-shadow:0 20px 60px rgba(233,30,99,.3);text-align:center;position:relative;}
+    .timer-content h3{margin:0 0 12px;font-size:28px;color:var(--rose);font-weight:700;}
+    .timer-content p{margin:0 0 24px;font-size:17px;color:var(--slate);line-height:1.6;}
+    .timer-display{font-size:72px;font-weight:700;color:var(--rose);margin:24px 0;letter-spacing:-2px;font-family:monospace;}
+    .timer-close{padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:16px;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);transition:all .3s ease;}
+    .timer-close:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+
+    /* contact modal */
+    .contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{background:white;border-radius:22px;padding:40px 28px;max-width:520px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);position:relative;animation:modalSlideIn .3s ease;}
+    .modal-close{position:absolute;top:16px;right:16px;background:transparent;border:none;font-size:26px;color:var(--muted);cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:all .2s;}
+    .modal-close:hover{background:var(--line);color:var(--ink);}
+    .contact-modal h2{margin:0 0 10px;font-size:28px;}
+    .contact-modal p{margin:0 0 24px;color:var(--slate);font-size:17px;}
+    .contact-form{display:flex;flex-direction:column;gap:18px;}
+    .form-group{display:flex;flex-direction:column;gap:7px;}
+    .form-group label{font-weight:600;color:var(--ink);font-size:15px;}
+    .form-group input,.form-group textarea{padding:12px 14px;border:2px solid var(--line);border-radius:11px;font-family:inherit;font-size:15px;color:var(--ink);transition:all .2s;}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(233,30,99,.1);}
+    .form-group textarea{resize:vertical;min-height:110px;}
+    .form-submit{padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:11px;font-size:17px;font-weight:700;cursor:pointer;transition:all .3s;margin-top:8px;}
+    .form-submit:hover{transform:translateY(-2px);}
+    .form-message{padding:14px;border-radius:10px;font-size:15px;font-weight:600;margin-top:12px;display:none;}
+    .form-message.success{background:rgba(34,197,94,.1);color:#16a34a;border:2px solid rgba(34,197,94,.3);display:block;}
+    .form-message.error{background:rgba(239,68,68,.1);color:#dc2626;border:2px solid rgba(239,68,68,.3);display:block;}
+
+
+    @media(max-width:968px){
+      .nav-links{display:none;}
+      .nav-actions{display:none;}
+      .hamburger-btn{display:block;}
+    }
+    @media(max-width:768px){
+
+      /* My Palace tab — flush + out 20% */
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:15px;padding:12px 12px;}
+
+      /* Gem counter */
+      .gem-counter-inner{width:48px;padding:10px;}
+      .gem-counter-amount{font-size:16px;}
+      .gem-icon{font-size:18px;}
+
+      /* floating btn */
+      .floating-sparkle-btn{left:14px;bottom:14px;padding:10px 12px;}
+      .fab-txt{display:none;}
+
+      /* hero */
+      h1.hero-heading{font-size:42px;}
+
+      /* how it works: 4→2 cols */
+      .how-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+      .how-num{font-size:36px;}
+
+      /* why habits: 3→1 */
+      .why-grid{grid-template-columns:1fr;gap:16px;}
+
+      /* insight cards: 3→1 */
+      .insight-cards{grid-template-columns:1fr;}
+      .insight-card{min-height:unset;}
+
+      /* treasures */
+      .treasures-showcase{gap:30px;}
+      .treasure-emoji{font-size:70px;}
+
+
+      /* sign in modal */
+      .sign-in-buttons{grid-template-columns:1fr;}
+
+      .card{padding:18px;}
+      .cta-section{padding:36px 20px;}
+
+      /* ── TESTIMONIALS MOBILE ── */
+      .testimonial-content{padding:22px 16px;border-radius:20px;}
+      .testimonial-content p{font-size:14px;line-height:1.7;}
+      .slider-btn{width:40px;height:40px;font-size:20px;}
+      .slider-controls{gap:10px;margin-top:16px;}
+      .slider-dots{gap:8px;margin-top:14px;}
+      .dot{width:9px;height:9px;}
+      .dot.active{width:22px;}
+    }
+    @media(max-width:480px){
+      /* Dashboard tab smaller */
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:14px;padding:12px 10px;}
+
+      h1.hero-heading{font-size:34px;}
+
+      /* ── TESTIMONIALS SMALL MOBILE ── */
+      .testimonial-content{padding:20px 14px;border-radius:16px;border-width:2px;}
+      .testimonial-content p{font-size:13px;}
+      .slider-btn{width:36px;height:36px;font-size:17px;border-width:2px;}
+    }
+  
+    /* ── Sound Lounge ── */
+    @media(max-width:980px){
+      .sound-lounge-grid{grid-template-columns:repeat(2,1fr) !important;}
+    }
+    @media(max-width:720px){
+      .sound-lounge-grid{grid-template-columns:1fr !important;}
+    }
+  </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/assets/supabase-config.js"></script>
+<script src="/assets/js/auth.js"></script>
+</head>
+
+<body>
+  <script>
+    function createFallingDiamonds(){
+      setInterval(()=>{
+        const d=document.createElement('div');
+        d.className='falling-diamond';d.textContent='💎';
+        const l=Math.random()*100,dur=15+Math.random()*10,delay=Math.random()*2;
+        d.style.setProperty('--left-pos',l+'%');
+        d.style.animationDuration=dur+'s';d.style.animationDelay=delay+'s';
+        document.body.appendChild(d);
+        setTimeout(()=>d.remove(),(dur+delay)*1000);
+      },400);
+    }
+    createFallingDiamonds();
+
+
+  </script>
+
+  <!-- Dashboard Tab -->
+  <div class="dashboard-tab palace-link" id="palaceTab" style="display:none;"><a href="palace.html" aria-label="My Palace"><span>💎</span><span>My Palace</span></a></div>
+
+  <div class="gem-counter" id="gemCounter">
+    <div class="gem-counter-inner">
+      <div class="gem-counter-amount"><span class="gem-icon">💎</span><span class="gem-total-number" id="gemTotal">0</span></div>
+      <div class="gem-progress"><div class="gem-progress-bar" id="gemProgressBar" style="height:0%"></div></div>
+      <div class="gem-milestone" id="gemMilestone">Next: Ring at 50</div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-home ic-home"></i> Home</a>
+    <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+    <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+    <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+    <a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring ic-support"></i> Support</a>
+    <a class="nav-link" id="signOutBtnMobile" style="display:flex;cursor:pointer;"><i class="fa-solid fa-spinner fa-spin"></i></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <picture>
+  <source srcset="assets/logo-96.webp" type="image/webp">
+  <img src="assets/logo-96.png" alt="Gem Glow Academy logo" width="85" height="85" onerror="this.style.display='none'">
+</picture>
+        <span>Gem Glow</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+        <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+        <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn" id="authBtn" type="button" style="display:flex;padding:10px 20px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:16px;align-items:center;gap:8px;"><i class="fa-solid fa-spinner fa-spin"></i></button>
+        <button class="hamburger-btn" id="hamburgerBtnNav" aria-label="Open menu" style="margin-left:12px;"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section style="padding:70px 0 50px;">
+      <div class="container" style="text-align:center;">
+        <h1 class="hero-heading" style="font-size:64px;margin:0 0 28px;text-shadow:2px 2px 4px rgba(233,30,99,.2);">Shine Bright, Build Strong!</h1>
+        <p style="font-size:20px;color:var(--slate);line-height:1.8;margin-bottom:28px;font-weight:500;max-width:660px;margin-left:auto;margin-right:auto;">
+          Welcome to Gem Glow Academy where building positive habits becomes a magical adventure! Earn dazzling gems, unlock treasures, and discover the amazing person you're meant to be.
+        </p>
+        <div id="heroPricingContainer">
+          <button class="cta-btn" onclick="startCheckout(window.GGA_PRICES.monthly)">
+            <i class="fa-solid fa-sparkles"></i> Get Started for £3.99
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section style="padding:50px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(156,39,176,.08),white);">
+          <div style="text-align:center;margin-bottom:32px;">
+            <h2 style="font-size:36px;margin:0 0 12px;color:var(--purple);">How Gem Glow Academy Works 🏆</h2>
+          </div>
+          <div class="how-grid">
+            <div class="how-step">
+              <div class="how-num" style="color:var(--rose);">1</div>
+              <h4 style="margin:0 0 10px;font-size:18px;">Choose a Path</h4>
+              <p style="margin:0;font-size:15px;color:var(--slate);">Pick from Habits, Calm, or Leadership.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-num" style="color:var(--purple);">2</div>
+              <h4 style="margin:0 0 10px;font-size:18px;">Start an Activity</h4>
+              <p style="margin:0;font-size:15px;color:var(--slate);">Choose an activity and start the timer.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-num" style="color:var(--mint);">3</div>
+              <h4 style="margin:0 0 10px;font-size:18px;">Complete It</h4>
+              <p style="margin:0;font-size:15px;color:var(--slate);">Finish when the timer reaches zero.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-num" style="color:var(--gold);">4</div>
+              <h4 style="margin:0 0 10px;font-size:18px;">Earn Your Gem</h4>
+              <p style="margin:0;font-size:15px;color:var(--slate);">Collect gems and unlock treasures!</p>
+            </div>
+          </div>
+          <div style="background:rgba(255,215,0,.1);padding:20px;border-radius:14px;border-left:4px solid var(--gold);text-align:center;margin-top:24px;">
+            <p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">💎 <strong>Pro Tip:</strong> Build a 7-day streak to earn bonus gems and unlock milestone rewards! ✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Build Habits -->
+    <section style="padding:50px 0;">
+      <div class="container">
+        <div class="card">
+          <div style="text-align:center;margin-bottom:32px;">
+            <h2 style="font-size:36px;margin:0 0 12px;">Why Build Positive Habits? 🌱</h2>
+            <p style="font-size:18px;color:var(--slate);">Habits are like tiny seeds you plant every day. With care and consistency, they grow into something truly amazing!</p>
+          </div>
+          <div class="why-grid">
+            <div class="why-card" style="background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(255,255,255,.95));border-color:rgba(255,107,157,.25);">
+              <div style="font-size:44px;margin-bottom:14px;">🧠</div>
+              <h3 style="margin:0 0 10px;font-size:19px;">Stronger Mind</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Positive habits build confidence, focus, and mental strength. You become better at handling challenges!</p>
+            </div>
+            <div class="why-card" style="background:linear-gradient(135deg,rgba(156,39,176,.08),rgba(255,255,255,.95));border-color:rgba(156,39,176,.25);">
+              <div style="font-size:44px;margin-bottom:14px;">❤️</div>
+              <h3 style="margin:0 0 10px;font-size:19px;">Healthier You</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">Good habits — like moving your body, staying hydrated, and getting rest — help you feel amazing every day.</p>
+            </div>
+            <div class="why-card" style="background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(255,255,255,.95));border-color:rgba(78,205,196,.25);">
+              <div style="font-size:44px;margin-bottom:14px;">🌟</div>
+              <h3 style="margin:0 0 10px;font-size:19px;">Better Life</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.6;">When you build positive habits, you become the person you want to be. Your future gets brighter!</p>
+            </div>
+          </div>
+          <div style="margin-top:24px;padding:20px;background:rgba(255,215,0,.08);border-radius:14px;border:2px solid var(--gold);text-align:center;">
+            <p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">✨ <strong>Remember:</strong> You don't need to be perfect. Every small step counts. Your effort is what matters!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treasures -->
+    <section style="padding:50px 0;">
+      <div class="container" style="text-align:center;">
+        <h2 style="font-size:40px;margin:0 0 14px;">Unlock Magical Treasures 🎁</h2>
+        <p style="font-size:18px;color:var(--slate);max-width:640px;margin:0 auto 50px;">Your gems are the key to incredible rewards. The more you build positive habits, the more treasures you unlock!</p>
+        <div class="treasures-showcase">
+          <div class="treasure-item">
+            <div class="treasure-emoji">💍</div>
+            <div class="treasure-label">Ring</div>
+            <div class="treasure-gems">50 gems</div>
+          </div>
+          <div class="treasure-item">
+            <div class="treasure-emoji">👑</div>
+            <div class="treasure-label">Crown</div>
+            <div class="treasure-gems">150 gems</div>
+          </div>
+          <div class="treasure-item">
+            <div class="treasure-emoji">🏰</div>
+            <div class="treasure-label">Palace</div>
+            <div class="treasure-gems">300 gems</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Paths -->
+    <section style="padding:50px 0;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:40px;">
+          <h2 style="font-size:40px;margin:0 0 14px;">Explore Your Journey 🌟</h2>
+          <p style="font-size:18px;color:var(--slate);max-width:640px;margin:0 auto;">Three incredible paths await you, each specially designed to help you grow in different ways!</p>
+        </div>
+        <div class="insight-cards">
+          <div class="insight-card">
+            <div>
+              <div class="insight-icon" style="color:#50C878;"><i class="fa-solid fa-gem"></i></div>
+              <h3>Emerald Eden</h3>
+              <p>Build amazing habits that stick! Learn morning routines, exercise rituals, and daily practices that transform your life.</p>
+            </div>
+            <a href="emerald-eden.html" class="insight-btn">Enter Emerald Eden →</a>
+          </div>
+          <div class="insight-card">
+            <div>
+              <div class="insight-icon" style="color:#0F52BA;"><i class="fa-solid fa-gem"></i></div>
+              <h3>Sapphire Sanctuary</h3>
+              <p>Discover calm and peace within. Guided relaxation, mindfulness exercises, and mood-matched activities for inner serenity.</p>
+            </div>
+            <a href="sapphire-sanctuary.html" class="insight-btn">Enter Sapphire Sanctuary →</a>
+          </div>
+          <div class="insight-card">
+            <div>
+              <div class="insight-icon" style="color:#E0115F;"><i class="fa-solid fa-gem"></i></div>
+              <h3>Ruby Rise</h3>
+              <p>Become your best self! Develop confidence, leadership skills, and personal power. Learn to believe in yourself and inspire others.</p>
+            </div>
+            <a href="ruby-rise.html" class="insight-btn">Enter Ruby Rise →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sound Lounge -->
+    <section style="padding:50px 0;background:linear-gradient(135deg,rgba(156,39,176,.05),rgba(255,255,255,.9));">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:40px;">
+          <h2 style="font-size:40px;margin:0 0 14px;color:var(--purple);">🎵 Sound Lounges</h2>
+          <p style="font-size:18px;color:var(--slate);max-width:640px;margin:0 auto;">Immersive soundscapes to help you focus, relax, and feel your best. Choose a vibe and let the music work its magic!</p>
+        </div>
+        <div class="sound-lounge-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto;">
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(78,205,196,.12),white);border:3px solid rgba(78,205,196,.4);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(78,205,196,.2)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">🌊</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Ocean Calm</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Gentle waves and sea breezes to wash away worries and bring deep calm.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(78,205,196,.15);border-radius:20px;font-size:13px;font-weight:700;color:#2B9E96;">🎧 Calm &amp; Focus</div>
+          </div>
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(156,39,176,.12),white);border:3px solid rgba(156,39,176,.4);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(156,39,176,.2)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">🌙</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Dreamy Stars</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Soft ambient tones and gentle melodies perfect for winding down at bedtime.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(156,39,176,.15);border-radius:20px;font-size:13px;font-weight:700;color:var(--purple);">🌙 Wind Down</div>
+          </div>
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(255,215,0,.12),white);border:3px solid rgba(255,215,0,.5);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(255,215,0,.25)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">⚡</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Energy Boost</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Upbeat rhythms and bright sounds to fire you up and get you ready to shine!</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(255,215,0,.2);border-radius:20px;font-size:13px;font-weight:700;color:#B8860B;">⚡ Energise</div>
+          </div>
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(233,30,99,.1),white);border:3px solid rgba(233,30,99,.3);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(233,30,99,.2)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">🌸</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Blossom Garden</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Birdsong and nature sounds to spark joy and creativity in your day.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(233,30,99,.1);border-radius:20px;font-size:13px;font-weight:700;color:var(--rose);">🌸 Joyful</div>
+          </div>
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(135,206,235,.15),white);border:3px solid rgba(135,206,235,.5);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(135,206,235,.3)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">🌧️</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Rainy Day</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Cosy rain and soft thunder for deep concentration and study sessions.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(135,206,235,.2);border-radius:20px;font-size:13px;font-weight:700;color:#4A90A4;">📚 Study Mode</div>
+          </div>
+          <div style="padding:28px 22px;background:linear-gradient(135deg,rgba(255,107,157,.1),white);border:3px solid rgba(255,107,157,.4);border-radius:22px;text-align:center;transition:all .3s ease;cursor:pointer;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(255,107,157,.2)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+            <div style="font-size:52px;margin-bottom:14px;">✨</div>
+            <h3 style="margin:0 0 10px;font-size:20px;color:var(--ink);">Sparkle Magic</h3>
+            <p style="margin:0 0 16px;font-size:14px;color:var(--slate);line-height:1.6;">Dreamy chimes and magical tones for creative activities and journalling.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:rgba(255,107,157,.15);border-radius:20px;font-size:13px;font-weight:700;color:var(--coral);">✨ Creative</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px;">
+          <p style="font-size:15px;color:var(--muted);font-style:italic;">🎵 Sound Lounges available inside each gem room — sign in to start listening!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="padding:50px 0;">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:40px;">
+          <h2 style="font-size:40px;margin:0 0 14px;">What People Are Saying ⭐</h2>
+          <p style="font-size:18px;color:var(--slate);max-width:640px;margin:0 auto;">Real stories from kids and parents discovering the magic of Gem Glow!</p>
+        </div>
+        <div class="slider-section-wrap">
+          <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>I actually enjoy my morning routine now! Building habits is so much fun when you get gems. Already unlocked the Ring 🎉</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Emma, 10</div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>The calm activities actually help when I'm anxious. Sapphire Sanctuary is like my chill zone. Love it so much!</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Zara, 11</div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>The roulette wheel is so fun! I try activities I'd never pick on my own, and some are now my favourites 😍</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Poppy, 10</div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>My daughter went from avoiding routines to asking when she can do her next activity. Total game-changer for our family.</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Sarah's Mum</div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>I unlocked the Crown and I'm SO proud! My friends think it's cool I'm becoming my best self 👑</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Isla, 9</div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="testimonial-content">
+                  <div style="font-size:32px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+                  <p>She struggles with ADHD and routines. Gem Glow has genuinely helped her stay on track. Game-changer for our family.</p>
+                  <div style="font-size:13px;font-weight:700;color:var(--ink);margin-top:16px;">Lisa's Mum</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevSlide">&#8249;</button>
+            <button class="slider-btn" id="nextSlide">&#8250;</button>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding:50px 0 70px;">
+      <div class="container">
+        <div class="cta-section">
+          <h2 style="font-size:36px;margin:0 0 12px;">Ready to Shine Bright? 🌟</h2>
+          <p style="margin:0 0 28px;font-size:18px;color:var(--slate);">Join thousands of children building amazing habits and unlocking their inner sparkle!</p>
+          <div id="ctaPricingContainer">
+            <button class="cta-btn" onclick="startCheckout(window.GGA_PRICES.monthly)">
+                <i class="fa-solid fa-sparkles"></i> Start Your Adventure Today
+            </button>
+          </div>
+          <p style="margin-top:20px;font-size:15px;color:var(--slate);">Already have an account? <a href="sign-in.html" style="color:var(--rose);font-weight:700;">Sign in here →</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Daily Sparkle Button -->
+  <button class="floating-sparkle-btn" id="dailySparkleFab" onclick="openRoulette()" type="button" aria-label="Open activity roulette">
+    <span class="fab-ic">✨</span>
+    <span class="fab-txt">Spin the Wheel!</span>
+  </button>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Roulette Modal -->
+  <div class="roulette-modal" id="rouletteModal">
+    <div class="roulette-content">
+      <button class="modal-x" onclick="closeRoulette()">×</button>
+      <h2 style="font-size:26px;color:var(--gold);margin:0 0 10px;">🎡 Activity Roulette!</h2>
+      <p style="font-size:16px;color:var(--slate);margin:0 0 16px;">Spin the wheel and let fate choose your next adventure!</p>
+      <div class="roulette-wheel-container">
+        <div class="roulette-pointer"></div>
+        <div class="roulette-wheel" id="rouletteWheel">
+          <div class="roulette-center"><button class="roulette-btn" id="rouletteSpinBtn" style="width:90px;padding:8px 10px;font-size:13px;border-radius:999px;">Spin!</button></div>
+        </div>
+      </div>
+      <div class="roulette-result" id="rouletteResult">
+        <div class="roulette-result-title" id="rouletteResultTitle"></div>
+        <div class="roulette-result-activity" id="rouletteResultActivity"></div>
+        <button class="glow-start-btn" id="rouletteStartBtn" onclick="handleRouletteStart()">Start This Activity ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timer Modal -->
+  <div class="timer-modal" id="timerModal">
+    <div class="timer-content">
+      <button class="modal-x" onclick="closeTimer()" aria-label="Close">×</button>
+      <h3 id="timerTitle"></h3>
+      <p id="timerDesc"></p>
+      <p style="margin:0 0 16px;color:var(--slate);font-size:14px;line-height:1.5;">💎 Your gem is earned when the timer reaches 0. Stay with it!</p>
+      <div class="timer-display" id="timerDisplay">0:00</div>
+      <button class="timer-close" onclick="closeTimer()">Close</button>
+    </div>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div class="container" id="bottomPricingContainer">
+    <div class="sign-in-buttons" style="max-width:420px;margin:0 auto;">
+      <button
+        class="sign-in-btn sign-up-btn"
+        onclick="startCheckout(window.GGA_PRICES.monthly)">
+        Sign Up
+      </button>
+
+      <button
+        class="sign-in-btn sign-in-btn-outline"
+        onclick="window.location.href='sign-in.html'">
+        Sign In
+      </button>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="modal-close" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h2>Get in Touch</h2>
+      <p>Have a question or need support? We're here to help!</p>
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+        <div class="form-group">
+          <label for="contactName">Name *</label>
+          <input type="text" id="contactName" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email *</label>
+          <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Message *</label>
+          <textarea id="contactMessage" name="message" required placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div id="contactMsg" class="form-message"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand">
+          <div class="brand" style="display:flex;align-items:center;gap:8px;font-family:'Pacifico',cursive;font-size:22px;color:#FFF;">
+            <span>💎</span><span>Gem Glow Academy</span>
+          </div>
+          <div class="tagline">Shine Bright, Build Strong!</div>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <div class="foot-links">
+            <a href="about-us.html">About Us</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms-and-conditions.html">Terms</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <div class="contact-pill" id="askQuestionBtn">
+            <span>Ask a question</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="foot-links" style="margin-top:12px;">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="profile.html" aria-label="Profile">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);color:#F8BBD0;font-size:15px;">
+        © 2026 Gem Glow Academy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── SLIDER ──
+    document.addEventListener('DOMContentLoaded', function(){
+      let currentSlide=0;
+      const slides=document.querySelectorAll('.slide');
+      const totalSlides=slides.length;
+      const wrapper=document.getElementById('sliderWrapper');
+      const dotsContainer=document.getElementById('sliderDots');
+      if(!wrapper||!totalSlides) return;
+      for(let i=0;i<totalSlides;i++){
+        const dot=document.createElement('div');
+        dot.className='dot'+(i===0?' active':'');
+        dot.onclick=()=>goToSlide(i);
+        dotsContainer.appendChild(dot);
+      }
+      function updateSlider(){
+        wrapper.style.transform=`translateX(-${currentSlide*100}%)`;
+        document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===currentSlide));
+      }
+      document.getElementById('nextSlide').onclick=()=>{currentSlide=(currentSlide+1)%totalSlides;updateSlider();};
+      document.getElementById('prevSlide').onclick=()=>{currentSlide=(currentSlide-1+totalSlides)%totalSlides;updateSlider();};
+      function goToSlide(n){currentSlide=n;updateSlider();}
+      setInterval(()=>{currentSlide=(currentSlide+1)%totalSlides;updateSlider();},5000);
+
+      // ── SWIPE SUPPORT ──
+      let touchStartX=0;
+      const container=document.querySelector('.slider-container');
+      container.addEventListener('touchstart',e=>{touchStartX=e.touches[0].clientX;},{passive:true});
+      container.addEventListener('touchend',e=>{
+        const diff=touchStartX-e.changedTouches[0].clientX;
+        if(Math.abs(diff)>40){
+          if(diff>0) currentSlide=(currentSlide+1)%totalSlides;
+          else currentSlide=(currentSlide-1+totalSlides)%totalSlides;
+          updateSlider();
+        }
+      },{passive:true});
+    });
+
+    // ── PROTECTED CLICKS ──
+    let protectedCounts={dashboard:0,gem:0,roulette:0};
+    const THRESHOLD=2;
+    async function handleProtectedClick(event,action){
+      event.preventDefault();
+      const status = await checkMembershipStatus();
+      if (action === 'roulette' && !status.isMember) { openRoulette(); return; }
+      if (status.role === 'child' && status.isMember) { location.href = action === 'dashboard' ? 'dashboard.html' : 'palace.html'; return; }
+      if (status.role === 'parent' && status.isMember) { location.href = 'child-login.html'; return; }
+      if (status.role === 'parent') { location.href = 'profile.html'; return; }
+      location.href = 'sign-in.html';
+    }
+    function showSignInModal(){ window.location.href = "sign-in.html"; }
+
+    // ── BACK TO TOP ──
+    const btt=document.getElementById('backToTopBtn');
+    window.addEventListener('scroll',()=>btt.classList.toggle('show',window.scrollY>300));
+    btt?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // ── ROULETTE ──
+    const ALL_ACTIVITIES=[{icon:'🌅',title:"Morning Stretch",mins:3,desc:"Wake up your body with gentle stretches."},{icon:'🛏️',title:"Bed Making Magic",mins:2,desc:"Make your bed — the first accomplishment of your day!"},{icon:'💧',title:"Water First",mins:1,desc:"Drink a glass of water first thing in the morning."},{icon:'💌',title:"Compliment Someone",mins:2,desc:"Give a genuine compliment to someone today!"},{icon:'🤝',title:"Help Without Asking",mins:5,desc:"Look for ways to help at home without being asked."},{icon:'📔',title:"Gratitude Journal",mins:4,desc:"Write 3 things you're grateful for."},{icon:'🌟',title:"Thanks Before Bed",mins:3,desc:"Think of 3 good things that happened today."},{icon:'💪',title:"Movement Joy",mins:8,desc:"Move your body in a way you enjoy!"},{icon:'🧘',title:"Mindful Breathing",mins:5,desc:"Sit quietly and just breathe."},{icon:'🌸',title:"Self-Care Check",mins:4,desc:"Have you eaten? Had water? Stretched? Rested?"},{icon:'📖',title:"Journal Time",mins:5,desc:"Write about your day and how you're feeling."},{icon:'🧘‍♀️',title:"Calm Breathing",mins:3,desc:"Sit comfortably and breathe slowly. In for 4, out for 6."}];
+    let currentRouletteActivity=null,lastActivityIndex=-1,isSpinning=false;
+    function openRoulette(){document.getElementById('rouletteModal').classList.add('show');document.getElementById('rouletteResult').classList.remove('show');}
+    function closeRoulette(){document.getElementById('rouletteModal').classList.remove('show');isSpinning=false;}
+    function spinRoulette(){if(isSpinning)return;isSpinning=true;const wheel=document.getElementById('rouletteWheel'),spinBtn=document.getElementById('rouletteSpinBtn'),result=document.getElementById('rouletteResult');spinBtn.disabled=true;result.classList.remove('show');let ni;do{ni=Math.floor(Math.random()*ALL_ACTIVITIES.length);}while(ni===lastActivityIndex&&ALL_ACTIVITIES.length>1);lastActivityIndex=ni;currentRouletteActivity=ALL_ACTIVITIES[ni];const deg=360/ALL_ACTIVITIES.length,offset=Math.random()*deg,tr=(ni*deg)+offset+1080;wheel.style.transform='rotate(0deg)';wheel.classList.add('spinning');playChime();setTimeout(()=>{wheel.classList.remove('spinning');wheel.style.transform=`rotate(${tr}deg)`;document.getElementById('rouletteResultTitle').textContent=`${currentRouletteActivity.icon} ${currentRouletteActivity.title}`;document.getElementById('rouletteResultActivity').textContent=currentRouletteActivity.desc;result.classList.add('show');spinBtn.disabled=false;isSpinning=false;playSpecialChime();},3000);}
+    function handleRouletteStart(){if(currentRouletteActivity){closeRoulette();startTimer(currentRouletteActivity.title,currentRouletteActivity.desc,currentRouletteActivity.mins);}}
+    // ── TIMER ──
+    let timerInterval=null;
+    window.startTimer=function(title,desc,minutes){if(timerInterval)return;const modal=document.getElementById('timerModal');document.getElementById('timerTitle').textContent=title;document.getElementById('timerDesc').textContent=desc;modal.classList.add('show');let seconds=minutes*60;const update=()=>{const m=Math.floor(seconds/60),s=seconds%60;document.getElementById('timerDisplay').textContent=`${m}:${s.toString().padStart(2,'0')}`;};update();timerInterval=setInterval(()=>{seconds--;if(seconds<=0){seconds=0;update();clearInterval(timerInterval);timerInterval=null;document.getElementById('timerDisplay').textContent='Complete! 💎';return;}update();},1000);};
+    window.closeTimer=function(){if(timerInterval)clearInterval(timerInterval);timerInterval=null;document.getElementById('timerModal').classList.remove('show');};
+    function playChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=880;osc.type='sine';gain.gain.setValueAtTime(.2,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.01,ctx.currentTime+.5);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+.5);}catch(e){}}
+    function playSpecialChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<4;i++){setTimeout(()=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=523.25+(i*200);osc.type='sine';gain.gain.setValueAtTime(.15,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+1);},i*150);}}catch(e){}}
+    document.getElementById('rouletteSpinBtn')?.addEventListener('click',spinRoulette);
+
+    // ── GEM COUNTER ──
+    function updateGemCount(){
+      const count=['habits','feelings','leadership'].reduce((a,s)=>a+(parseInt(localStorage.getItem('gga_gems_'+s)||'0',10)||0),0);
+      const el=document.getElementById('gemTotal');if(el)el.textContent=count;
+    }
+    updateGemCount();
+
+    // ── CONTACT MODAL ──
+    function openContactModal(){document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';}
+    function closeContactModal(){document.getElementById('contactModal').classList.remove('active');document.body.style.overflow='';document.getElementById('contactForm').reset();document.getElementById('contactMsg').style.display='none';}
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const form=e.currentTarget,btn=form.querySelector('button[type="submit"]'),msg=document.getElementById('contactMsg');
+      btn.disabled=true;btn.textContent='Sending…';msg.textContent='';msg.className='form-message';
+      try{
+        const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+          name:form.name.value,email:form.email.value,message:form.message.value,website:form.querySelector('[name="website"]')?.value||''
+        })});
+        const data=await response.json().catch(()=>({}));
+        if(!response.ok)throw new Error(data.error||'Something went wrong.');
+        msg.className='form-message success';msg.textContent="✓ Message sent. We'll get back to you soon.";form.reset();
+      }catch(error){msg.className='form-message error';msg.textContent=error.message||'Network error. Please try again.'}
+      finally{btn.disabled=false;btn.textContent='Send Message'}
+    }
+    document.getElementById('askQuestionBtn')?.addEventListener('click',openContactModal);
+    document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal();});
+  
+    // ── MOBILE MENU ──
+    const hamburgerBtn=document.getElementById('hamburgerBtn'),hamburgerBtnNav=document.getElementById('hamburgerBtnNav'),mobileMenu=document.getElementById('mobileMenu'),menuOverlay=document.getElementById('menuOverlay');
+    function toggleMobileMenu(){mobileMenu.classList.toggle('active');menuOverlay.classList.toggle('active');document.body.style.overflow=mobileMenu.classList.contains('active')?'hidden':'';}
+    hamburgerBtn?.addEventListener('click',toggleMobileMenu);hamburgerBtnNav?.addEventListener('click',toggleMobileMenu);menuOverlay?.addEventListener('click',toggleMobileMenu);
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(l=>l.addEventListener('click',toggleMobileMenu));
+
+    function handleSignUp(){
+  startCheckout(window.GGA_PRICES.monthly);
+}
+
+    (async () => {
+      try {
+        const status = await checkMembershipStatus();
+        if (!status.isMember) return;
+        const isChild = status.role === 'child';
+        const href = isChild ? 'dashboard.html' : 'profile.html';
+        const label = isChild ? 'Go to my dashboard' : 'Open family account';
+        const icon = isChild ? 'fa-gem' : 'fa-user-gear';
+        ['heroPricingContainer','ctaPricingContainer','bottomPricingContainer'].forEach(id => {
+          const container=document.getElementById(id);if(!container)return;
+          container.innerHTML=`<a href="${href}" class="cta-btn" style="text-decoration:none;${id==='bottomPricingContainer'?'max-width:420px;width:100%;display:inline-flex;justify-content:center;':''}"><i class="fa-solid ${icon}"></i> ${label}</a>`;
+        });
+      } catch (error) { console.error('Membership display failed',error); }
+    })();
+  </script>
+</body>
+</html>

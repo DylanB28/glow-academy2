@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sapphire Sanctuary - Emotions | Gem Glow Academy</title>
+  <meta name="description" content="Understand your feelings, find calm, and build emotional strength in Sapphire Sanctuary!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gemglowacademy.com/sapphire-sanctuary.html" />
+  <link rel="alternate" hreflang="en-us" href="https://www.gemglowacademy.com/sapphire-sanctuary.html" />
+  <meta property="og:title" content="Sapphire Sanctuary - Emotions | Gem Glow Academy" />
+  <meta property="og:description" content="Understand your feelings, find calm, and build emotional strength in Sapphire Sanctuary!" />
+  <meta property="og:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta property="og:url" content="https://www.gemglowacademy.com/sapphire-sanctuary.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gem Glow Academy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sapphire Sanctuary - Emotions | Gem Glow Academy" />
+  <meta name="twitter:description" content="Understand your feelings, find calm, and build emotional strength in Sapphire Sanctuary!" />
+  <meta name="twitter:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta name="twitter:site" content="@gemglowacademy" />
+  <meta name="twitter:creator" content="@gemglowacademy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    /* Page-specific variable overrides */
+    :root {
+      --sapphire-light: #4169E1;
+      --shadow:     0 12px 30px rgba(15,82,186,.15);
+      --shadowSoft: 0 10px 24px rgba(15,82,186,.10);
+    }
+    body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#FFF5F8 0%,#F3E5F5 100%);background-attachment:fixed;font-weight:400;}
+    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,215,0,.03) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(233,30,99,.03) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(156,39,176,.02) 0%,transparent 50%);pointer-events:none;z-index:0;}
+    .container{width:min(1120px,92vw);margin:auto}
+
+    .sparkle{display:inline-block;animation:sparkle 2s ease-in-out infinite;color:#0F52BA;filter:drop-shadow(0 0 6px #0F52BA);}
+
+
+
+
+
+    main{min-height:55vh;padding-bottom:80px;}
+
+    /* Cards */
+    .card{background:white;border:2px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadowSoft);margin-bottom:40px;position:relative;overflow:hidden;}
+    .card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,215,0,.05) 0%,transparent 70%);pointer-events:none;}
+    .card>*{position:relative;}
+    .card h2{margin:0 0 16px;font-size:32px;color:var(--ink);font-weight:700;}
+    .card h3{margin:0 0 12px;font-size:24px;}
+    .card p{margin:0 0 16px;font-size:19px;color:var(--slate);}
+
+    /* Mood Selector */
+    .glow-mood-block{padding:24px 0;margin-bottom:40px;}
+    .glow-mood-shell{padding:28px;border-radius:var(--radius);border:2px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(252,228,236,.3));box-shadow:var(--shadowSoft);}
+    .glow-mood-head h3{margin:0 0 8px;font-size:26px;color:var(--rose);font-weight:700;}
+    .glow-mood-head p{margin:0;color:var(--slate);font-weight:500;font-size:17px;}
+    .glow-mood-row{margin:20px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;padding:10px 0;}
+    .glow-mood-item{display:grid;justify-items:center;gap:12px;padding:24px 16px;border-radius:20px;border:3px solid var(--line);background:white;cursor:pointer;user-select:none;transition:all .3s ease;min-height:200px;}
+    .glow-mood-item:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(233,30,99,.15);border-color:var(--pink);}
+    .glow-mood-item.active{border-color:var(--rose);background:linear-gradient(135deg,rgba(233,30,99,.12),rgba(255,255,255,.95));box-shadow:0 12px 28px rgba(233,30,99,.25);}
+    .glow-mood-emoji{font-size:56px;line-height:1;filter:drop-shadow(0 4px 8px rgba(233,30,99,.1));}
+    .glow-mood-label{font-weight:700;color:var(--ink);font-size:17px;text-align:center;}
+    .glow-mood-relatable{font-size:13px;color:var(--slate);font-weight:500;text-align:center;font-style:italic;}
+    .glow-activities-wrap{margin:24px 0 0;display:none;}
+    .glow-activities-wrap.show{display:block;}
+    .glow-activities-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+    .glow-tasks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .glow-task-card{padding:24px;border:3px solid var(--line);border-radius:20px;background:white;transition:all .3s ease;display:flex;flex-direction:column;position:relative;min-height:100%;}
+    .glow-task-time{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--gold);padding-bottom:12px;margin-bottom:12px;border-bottom:2px solid var(--gold);}
+    .glow-task-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .glow-task-icon{font-size:36px;flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(233,30,99,.2));}
+    .glow-task-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);border-color:var(--rose);}
+    .glow-task-content{flex:1;display:flex;flex-direction:column;}
+    .glow-task-content h4{margin:0 0 8px;font-size:22px;font-weight:700;color:var(--ink);}
+    .glow-task-content p{margin:0 0 auto;font-size:18px;color:var(--slate);line-height:1.65;padding-bottom:16px;}
+    .glow-start-btn{padding:14px 24px;border-radius:14px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;font-weight:700;font-size:16px;transition:all .3s ease;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);margin-top:auto;}
+    .glow-start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+
+
+    /* Glow Path Cards */
+    .glow-path-card{padding:32px 28px;border-radius:20px;border:3px solid transparent;cursor:pointer;transition:all .3s ease;position:relative;background:white;}
+    .glow-path-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);}
+    .glow-path-card.morning{border-color:rgba(255,107,157,.2);background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(255,255,255,.95));}
+    .glow-path-card.morning:hover{border-color:var(--coral);}
+    .glow-path-card.kindness{border-color:rgba(240,98,146,.2);background:linear-gradient(135deg,rgba(240,98,146,.08),rgba(255,255,255,.95));}
+    .glow-path-card.kindness:hover{border-color:var(--pink);}
+    .glow-path-card.gratitude{border-color:rgba(156,39,176,.2);background:linear-gradient(135deg,rgba(156,39,176,.08),rgba(255,255,255,.95));}
+    .glow-path-card.gratitude:hover{border-color:var(--purple);}
+    .glow-path-card.wellness{border-color:rgba(78,205,196,.2);background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(255,255,255,.95));}
+    .glow-path-card.wellness:hover{border-color:var(--mint);}
+
+    /* Sound Cards */
+    .sound-card:hover{transform:translateY(-4px) !important;box-shadow:0 12px 28px rgba(15,82,186,.15) !important;}
+    .sound-playing-badge{display:none;position:absolute;top:10px;right:10px;width:10px;height:10px;border-radius:50%;background:var(--sapphire);animation:sparkle 1s ease-in-out infinite;}
+
+    /* Floating Button */
+    .floating-sparkle-btn{position:fixed;bottom:30px;left:30px;z-index:9998;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;border:3px solid var(--gold);background:white;box-shadow:0 14px 30px rgba(255,215,0,.25);cursor:pointer;transition:all .3s ease;font-family:inherit;}
+    .floating-sparkle-btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,215,0,.35);}
+    .floating-sparkle-btn .fab-ic{font-size:20px;color:var(--gold);}
+    .floating-sparkle-btn .fab-txt{font-weight:700;font-size:16px;color:var(--ink);}
+
+    /* Gem Toast */
+    .gem-toast{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2000;display:none;background:white;border:3px solid var(--gold);border-radius:20px;padding:28px 32px;box-shadow:0 22px 50px rgba(255,215,0,.35);min-width:400px;max-width:92vw;}
+    .gem-toast-content{display:flex;align-items:center;gap:16px;}
+    .gem-toast-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--amber));display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(255,215,0,.3);}
+    .gem-toast-text{flex:1;}
+    .gem-toast-title{font-weight:700;font-size:20px;color:var(--ink);margin-bottom:4px;}
+    .gem-toast-subtitle{font-size:16px;color:var(--slate);font-weight:500;}
+    .gem-toast-close{background:transparent;border:none;color:var(--slate);font-size:24px;cursor:pointer;padding:4px 8px;opacity:.7;}
+    .gem-toast-close:hover{opacity:1;}
+
+    /* Timer Modal */
+    .timer-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .timer-modal.show{display:flex;}
+    .timer-content{background:white;border-radius:24px;border:3px solid var(--rose);padding:40px;max-width:500px;width:90%;box-shadow:0 20px 60px rgba(233,30,99,.3);text-align:center;position:relative;}
+    .timer-content h3{margin:0 0 12px;font-size:28px;color:var(--rose);font-weight:700;}
+    .timer-content p{margin:0 0 24px;font-size:17px;color:var(--slate);line-height:1.6;}
+    .timer-display{font-size:72px;font-weight:700;color:var(--rose);margin:24px 0;letter-spacing:-2px;font-family:monospace;}
+    .timer-close{padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:16px;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);transition:all .3s ease;}
+    .timer-close:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+    .modal-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:999px;border:2px solid var(--line);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:var(--slate);transition:all .2s ease;z-index:10;}
+    .modal-x:hover{background:rgba(233,30,99,.08);border-color:var(--rose);transform:scale(1.1);}
+
+    /* 7-Day Challenge */
+    .challenge-tracker{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:0;}
+    .challenge-day{padding:20px 12px;border-radius:16px;border:3px solid var(--line);background:white;text-align:center;transition:all .3s ease;cursor:not-allowed;font-family:inherit;}
+    .challenge-day.today{border-color:var(--sapphire);background:linear-gradient(135deg,rgba(15,82,186,.08),white);cursor:pointer;}
+    .challenge-day.today:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(15,82,186,.15);}
+    .challenge-day.completed{border-color:var(--gold);background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,255,255,.95));}
+    .challenge-day-num{font-size:14px;font-weight:700;color:var(--slate);margin-bottom:8px;}
+    .challenge-day-emoji{font-size:32px;margin-bottom:8px;filter:grayscale(100%);opacity:.3;transition:all .3s ease;}
+    .challenge-day.completed .challenge-day-emoji,.challenge-day.today .challenge-day-emoji{filter:grayscale(0%);opacity:1;}
+    .challenge-day-label{font-size:12px;font-weight:600;color:var(--slate);}
+
+    /* Roulette */
+    .roulette-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .roulette-modal.show{display:flex;}
+    .roulette-content{background:white;border-radius:24px;border:3px solid var(--gold);padding:24px;max-width:500px;width:95%;box-shadow:0 20px 60px rgba(255,215,0,.3);text-align:center;position:relative;}
+    .roulette-wheel-container{position:relative;width:240px;height:240px;margin:20px auto;}
+    .roulette-wheel{width:100%;height:100%;border-radius:50%;border:5px solid var(--gold);background:conic-gradient(var(--coral) 0deg 45deg,var(--pink) 45deg 90deg,var(--purple) 90deg 135deg,var(--mint) 135deg 180deg,var(--lavender) 180deg 225deg,var(--gold) 225deg 270deg,var(--sky) 270deg 315deg,var(--rose) 315deg 360deg);box-shadow:0 0 0 8px white,0 12px 40px rgba(255,215,0,.3);transition:transform .5s ease;}
+    .roulette-wheel.spinning{animation:spin 3s cubic-bezier(.17,.67,.12,.99);}
+    .roulette-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:35px solid var(--rose);z-index:10;}
+    .roulette-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:5;}
+    .roulette-result{margin-top:20px;padding:18px;background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(233,30,99,.1));border-radius:16px;border:2px solid var(--gold);display:none;}
+    .roulette-result.show{display:block;}
+    .roulette-result-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:8px;}
+    .roulette-result-activity{font-size:16px;color:var(--slate);margin-bottom:16px;}
+    .roulette-btn{padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--ink);border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:17px;margin-top:12px;transition:all .3s ease;}
+    .roulette-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,215,0,.4);}
+    .roulette-btn:disabled{opacity:.5;cursor:not-allowed;}
+
+    /* Contact Modal */
+    .contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{background:white;border-radius:24px;padding:48px;max-width:580px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);position:relative;}
+    .modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;}
+    .modal-close:hover{background:var(--line);color:var(--ink);}
+    .contact-form{display:flex;flex-direction:column;gap:20px;}
+    .form-group{display:flex;flex-direction:column;gap:8px;}
+    .form-group label{font-weight:600;color:var(--ink);font-size:16px;}
+    .form-group input,.form-group textarea{padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit;font-size:16px;color:var(--ink);transition:all .2s ease;}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(233,30,99,.1);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-submit{padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:12px;}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,30,99,.3);}
+    .form-message{padding:16px;border-radius:12px;font-size:16px;font-weight:600;margin-top:16px;display:none;}
+    .form-message.success{background:rgba(34,197,94,.1);color:#16a34a;border:2px solid rgba(34,197,94,.3);display:block;}
+    .form-message.error{background:rgba(239,68,68,.1);color:#dc2626;border:2px solid rgba(239,68,68,.3);display:block;}
+
+
+    /* ══ TABLET (≤980px) ══ */
+    @media(max-width:968px){
+      #hamburgerBtn{display:block;}
+      #hamburgerBtnNav{display:none;}
+      .nav-links{display:none;}
+      .nav-actions{display:none;}
+      .brand{font-size:25px;}
+      .brand img{width:70px;height:70px;}
+      .glow-tasks-grid{grid-template-columns:1fr;}
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);}
+      .sound-library-grid{grid-template-columns:repeat(3,1fr) !important;}
+      .inline-2col{grid-template-columns:1fr !important;}
+      .inline-3col{grid-template-columns:1fr !important;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+
+    /* ══ MOBILE (≤768px) ══ */
+    @media(max-width:768px){
+      .container{width:94vw;}
+      main{padding-bottom:80px;}
+      section{padding-top:24px !important;padding-bottom:24px !important;}
+      h1{font-size:38px !important;}
+      h2,.card h2{font-size:22px !important;}
+      h3{font-size:18px !important;}
+      p{font-size:16px !important;}
+      .card{padding:18px;margin-bottom:24px;}
+      .card p{font-size:16px !important;}
+
+      /* Triage box */
+      #triageContainer{padding:0;}
+
+      /* Neuro-hacks grid */
+      .neuro-grid{grid-template-columns:1fr !important;gap:14px !important;}
+
+      /* Mood selector */
+      .glow-mood-shell{padding:18px;}
+      .glow-mood-row{grid-template-columns:repeat(2,1fr);gap:10px;}
+      .glow-mood-item{min-height:120px;padding:14px 10px;gap:8px;}
+      .glow-mood-emoji{font-size:36px;}
+      .glow-mood-label{font-size:14px;}
+      .glow-mood-relatable{font-size:11px;}
+
+      /* Activity cards */
+      .glow-tasks-grid{grid-template-columns:1fr;gap:14px;}
+      .glow-task-card{padding:16px;}
+      .glow-task-content h4{font-size:18px !important;}
+      .glow-task-content p{font-size:15px !important;}
+
+      /* Sound grid */
+      .sound-library-grid{grid-template-columns:repeat(2,1fr) !important;gap:12px !important;}
+
+      /* Glow paths */
+      .inline-2col{grid-template-columns:1fr !important;gap:14px !important;}
+      .inline-3col{grid-template-columns:1fr !important;gap:14px !important;}
+      .glow-path-card{padding:20px 16px;}
+
+      /* Triage options */
+      .triage-options-grid{grid-template-columns:1fr !important;gap:8px !important;}
+
+      /* Challenge tracker */
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);gap:8px;}
+      .challenge-day{padding:10px 6px;}
+      .challenge-day-num{font-size:11px;}
+      .challenge-day-emoji{font-size:22px;margin-bottom:4px;}
+      .challenge-day-label{font-size:10px;}
+
+      /* Roulette */
+      .roulette-content{width:96vw !important;max-width:96vw !important;padding:18px 14px;}
+      .roulette-wheel-container{width:180px;height:180px;}
+
+      /* Timer */
+      .timer-content{width:94vw !important;padding:24px 16px;}
+      .timer-display{font-size:52px !important;}
+
+      /* Gem toast */
+      .gem-toast{min-width:unset;width:90vw;padding:18px;}
+
+      /* Fixed elements */
+      .floating-sparkle-btn{left:14px;bottom:18px;padding:12px 14px;}
+      .floating-sparkle-btn .fab-txt{display:none;}
+      .back-to-top{bottom:18px;right:14px;width:42px;height:42px;font-size:18px;}
+      .gem-counter-inner{width:48px;padding:10px;}
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:15px;padding:12px 12px;}
+      .gem-counter-amount{font-size:16px;}
+      .gem-icon{font-size:18px;}
+
+      /* Footer */
+      .contact-pill{max-width:100%;}
+      footer{padding:36px 0;margin-top:40px;}
+
+      /* Voice journal */
+      .voice-journal-btns{flex-direction:column !important;}
+      .voice-journal-btns button{width:100% !important;}
+    }
+
+    /* ══ SMALL PHONES (≤540px) ══ */
+    @media(max-width:540px){
+      .container{width:96vw;}
+      .card{padding:14px;}
+      h1{font-size:30px !important;}
+      h2,.card h2{font-size:20px !important;}
+      .glow-mood-row{grid-template-columns:1fr;}
+      .glow-mood-item{min-height:auto;display:flex;flex-direction:row;align-items:center;text-align:left;padding:12px 14px;gap:12px;}
+      .glow-mood-emoji{font-size:28px;flex-shrink:0;}
+      .challenge-tracker{grid-template-columns:1fr !important;gap:6px;}
+      .challenge-day{text-align:left;display:flex;align-items:center;gap:12px;padding:12px 16px;}
+      .challenge-day-emoji{margin-bottom:0;flex-shrink:0;}
+      .challenge-day-num,.challenge-day-label{margin-bottom:0;}
+      .challenge-day-emoji{font-size:20px;}
+      .sound-library-grid{grid-template-columns:1fr !important;}
+      .timer-display{font-size:44px !important;}
+      .triage-options-grid{grid-template-columns:1fr !important;}
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:14px;padding:12px 10px;}
+    }
+    .challenge-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;}
+    .challenge-row select{width:100%;box-sizing:border-box;}
+    @media(max-width:480px){
+      .challenge-row{grid-template-columns:1fr;}
+      .challenge-row button{width:100%;}
+    }
+    .select-wrap{position:relative;}
+    .select-wrap::after{content:'';position:absolute;right:16px;top:50%;width:8px;height:8px;transform:translateY(-75%) rotate(45deg);border-right:2.5px solid #777;border-bottom:2.5px solid #777;pointer-events:none;}
+    .select-wrap select{appearance:none;-webkit-appearance:none;}
+  </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/assets/js/config.js"></script>
+<script src="/assets/supabase-config.js"></script>
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/supabase-progress.js"></script>
+</head>
+
+<body>
+  <div class="dashboard-tab palace-link" id="palaceTab" style="display:none;"><a href="palace.html" aria-label="My Palace"><span>💎</span><span>My Palace</span></a></div>
+
+  <div class="gem-counter" id="gemCounter">
+    <div class="gem-counter-inner">
+      <div class="gem-counter-amount">
+        <span class="gem-icon">💎</span>
+        <span class="gem-total-number" id="gemTotal">0</span>
+      </div>
+      <div class="gem-progress"><div class="gem-progress-bar" id="gemProgressBar" style="height:0%"></div></div>
+      <div class="gem-milestone" id="gemMilestone">Next: Ring at 50</div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-home ic-home"></i> Home</a>
+    <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+    <a class="nav-link active" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+    <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+    <a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring ic-support"></i> Support</a>
+    <a class="nav-link" id="signOutBtnMobile" style="display:flex;cursor:pointer;"><i class="fa-solid fa-spinner fa-spin"></i></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <picture>
+  <source srcset="assets/logo-96.webp" type="image/webp">
+  <img src="assets/logo-96.png" alt="Gem Glow Academy logo" width="85" height="85" onerror="this.style.display='none'">
+</picture>
+        <span>Gem Glow</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+        <a class="nav-link active" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+        <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn" id="authBtn" type="button" style="display:flex;padding:10px 20px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:16px;align-items:center;gap:8px;"><i class="fa-solid fa-spinner fa-spin"></i></button>
+        <button class="hamburger-btn" id="hamburgerBtnNav" aria-label="Open menu" style="margin-left:12px;"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section style="padding:35px 0 40px;position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,rgba(15,82,186,.03),transparent);"></div>
+      <div class="container">
+        <div style="max-width:750px;margin:0 auto;text-align:center;">
+          <div style="margin-bottom:20px;"><i class="fa-solid fa-gem sparkle" style="font-size:64px;"></i></div>
+          <h1 style="font-size:72px;margin:0 0 20px;font-weight:500;color:#0F52BA;">Sapphire Sanctuary</h1>
+          <p style="font-size:22px;color:var(--slate);line-height:1.5;font-weight:600;margin-bottom:18px;">Your safe space to understand and care for your feelings</p>
+          <p style="font-size:17px;color:var(--muted);line-height:1.6;max-width:680px;margin:0 auto 28px;">In Sapphire Sanctuary, you'll learn to recognize emotions, find calm when you need it, and build emotional strength. Every feeling matters, and you deserve to feel peaceful and understood.</p>
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:linear-gradient(135deg,rgba(15,82,186,.15),rgba(65,105,225,.15));border:3px solid var(--sapphire);border-radius:18px;margin-bottom:28px;">
+            <span style="font-size:28px;">💎</span>
+            <span style="font-weight:700;font-size:18px;color:var(--ink);">Find calm = Earn gems!</span>
+          </div>
+        </div>
+
+        <!-- Emotional Wellness Triage -->
+        <div style="max-width:900px;margin:0 auto;background:white;border-radius:24px;padding:32px;box-shadow:0 12px 40px rgba(15,82,186,.15);border:3px solid rgba(15,82,186,.2);">
+          <div style="text-align:center;margin-bottom:24px;">
+            <h2 style="font-size:28px;color:var(--sapphire);margin:0 0 10px;font-weight:700;">🌊 Let's Find Your Perfect Calm</h2>
+            <p style="font-size:16px;color:var(--slate);margin:0;">4 quick questions to guide you to what you need most right now 💙</p>
+          </div>
+          <div id="triageContainer">
+            <div id="triageWelcome" style="text-align:center;padding:32px 20px;">
+              <div style="font-size:64px;margin-bottom:16px;">🌸</div>
+              <h3 style="font-size:24px;color:var(--sapphire);margin:0 0 14px;">Hi there, beautiful soul!</h3>
+              <p style="font-size:18px;color:var(--slate);line-height:1.6;margin:0 0 28px;">Let's figure out exactly what kind of calm you need today.</p>
+              <button onclick="startTriage()" style="padding:16px 32px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));color:white;border:none;border-radius:16px;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(15,82,186,.3);">Let's Begin ✨</button>
+            </div>
+            <div id="triageQ1" style="display:none;">
+              <div style="display:flex;gap:14px;margin-bottom:20px;align-items:start;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💙</div>
+                <div style="background:rgba(15,82,186,.08);padding:14px 18px;border-radius:16px;flex:1;"><p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">How do you WANT to feel right now?</p></div>
+              </div>
+              <div class="triage-options-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+                <button class="triage-option" onclick="answerTriage(1,'peaceful')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">😌 Peaceful & calm</button>
+                <button class="triage-option" onclick="answerTriage(1,'happy')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">😊 Happy & light</button>
+                <button class="triage-option" onclick="answerTriage(1,'grounded')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">🌍 Grounded & steady</button>
+                <button class="triage-option" onclick="answerTriage(1,'free')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">🕊️ Free & unburdened</button>
+              </div>
+            </div>
+            <div id="triageQ2" style="display:none;">
+              <div style="display:flex;gap:14px;margin-bottom:14px;align-items:start;justify-content:flex-end;">
+                <div style="background:var(--sapphire);padding:12px 18px;border-radius:16px;color:white;"><p style="margin:0;font-size:16px;font-weight:600;" id="answer1Text"></p></div>
+                <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--lavender),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✨</div>
+              </div>
+              <div style="display:flex;gap:14px;margin-bottom:20px;align-items:start;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💙</div>
+                <div style="background:rgba(15,82,186,.08);padding:14px 18px;border-radius:16px;flex:1;"><p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">I hear you 💙 What's your energy like right now?</p></div>
+              </div>
+              <div class="triage-options-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+                <button class="triage-option" onclick="answerTriage(2,'low')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">😴 Low - feeling tired or drained</button>
+                <button class="triage-option" onclick="answerTriage(2,'high')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">⚡ High - restless or buzzing</button>
+              </div>
+            </div>
+            <div id="triageQ3" style="display:none;">
+              <div style="display:flex;gap:14px;margin-bottom:14px;align-items:start;justify-content:flex-end;">
+                <div style="background:var(--sapphire);padding:12px 18px;border-radius:16px;color:white;"><p style="margin:0;font-size:16px;font-weight:600;" id="answer2Text"></p></div>
+                <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--lavender),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✨</div>
+              </div>
+              <div style="display:flex;gap:14px;margin-bottom:20px;align-items:start;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💙</div>
+                <div style="background:rgba(15,82,186,.08);padding:14px 18px;border-radius:16px;flex:1;"><p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">Got it! How does your body feel?</p></div>
+              </div>
+              <div class="triage-options-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+                <button class="triage-option" onclick="answerTriage(3,'tense')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">😣 Tense or tight</button>
+                <button class="triage-option" onclick="answerTriage(3,'relaxed')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">😌 Relaxed or loose</button>
+              </div>
+            </div>
+            <div id="triageQ4" style="display:none;">
+              <div style="display:flex;gap:14px;margin-bottom:14px;align-items:start;justify-content:flex-end;">
+                <div style="background:var(--sapphire);padding:12px 18px;border-radius:16px;color:white;"><p style="margin:0;font-size:16px;font-weight:600;" id="answer3Text"></p></div>
+                <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--lavender),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✨</div>
+              </div>
+              <div style="display:flex;gap:14px;margin-bottom:20px;align-items:start;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💙</div>
+                <div style="background:rgba(15,82,186,.08);padding:14px 18px;border-radius:16px;flex:1;"><p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;">Perfect! Last one - what would help you most?</p></div>
+              </div>
+              <div class="triage-options-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+                <button class="triage-option" onclick="answerTriage(4,'stillness')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">🧘 Stillness & quiet</button>
+                <button class="triage-option" onclick="answerTriage(4,'movement')" style="padding:16px;background:white;border:3px solid var(--line);border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;text-align:left;transition:all .2s;">💨 Movement & release</button>
+              </div>
+            </div>
+            <div id="triageResult" style="display:none;">
+              <div style="display:flex;gap:14px;margin-bottom:16px;align-items:start;justify-content:flex-end;">
+                <div style="background:var(--sapphire);padding:12px 18px;border-radius:16px;color:white;"><p style="margin:0;font-size:16px;font-weight:600;" id="answer4Text"></p></div>
+                <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--lavender),var(--pink));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✨</div>
+              </div>
+              <div style="display:flex;gap:14px;margin-bottom:24px;align-items:start;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💙</div>
+                <div style="background:rgba(15,82,186,.08);padding:14px 18px;border-radius:16px;flex:1;"><p style="margin:0;font-size:17px;color:var(--ink);font-weight:600;" id="triageMessage"></p></div>
+              </div>
+              <div style="text-align:center;padding:28px 20px;background:linear-gradient(135deg,rgba(15,82,186,.08),rgba(135,206,235,.05));border-radius:16px;margin-bottom:16px;">
+                <div style="font-size:56px;margin-bottom:14px;" id="resultEmoji"></div>
+                <h3 style="font-size:24px;color:var(--sapphire);margin:0 0 10px;font-weight:700;" id="resultTitle"></h3>
+                <p style="font-size:16px;color:var(--slate);margin:0 0 20px;line-height:1.6;" id="resultDesc"></p>
+                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                  <button onclick="showCalmPath()" style="padding:14px 28px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));color:white;border:none;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;">Show Me Activities ✨</button>
+                  <button onclick="resetTriage()" style="padding:14px 28px;background:white;color:var(--sapphire);border:3px solid var(--sapphire);border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;">Start Over</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brain-Science Calm Hacks -->
+    <section style="padding:40px 0;background:linear-gradient(135deg,rgba(15,82,186,.05),rgba(135,206,235,.03));">
+      <div class="container">
+        <div style="max-width:950px;margin:0 auto;">
+          <h2 style="text-align:center;font-size:32px;color:var(--sapphire);margin-bottom:12px;">🧠 Brain-Science Calm Hacks</h2>
+          <p style="text-align:center;font-size:17px;color:var(--slate);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">These simple tricks actually change what's happening in your brain to help you feel calm and in control!</p>
+<div class="neuro-grid glow-tasks-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+  <!-- 5-4-3-2-1 Grounding -->
+  <div class="glow-task-card">
+    <div class="glow-task-time">
+      <i class="fa-solid fa-clock"></i> 3 min
+    </div>
+    <div class="glow-task-header">
+      <div class="glow-task-icon">🌊</div>
+    </div>
+    <div class="glow-task-content">
+      <h4>5-4-3-2-1 Grounding</h4>
+      <p>
+        Notice 5 things you see, 4 you touch, 3 you hear, 2 you smell,
+        1 you taste. This pulls your brain back into the present moment.
+      </p>
+      <button class="glow-start-btn"
+        onclick="startActivityWithGating(
+          '5-4-3-2-1 Grounding',
+          'Name 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste. Stay present until the timer ends.',
+          3
+        )">
+        Start Activity ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- Box Breathing -->
+  <div class="glow-task-card">
+    <div class="glow-task-time">
+      <i class="fa-solid fa-clock"></i> 4 min
+    </div>
+    <div class="glow-task-header">
+      <div class="glow-task-icon">💨</div>
+    </div>
+    <div class="glow-task-content">
+      <h4>Box Breathing</h4>
+      <p>
+        Breathe in for 4, hold for 4, out for 4, hold for 4.
+        This activates your calm nervous system instantly.
+      </p>
+      <button class="glow-start-btn"
+        onclick="startActivityWithGating(
+          'Box Breathing',
+          'Breathe in 4, hold 4, out 4, hold 4. Repeat slowly and gently until the timer finishes.',
+          4
+        )">
+        Start Activity ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- Cold Water Reset -->
+  <div class="glow-task-card">
+    <div class="glow-task-time">
+      <i class="fa-solid fa-clock"></i> 2 min
+    </div>
+    <div class="glow-task-header">
+      <div class="glow-task-icon">🧊</div>
+    </div>
+    <div class="glow-task-content">
+      <h4>Cold Water Reset</h4>
+      <p>
+        Splash cold water on your face or hold something cold.
+        This slows your heart rate and resets your nervous system.
+      </p>
+      <button class="glow-start-btn"
+        onclick="startActivityWithGating(
+          'Cold Water Reset',
+          'Use cold water or hold something cool. Focus on the sensation and your breathing.',
+          2
+        )">
+        Start Activity ✨
+      </button>
+    </div>
+  </div>
+
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Journal -->
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(15,82,186,.08),white);border-color:var(--sapphire);max-width:900px;margin:0 auto 40px;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <h2 style="color:var(--sapphire);font-size:32px;margin-bottom:12px;">🎙️ Voice Journal 🎙️</h2>
+            <p style="font-size:17px;color:var(--slate);">Sometimes it's easier to talk than write. Record your thoughts and feelings out loud!</p>
+          </div>
+          <div style="padding:20px;background:rgba(15,82,186,.05);border-radius:16px;border:2px solid rgba(15,82,186,.3);margin-bottom:20px;">
+            <label style="display:block;font-weight:700;color:var(--ink);font-size:17px;margin-bottom:12px;">💭 What's on your mind today?</label>
+            <textarea id="voiceJournalText" placeholder="Click the microphone to speak, or type your feelings here..." style="width:100%;min-height:130px;padding:14px 18px;border:3px solid var(--line);border-radius:14px;font-size:16px;font-family:inherit;font-weight:500;resize:vertical;"></textarea>
+            <div class="voice-journal-btns" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;">
+              <button id="voiceRecordBtn" onclick="toggleVoiceRecording()" style="padding:13px 20px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));color:white;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;flex:1;">
+                <i class="fa-solid fa-microphone"></i> Start Recording
+              </button>
+              <button id="downloadJournalBtn" onclick="downloadJournal()" style="padding:13px 20px;background:white;color:var(--sapphire);border:3px solid var(--sapphire);border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;flex:1;">
+                <i class="fa-solid fa-download"></i> Download as Word
+              </button>
+              <button onclick="clearJournal()" style="padding:13px 20px;background:white;color:var(--slate);border:3px solid var(--line);border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;">Clear</button>
+            </div>
+            <p style="margin:12px 0 0;font-size:13px;color:var(--muted);font-style:italic;">💡 Talking about your feelings helps your brain process them. You're doing great!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7-Day Calm Challenge -->
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(15,82,186,.08),white);border-color:var(--sapphire);max-width:900px;margin:0 auto 40px;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <h2 style="color:var(--sapphire);font-size:32px;margin-bottom:12px;">🌊 7-Day Calm Challenge 🌊</h2>
+            <p style="font-size:17px;color:var(--slate);">Pick one calming practice and do it every day for a week. You've got this!</p>
+          </div>
+          <div style="padding:18px;background:rgba(15,82,186,.05);border-radius:16px;border:2px solid rgba(15,82,186,.3);margin-bottom:20px;">
+            <label style="display:block;font-weight:700;color:var(--ink);font-size:17px;margin-bottom:10px;">Choose Your Daily Calm Practice:</label>
+            <div class="challenge-row">
+              <div class="select-wrap">
+                <select id="challengeHabit" style="padding:13px 48px 13px 16px;border:3px solid var(--line);border-radius:14px;font-size:16px;font-family:inherit;font-weight:600;background-color:white;">
+                  <option value="">Pick a calm practice...</option>
+                  <option value="5 minutes of deep breathing">🌬️ 5 minutes of deep breathing</option>
+                  <option value="Write in my feelings journal">📝 Write in my feelings journal</option>
+                  <option value="Do a body scan meditation">🧘 Do a body scan meditation</option>
+                  <option value="Practice gratitude - list 3 things">🙏 Practice gratitude - list 3 things</option>
+                  <option value="Gentle stretching or yoga">🌸 Gentle stretching or yoga</option>
+                  <option value="Listen to calming music">🎵 Listen to calming music</option>
+                  <option value="Spend time in nature">🌳 Spend time in nature</option>
+                  <option value="Use a calming visualization">✨ Use a calming visualization</option>
+                </select>
+              </div>
+              <button id="addChallengeBtn" type="button" style="display:none;padding:13px 24px;background:linear-gradient(135deg,var(--sapphire),var(--sapphire-light));color:white;border:none;border-radius:14px;font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;box-shadow:0 6px 16px rgba(15,82,186,.3);white-space:nowrap;">+ Add</button>
+            </div>
+          </div>
+          <div id="challengesContainer"></div>
+          <div style="margin-top:20px;padding:18px;background:rgba(255,215,0,.2);border-radius:14px;border:3px solid var(--gold);text-align:center;">
+            <p style="margin:0;font-size:18px;color:var(--ink);font-weight:700;">🏆 Complete all 7 days and celebrate your consistency with a new challenge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confidence Check-In / Mood Selector -->
+    <section class="glow-mood-block" id="activitiesStart">
+      <div class="container">
+        <div class="glow-mood-shell">
+          <div class="glow-mood-head">
+            <h3>How are you feeling right now? 💙</h3>
+            <p>Choose the feeling that matches your mood, and we'll show you the perfect calming activities!</p>
+          </div>
+          <div class="glow-mood-row" role="group" aria-label="Mood selector">
+            <button class="glow-mood-item" type="button" data-mood="excited"><div class="glow-mood-emoji">🚀</div><div class="glow-mood-label">Super Confident<br><span class="glow-mood-relatable">I can do anything!</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="happy"><div class="glow-mood-emoji">😊</div><div class="glow-mood-label">Feeling Good<br><span class="glow-mood-relatable">Ready to try!</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="okay"><div class="glow-mood-emoji">😌</div><div class="glow-mood-label">Pretty Good<br><span class="glow-mood-relatable">I'm doing okay</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="tired"><div class="glow-mood-emoji">😐</div><div class="glow-mood-label">Not Sure<br><span class="glow-mood-relatable">Need a boost</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="unsure"><div class="glow-mood-emoji">😰</div><div class="glow-mood-label">Nervous<br><span class="glow-mood-relatable">Feeling shy</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="cozy"><div class="glow-mood-emoji">🤗</div><div class="glow-mood-label">Want Support<br><span class="glow-mood-relatable">Need encouragement</span></div></button>
+          </div>
+          <div class="glow-activities-wrap" id="glowActivitiesWrap">
+            <div class="glow-activities-title"><span>💫</span><span id="glowMoodTitle">Perfect activities for you</span></div>
+            <div class="glow-tasks-grid" id="glowTasksGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ THE CALM LOUNGE (Sound Library) ══ -->
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(15,82,186,.04),rgba(135,206,235,.04),white);border-color:var(--sapphire);">
+          <div style="text-align:center;margin-bottom:28px;">
+            <h2 style="color:var(--sapphire);font-size:34px;margin-bottom:10px;font-family:'Pacifico',cursive;font-weight:400;">🎵 The Calm Lounge 🎵</h2>
+            <p style="font-size:18px;color:var(--slate);">Play a soothing background sound to help you find peace and focus!</p>
+          </div>
+          <div class="sound-library-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:20px;">
+            <div class="sound-card" data-sound="assets/audio/rain-calm.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(15,82,186,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div style="font-size:40px;margin-bottom:10px;">🌧️</div>
+              <div style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Gentle Rain</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4;">Soft rain sounds to melt stress away 💙</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="assets/audio/ocean-waves.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(15,82,186,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div style="font-size:40px;margin-bottom:10px;">🌊</div>
+              <div style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Ocean Waves</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4;">Rolling waves to steady your breathing 🌊</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="assets/audio/singing-bowls.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(15,82,186,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div style="font-size:40px;margin-bottom:10px;">🪬</div>
+              <div style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Singing Bowls</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4;">Ancient healing tones to centre your mind ✨</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="assets/audio/forest-birds.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(15,82,186,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div style="font-size:40px;margin-bottom:10px;">🌿</div>
+              <div style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Forest Birdsong</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4;">Morning birdsong to lift your spirit 🐦</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+            <div class="sound-card" data-sound="assets/audio/deep-sleep.mp3" onclick="toggleSound(this)" style="text-align:center;padding:22px 14px;background:white;border:3px solid rgba(15,82,186,.18);border-radius:20px;cursor:pointer;transition:all .3s ease;position:relative;">
+              <div style="font-size:40px;margin-bottom:10px;">🌙</div>
+              <div style="font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;">Night Stillness</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4;">Deep, quiet tones for rest and release 😌</div>
+              <div class="sound-playing-badge"></div>
+            </div>
+          </div>
+          <div style="margin-top:20px;text-align:center;">
+            <p style="margin:0;font-size:15px;color:var(--muted);font-weight:500;">🎧 Click any sound to play · Click again to stop · Sounds loop for 7 minutes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calm Paths -->
+    <section style="padding:40px 0;" id="calmPaths">
+      <div class="container">
+        <div class="card">
+          <div style="text-align:center;margin-bottom:32px;">
+            <h2 style="font-size:34px;color:var(--sapphire);margin-bottom:10px;">Choose Your Calm Path 🌊</h2>
+            <p style="font-size:18px;color:var(--slate);">Each path has gentle activities to help you feel peaceful, grounded, and emotionally strong.</p>
+          </div>
+          <div class="inline-2col" style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-bottom:36px;">
+            <!-- Breathe & Release -->
+            <div class="glow-path-card morning" data-path="breathe" onclick="selectGlowPath('breathe')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+                <div style="width:58px;height:58px;background:linear-gradient(135deg,#0F52BA,#4169E1);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 6px 16px rgba(15,82,186,.25);">🌬️</div>
+                <h3 style="margin:0;font-size:22px;font-weight:700;color:var(--ink);">Breathe & Release</h3>
+              </div>
+              <p style="margin:0 0 12px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Let go of stress through breathing and movement</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">When big feelings build up, use breathing exercises, gentle movement, and expression to release what's weighing you down.</p>
+              <div style="background:rgba(15,82,186,.08);padding:14px;border-radius:12px;border-left:4px solid var(--sapphire);">
+                <p style="margin:0 0 6px;font-weight:700;color:var(--ink);font-size:14px;">✨ You'll learn to:</p>
+                <div style="font-size:13px;color:var(--slate);font-weight:600;display:flex;flex-direction:column;gap:5px;">
+                  <span>💨 Control anxiety with breathing</span>
+                  <span>🌊 Release tension safely</span>
+                  <span>✨ Reset your nervous system</span>
+                </div>
+              </div>
+            </div>
+            <!-- Ground & Center -->
+            <div class="glow-path-card kindness" data-path="ground" onclick="selectGlowPath('ground')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+                <div style="width:58px;height:58px;background:linear-gradient(135deg,#65A5D1,#87CEEB);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 6px 16px rgba(135,206,235,.25);">🌍</div>
+                <h3 style="margin:0;font-size:22px;font-weight:700;color:var(--ink);">Ground & Center</h3>
+              </div>
+              <p style="margin:0 0 12px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Come back to the present moment</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">When your mind is racing, grounding brings you back to now. Use your senses and mindfulness to feel steady and present.</p>
+              <div style="background:rgba(135,206,235,.08);padding:14px;border-radius:12px;border-left:4px solid var(--sky);">
+                <p style="margin:0 0 6px;font-weight:700;color:var(--ink);font-size:14px;">✨ You'll learn to:</p>
+                <div style="font-size:13px;color:var(--slate);font-weight:600;display:flex;flex-direction:column;gap:5px;">
+                  <span>🧘 Use 5-4-3-2-1 grounding</span>
+                  <span>🌳 Feel connected and present</span>
+                  <span>💙 Stop anxious spirals</span>
+                </div>
+              </div>
+            </div>
+            <!-- Soothe & Comfort -->
+            <div class="glow-path-card gratitude" data-path="soothe" onclick="selectGlowPath('soothe')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+                <div style="width:58px;height:58px;background:linear-gradient(135deg,#BA68C8,#E1BEE7);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 6px 16px rgba(186,104,200,.25);">💜</div>
+                <h3 style="margin:0;font-size:22px;font-weight:700;color:var(--ink);">Soothe & Comfort</h3>
+              </div>
+              <p style="margin:0 0 12px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Be gentle and kind to yourself</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">When you're hurting, you deserve comfort. Learn self-compassion, create calm spaces, and use sensory soothing to feel safe.</p>
+              <div style="background:rgba(186,104,200,.08);padding:14px;border-radius:12px;border-left:4px solid var(--lavender);">
+                <p style="margin:0 0 6px;font-weight:700;color:var(--ink);font-size:14px;">✨ You'll learn to:</p>
+                <div style="font-size:13px;color:var(--slate);font-weight:600;display:flex;flex-direction:column;gap:5px;">
+                  <span>🤗 Practice self-compassion</span>
+                  <span>☕ Create calm rituals</span>
+                  <span>🌸 Soothe big emotions</span>
+                </div>
+              </div>
+            </div>
+            <!-- Express & Process -->
+            <div class="glow-path-card wellness" data-path="express" onclick="selectGlowPath('express')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+                <div style="width:58px;height:58px;background:linear-gradient(135deg,#4ECDC4,#80DEEA);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 6px 16px rgba(78,205,196,.25);">🎨</div>
+                <h3 style="margin:0;font-size:22px;font-weight:700;color:var(--ink);">Express & Process</h3>
+              </div>
+              <p style="margin:0 0 12px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Let your feelings out in healthy ways</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">Feelings need to move through you! Use journaling, art, music, and creative expression to understand yourself better.</p>
+              <div style="background:rgba(78,205,196,.08);padding:14px;border-radius:12px;border-left:4px solid var(--mint);">
+                <p style="margin:0 0 6px;font-weight:700;color:var(--ink);font-size:14px;">✨ You'll learn to:</p>
+                <div style="font-size:13px;color:var(--slate);font-weight:600;display:flex;flex-direction:column;gap:5px;">
+                  <span>📝 Journal your emotions</span>
+                  <span>🎨 Express through creativity</span>
+                  <span>💙 Understand your feelings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="pathwayActivities" style="display:none;margin-top:32px;">
+            <h3 id="pathwayTitle" style="margin:0 0 20px;font-size:26px;font-weight:700;color:var(--sapphire);text-align:center;">Activities for This Path</h3>
+            <div class="glow-tasks-grid" id="glowTasksGridPathway"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GEM JOURNEY (compact, near footer) ══ -->
+    <section style="padding:8px 0 48px;">
+      <div class="container">
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,.08),white);border:2px solid var(--gold);border-radius:var(--radius);padding:20px;box-shadow:var(--shadowSoft);">
+          <div style="text-align:center;margin-bottom:18px;">
+            <h2 style="color:var(--gold);font-size:26px;margin:0 0 6px;font-weight:700;font-family:'Pacifico',cursive;">✨ Your Gem Journey ✨</h2>
+            <p style="font-size:15px;color:var(--slate);margin:0;">Spend gems on 100 items and make your palace your own!</p>
+          </div>
+          <div class="inline-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div style="text-align:center;padding:18px 12px;background:white;border:2px solid var(--gold);border-radius:16px;box-shadow:0 4px 14px rgba(255,215,0,.12);">
+              <div style="font-size:36px;margin-bottom:8px;">💍</div>
+              <h3 style="margin:0 0 4px;font-size:16px;color:var(--gold);">First Palace Pick</h3>
+              <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">20 Gems</div>
+              <p style="margin:0;font-size:12px;color:var(--slate);">Choose your first shop item!</p>
+            </div>
+            <div style="text-align:center;padding:18px 12px;background:white;border:2px solid var(--rose);border-radius:16px;box-shadow:0 4px 14px rgba(233,30,99,.1);">
+              <div style="font-size:36px;margin-bottom:8px;">👑</div>
+              <h3 style="margin:0 0 4px;font-size:16px;color:var(--rose);">Room Refresh</h3>
+              <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">75 Gems</div>
+              <p style="margin:0;font-size:12px;color:var(--slate);">Build a room that feels like you!</p>
+            </div>
+            <div style="text-align:center;padding:18px 12px;background:white;border:2px solid var(--purple);border-radius:16px;box-shadow:0 4px 14px rgba(156,39,176,.1);">
+              <div style="font-size:36px;margin-bottom:8px;">🏰</div>
+              <h3 style="margin:0 0 4px;font-size:16px;color:var(--purple);">Royal Collection</h3>
+              <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">150 Gems</div>
+              <p style="margin:0;font-size:12px;color:var(--slate);">Keep collecting — the shop can keep growing!</p>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding:12px;background:rgba(255,215,0,.1);border-radius:10px;border:2px solid var(--gold);">
+            <p style="margin:0;text-align:center;font-size:14px;color:var(--ink);font-weight:600;">💎 Each activity earns 1 gem — timer must reach 0 to collect! ✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="floating-sparkle-btn" id="dailySparkleFab" type="button" aria-label="Open activity roulette" onclick="openRoulette()">
+    <span class="fab-ic">✨</span><span class="fab-txt">Spin the Wheel!</span>
+  </button>
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Timer Modal -->
+  <div class="timer-modal" id="timerModal">
+    <div class="timer-content">
+      <button class="modal-x" onclick="closeTimer()" aria-label="Close">×</button>
+      <h3 id="timerTitle"></h3>
+      <p id="timerDesc"></p>
+      <p style="margin:0 0 16px;color:var(--slate);font-size:14px;line-height:1.5;">💎 Your gem is earned when the timer reaches 0. Stay with it!</p>
+      <div class="timer-display" id="timerDisplay">0:00</div>
+      <button class="timer-close" onclick="closeTimer()">Close</button>
+    </div>
+  </div>
+
+  <!-- Roulette Modal -->
+  <div class="roulette-modal" id="rouletteModal">
+    <div class="roulette-content">
+      <button class="modal-x" onclick="closeRoulette()" aria-label="Close">×</button>
+      <h2 style="font-size:26px;color:var(--gold);margin:0 0 8px;font-weight:700;">🎡 Activity Roulette! 🎡</h2>
+      <p style="font-size:15px;color:var(--slate);margin:0 0 16px;">Spin the wheel and let fate choose your next calm adventure!</p>
+      <div class="roulette-wheel-container">
+        <div class="roulette-pointer"></div>
+        <div class="roulette-wheel" id="rouletteWheel">
+          <div class="roulette-center"><button class="roulette-btn" id="rouletteSpinBtn" style="width:90px;padding:8px 10px;font-size:13px;border-radius:999px;">Spin!</button></div>
+        </div>
+      </div>
+      <div class="roulette-result" id="rouletteResult">
+        <div class="roulette-result-title" id="rouletteResultTitle"></div>
+        <div class="roulette-result-activity" id="rouletteResultActivity"></div>
+        <button class="glow-start-btn" id="rouletteStartBtn" onclick="handleRouletteStart()">Start This Activity ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gem Toast -->
+  <div class="gem-toast" id="gemToast">
+    <div class="gem-toast-content">
+      <div class="gem-toast-icon">💎</div>
+      <div class="gem-toast-text">
+        <div class="gem-toast-title">Gem earned!</div>
+        <div class="gem-toast-subtitle" id="gemToastSub">Amazing work! Keep shining!</div>
+      </div>
+      <button class="gem-toast-close" id="closeGemToast" aria-label="Close">×</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand">
+          <div class="brand" style="color:#FFF;font-size:28px;"><span>💎</span><span>Gem Glow Academy</span></div>
+          <div class="tagline">Shine Bright, Build Strong!</div>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <div class="foot-links">
+            <a href="about-us.html">About Us</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <div class="contact-pill" role="button" id="askQuestionBtn"><span>Ask a question</span><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="foot-links" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="palace.html" aria-label="My Palace">My Palace</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin:10px 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);color:#F8BBD0;font-size:16px;">© 2026 Gem Glow Academy. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Sign-In Upsell Modal -->
+  <div class="contact-modal" id="thirdClickModal" style="display:none;"><div class="contact-modal-content" style="max-width:500px;text-align:center;padding:48px 40px;"><button class="modal-close" onclick="event.stopPropagation(); closeThirdClickModal();" aria-label="Close modal" style="position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;padding:0;">×</button><div style="font-size:64px;margin-bottom:16px;">✨</div><h2 style="margin:0 0 12px;font-size:28px;color:var(--rose);font-family:'Pacifico',cursive;font-weight:400;">Ready to Start Your Gem Journey?</h2><p style="margin:0 0 20px;color:var(--slate);font-size:17px;line-height:1.6;">You've used your 3 free activities! 💎 A parent can create the family membership, then you can earn gems and choose from 100 palace items.</p><div style="background:linear-gradient(135deg,rgba(233,30,99,.08),white);border:2px solid var(--rose);border-radius:16px;padding:16px;margin-bottom:24px;"><p style="margin:0;font-size:15px;color:var(--ink);font-weight:600;">✓ Access all 40+ activities<br>✓ Earn gems forever<br>✓ Decorate and save your own palace<br>✓ Track your 7-day challenges</p></div><div style="display:flex;gap:12px;flex-direction:column;"><button onclick="startCheckout(window.GGA_PRICES.monthly); closeThirdClickModal();" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;box-shadow:0 8px 20px rgba(233,30,99,.3);font-family:inherit;">Unlock Unlimited 💎</button><a href="sign-in.html" onclick="closeThirdClickModal()" style="display:inline-block;padding:16px 32px;background:white;color:var(--rose);border:3px solid var(--rose);border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;text-align:center;">Sign In</a></div></div></div>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <h2 style="margin:0 0 12px;font-size:28px;color:var(--ink);">Get in Touch</h2>
+      <p style="margin:0 0 28px;color:var(--slate);font-size:17px;">Have a question or need support? We're here to help!</p>
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+        <div class="form-group"><label for="contactName">Name *</label><input type="text" id="contactName" name="name" required placeholder="Your name"></div>
+        <div class="form-group"><label for="contactEmail">Email *</label><input type="email" id="contactEmail" name="email" required placeholder="your@email.com"></div>
+        <div class="form-group"><label for="contactMessage">Message *</label><textarea id="contactMessage" name="message" required placeholder="How can we help you?"></textarea></div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    // ── ACTIVITY GATING ──
+    let userIsLoggedIn = false;
+    let userIsMember = false;
+    (async () => {
+      try {
+        userIsLoggedIn = await checkLoginState();
+        const status = await checkMembershipStatus();
+        userIsMember = status.isMember && status.role === 'child';
+        if (userIsMember) { await progressFetch(); updateGemDisplay(); }
+      } catch(e) {}
+    })();
+
+    function getFreeCompletionCount() {
+      const stored = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_KEY) || '0', 10);
+      const timestamp = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY) || '0', 10);
+      const now = Date.now();
+      if (timestamp > 0 && (now - timestamp) > RESET_TIMEOUT_MS) {
+        localStorage.setItem(ACTIVITY_COMPLETION_KEY, '0');
+        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        return 0;
+      }
+      return stored;
+    }
+    function recordFreeCompletion() {
+      const c = getFreeCompletionCount();
+      if (c < FREE_ACTIVITY_COMPLETIONS) { const now = Date.now(); localStorage.setItem(ACTIVITY_COMPLETION_KEY, String(c + 1)); localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now)); }
+    }
+    function checkIfFreeCompletionLimitExceeded() { return getFreeCompletionCount() >= FREE_ACTIVITY_COMPLETIONS; }
+    function closeThirdClickModal() { document.getElementById('thirdClickModal').style.display = 'none'; document.body.style.overflow = ''; }
+    function showThirdClickUpsell() { document.getElementById('thirdClickModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function startActivityWithGating(title, desc, mins) {
+      if (userIsMember) { startTimer(title, desc, mins); return; }
+      if (checkIfFreeCompletionLimitExceeded()) {
+        if (window.gtag) { gtag('event', 'upsell_trigger', { source: 'task' }); }
+        showThirdClickUpsell();
+        return;
+      }
+      recordFreeCompletion();
+      if (window.gtag) { gtag('event', 'activity_start', { activity: title }); }
+      startTimer(title, desc, mins);
+    }
+
+    // ── GEM SYSTEM ──
+    function getGemTotal(){return Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);}
+    
+    function updateGemDisplay(){const total=getGemTotal();document.getElementById('gemTotal').textContent=total;const next=GEM_MILESTONES.find(m=>m.gems>total)||GEM_MILESTONES[GEM_MILESTONES.length-1];const prev=GEM_MILESTONES.filter(m=>m.gems<=total).pop();const start=prev?prev.gems:0,end=next.gems;const pct=((total-start)/(end-start))*100;document.getElementById('gemProgressBar').style.height=Math.min(100,Math.max(0,pct))+'%';document.getElementById('gemMilestone').textContent=total>=150?'100 palace items are waiting in the shop':`Next glow goal: ${next.reward} at ${next.gems}`;}
+    function showGemToast(subtitle){const toast=document.getElementById('gemToast'),sub=document.getElementById('gemToastSub');if(!toast)return;if(subtitle)sub.textContent=subtitle;toast.style.display='block';toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';requestAnimationFrame(()=>{toast.style.transition='opacity .3s ease,transform .3s ease';toast.style.opacity='1';toast.style.transform='translate(-50%,-50%) scale(1)';});setTimeout(()=>hideGemToast(),3500);}
+    function hideGemToast(){const toast=document.getElementById('gemToast');if(!toast)return;toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';setTimeout(()=>{toast.style.display='none';},300);}
+    document.getElementById('closeGemToast')?.addEventListener('click',hideGemToast);
+    async function awardGem(title, durationMinutes = 0){
+      const result = await progressAwardGem('feelings', title, durationMinutes);
+      if (!result.ok) {
+        if (result.status === 401) {
+          showGemToast('🔐 Sign in with your child PIN to save this activity and earn gems.');
+          setTimeout(() => { window.location.href = 'child-login.html'; }, 1200);
+        } else if (result.status === 402) {
+          showGemToast('Ask your parent to reactivate the family membership.');
+        } else {
+          showGemToast('We could not save this activity, so no gem was changed. Please try again.');
+        }
+        return;
+      }
+      const n = result.wallet.gemBalance;
+      updateGemDisplay();
+      if (result.duplicate) {
+        showGemToast(`✓ "${title}" is complete. You already earned its gem today.`);
+        playChime();
+        return;
+      }
+      if (typeof createGemSparkle === 'function') createGemSparkle();
+      showGemToast(`💎 +1 gem for "${title}" — ${n} gems available to spend`);
+      playChime();
+    }
+
+    // ── SOUND LIBRARY (7-min loop) ──
+    let currentAudio=null,currentCard=null,soundStopTimer=null;
+    function toggleSound(card){
+      const src=card.dataset.sound,badge=card.querySelector('.sound-playing-badge');
+      if(currentAudio&&currentCard===card){
+        currentAudio.pause();currentAudio=null;currentCard=null;
+        card.style.borderColor='rgba(15,82,186,.18)';card.style.background='white';card.style.transform='';card.style.boxShadow='';
+        if(badge)badge.style.display='none';
+        if(soundStopTimer){clearTimeout(soundStopTimer);soundStopTimer=null;}
+        return;
+      }
+      if(currentAudio){
+        currentAudio.pause();
+        if(currentCard){currentCard.style.borderColor='rgba(15,82,186,.18)';currentCard.style.background='white';currentCard.style.transform='';currentCard.style.boxShadow='';const pb=currentCard.querySelector('.sound-playing-badge');if(pb)pb.style.display='none';}
+      }
+      currentAudio=new Audio(src);currentAudio.loop=true;currentAudio.volume=0.6;currentAudio.play().catch(()=>{});currentCard=card;
+      if(soundStopTimer)clearTimeout(soundStopTimer);
+      soundStopTimer=setTimeout(()=>{
+        if(currentAudio){currentAudio.pause();currentAudio=null;}
+        if(currentCard){currentCard.style.borderColor='rgba(15,82,186,.18)';currentCard.style.background='white';currentCard.style.transform='';currentCard.style.boxShadow='';const pb=currentCard.querySelector('.sound-playing-badge');if(pb)pb.style.display='none';currentCard=null;}
+        soundStopTimer=null;
+      },SOUND_DURATION_MS);
+      card.style.borderColor='var(--sapphire)';card.style.background='linear-gradient(135deg,rgba(15,82,186,.08),white)';card.style.transform='translateY(-4px)';card.style.boxShadow='0 12px 28px rgba(15,82,186,.18)';
+      if(badge)badge.style.display='block';
+    }
+
+    // ── 7-DAY CHALLENGE ──
+    function getTodayDate(){const d=new Date();return d.toISOString().split('T')[0];}
+    function getChallengesData(){const d=localStorage.getItem('gga_calm_challenges_data');return d?JSON.parse(d):[];}
+    function setChallengesData(d){localStorage.setItem('gga_calm_challenges_data',JSON.stringify(d));}
+    function addChallenge(habit){
+      const challenges=getChallengesData();
+      if(challenges.find(c=>c.habit===habit)){showGemToast('⚠️ You are already tracking this challenge!');return;}
+      challenges.push({habit,lastMarkedDate:'',currentDay:0});
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function removeChallenge(idx){
+      const challenges=getChallengesData();
+      challenges.splice(idx,1);
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function markDay(habitIndex){
+      const challenges=getChallengesData();
+      if(!challenges[habitIndex]){return;}
+      const today=getTodayDate();
+      if(challenges[habitIndex].lastMarkedDate===today){
+        showGemToast('⏰ You already marked today! Come back tomorrow to mark the next day.');
+        return;
+      }
+      challenges[habitIndex].currentDay++;
+      challenges[habitIndex].lastMarkedDate=today;
+      showGemToast(`🌊 Day ${challenges[habitIndex].currentDay} complete! Great calm work on "${challenges[habitIndex].habit}"!`);playChime();
+      if(challenges[habitIndex].currentDay===7){
+        showGemToast('🏆 7-DAY CALM CHALLENGE COMPLETE! Choose your next challenge.');
+        playSpecialChime();
+        challenges.splice(habitIndex,1);
+      }
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function renderChallenges(){
+      const container=document.getElementById('challengesContainer');
+      const challenges=getChallengesData();
+      const today=getTodayDate();
+      const dayEmojis=['⭐','✨','💫','🌟','⚡','🔥','👑'];
+      const dayNames=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+      container.innerHTML='';
+      challenges.forEach((c,idx)=>{
+        const card=document.createElement('div');
+        card.style.cssText='margin-bottom:24px;padding:18px;background:white;border-radius:16px;border:3px solid var(--sapphire);box-shadow:0 4px 12px rgba(15,82,186,.15);position:relative;';
+        const header=document.createElement('div');
+        header.style.cssText='display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:8px;';
+        const title=document.createElement('h4');
+        title.textContent=c.habit;
+        title.style.cssText='margin:0;font-size:18px;font-weight:700;color:var(--ink);flex:1;';
+        const removeBtn=document.createElement('button');
+        removeBtn.type='button';
+        removeBtn.innerHTML='&times;';
+        removeBtn.title='Remove challenge';
+        removeBtn.style.cssText='background:none;border:none;font-size:22px;line-height:1;color:#aaa;cursor:pointer;padding:0 2px;flex-shrink:0;transition:color .2s;';
+        removeBtn.onmouseover=()=>{removeBtn.style.color='#e53935';};
+        removeBtn.onmouseout=()=>{removeBtn.style.color='#aaa';};
+        removeBtn.onclick=(e)=>{e.preventDefault();e.stopPropagation();removeChallenge(idx);};
+        header.appendChild(title);header.appendChild(removeBtn);
+        card.appendChild(header);
+        const tracker=document.createElement('div');
+        tracker.className='challenge-tracker';
+        for(let day=1;day<=7;day++){
+          const isCompleted=day<=c.currentDay;
+          const isToday=day===c.currentDay+1&&c.lastMarkedDate!==today;
+          const dayBox=document.createElement('button');
+          dayBox.type='button';
+          dayBox.className='challenge-day'+(isCompleted?' completed':isToday?' today':'');
+          dayBox.disabled=!isToday;
+          if(isToday){dayBox.onclick=(e)=>{e.preventDefault();e.stopPropagation();markDay(idx);};}
+          const num=document.createElement('div');num.className='challenge-day-num';num.textContent='Day '+day;
+          const emoji=document.createElement('div');emoji.className='challenge-day-emoji';emoji.textContent=dayEmojis[day-1];
+          const label=document.createElement('div');label.className='challenge-day-label';label.textContent=dayNames[day-1];
+          dayBox.appendChild(num);dayBox.appendChild(emoji);dayBox.appendChild(label);
+          tracker.appendChild(dayBox);
+        }
+        card.appendChild(tracker);
+        container.appendChild(card);
+      });
+    }
+    document.getElementById('challengeHabit')?.addEventListener('change',function(){
+      if(this.value){
+        const addBtn=document.getElementById('addChallengeBtn');
+        if(addBtn)addBtn.style.display='block';
+      }
+    });
+    document.getElementById('addChallengeBtn')?.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      const select=document.getElementById('challengeHabit');
+      if(!select.value){showGemToast('⚠️ Choose a challenge first!');return;}
+      addChallenge(select.value);
+      select.value='';
+      this.style.display='none';
+    });
+
+    // ── TRIAGE ──
+    let triageAnswers={};
+    function startTriage(){document.getElementById('triageWelcome').style.display='none';document.getElementById('triageQ1').style.display='block';}
+    function answerTriage(q,answer){
+      triageAnswers[q]=answer;
+      const answerLabels={peaceful:'😌 Peaceful & calm',happy:'😊 Happy & light',grounded:'🌍 Grounded & steady',free:'🕊️ Free & unburdened',low:'😴 Low energy',high:'⚡ High energy',tense:'😣 Tense or tight',relaxed:'😌 Relaxed',stillness:'🧘 Stillness & quiet',movement:'💨 Movement & release'};
+      if(q<4){const ans=document.getElementById(`answer${q}Text`);if(ans)ans.textContent=answerLabels[answer]||answer;document.getElementById(`triageQ${q}`).style.display='none';document.getElementById(`triageQ${q+1}`).style.display='block';}
+      else{const ans=document.getElementById('answer4Text');if(ans)ans.textContent=answerLabels[answer]||answer;document.getElementById('triageQ4').style.display='none';showTriageResult();}
+    }
+    function showTriageResult(){
+      const a=triageAnswers;let title,desc,emoji,message;
+      if(a[2]==='low'&&a[3]==='tense'){title='Gentle Breathe & Release';desc='You need slow, soothing movement and deep breathing to release tension without overwhelming tired energy.';emoji='🌬️';message="Your body is tired but tense — let's gently ease that tension with soft breathing and slow movement.";}
+      else if(a[2]==='high'&&a[3]==='tense'){title='Active Release';desc='Use vigorous breathing, shaking, or movement to burn through that restless, tense energy.';emoji='💨';message="You have high, tense energy that needs to move! Let's release it through active breathing and movement.";}
+      else if(a[4]==='stillness'){title='Grounding & Stillness';desc='Mindfulness, sensory grounding, and quiet presence will help you find the calm you need.';emoji='🌍';message="Stillness will serve you well right now — let's ground you with mindfulness and sensory practices.";}
+      else{title='Creative Expression';desc='Journaling, art, or music will help you process and release what you\'re carrying inside.';emoji='🎨';message="Expressing what's inside will help you find relief and understanding. Let's channel those feelings creatively.";}
+      document.getElementById('resultTitle').textContent=title;document.getElementById('resultDesc').textContent=desc;document.getElementById('resultEmoji').textContent=emoji;document.getElementById('triageMessage').textContent=message;document.getElementById('triageResult').style.display='block';}
+    function resetTriage(){triageAnswers={};['triageWelcome','triageQ1','triageQ2','triageQ3','triageQ4','triageResult'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display=id==='triageWelcome'?'block':'none';});}
+    function showCalmPath(){document.getElementById('calmPaths').scrollIntoView({behavior:'smooth',block:'start'});}
+
+    // ── ROULETTE ──
+    const ALL_ACTIVITIES=[{icon:'🌬️',title:"Box Breathing",mins:4,desc:"Breathe in 4, hold 4, out 4, hold 4. Repeat 4 times to activate your calm nervous system."},{icon:'🌊',title:"5-4-3-2-1 Ground",mins:3,desc:"Name 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste. Come back to now!"},{icon:'🧘',title:"Body Scan",mins:5,desc:"Sit quietly and scan from your toes to your head, releasing tension in each body part."},{icon:'📝',title:"Feelings Journal",mins:5,desc:"Write about what you're feeling right now. Getting it out of your head and onto paper helps!"},{icon:'🎨',title:"Draw Your Feelings",mins:6,desc:"Draw or doodle what your feelings look like. They don't need to be pretty — just honest!"},{icon:'💜',title:"Self-Compassion",mins:4,desc:"Place your hand on your heart and say 3 kind things to yourself. You deserve kindness!"},{icon:'🌸',title:"Calming Visualization",mins:5,desc:"Close your eyes and picture a peaceful place. See it clearly, feel the calm spread through you."},{icon:'💧',title:"Cold Water Reset",mins:2,desc:"Splash cold water on your face or hold a cold cup. This resets your nervous system fast!"},{icon:'🎵',title:"Humming Calm",mins:3,desc:"Hum a gentle melody. The vibration activates your vagus nerve and creates instant calm."},{icon:'🤗',title:"Self-Hug",mins:2,desc:"Cross your arms and give yourself a gentle hug. Rock gently if it helps. You are safe."},{icon:'🌿',title:"Nature Moment",mins:5,desc:"Step outside or look out a window. Notice 3 beautiful things in nature around you."},{icon:'✨',title:"Gratitude Stars",mins:4,desc:"Write 3 things you are grateful for today — big or small. Gratitude shifts your whole mood!"}];
+    let currentRouletteActivity=null,lastActivityIndex=-1,isSpinning=false;
+    function openRoulette(){document.getElementById('rouletteModal').classList.add('show');document.getElementById('rouletteResult').classList.remove('show');}
+    function closeRoulette(){document.getElementById('rouletteModal').classList.remove('show');isSpinning=false;}
+    function spinRoulette(){if(isSpinning)return;isSpinning=true;const wheel=document.getElementById('rouletteWheel'),spinBtn=document.getElementById('rouletteSpinBtn'),result=document.getElementById('rouletteResult');spinBtn.disabled=true;result.classList.remove('show');let ni;do{ni=Math.floor(Math.random()*ALL_ACTIVITIES.length);}while(ni===lastActivityIndex&&ALL_ACTIVITIES.length>1);lastActivityIndex=ni;currentRouletteActivity=ALL_ACTIVITIES[ni];const deg=360/ALL_ACTIVITIES.length,offset=Math.random()*deg,tr=(ni*deg)+offset+1080;wheel.style.transform='rotate(0deg)';wheel.classList.add('spinning');playChime();setTimeout(()=>{wheel.classList.remove('spinning');wheel.style.transform=`rotate(${tr}deg)`;document.getElementById('rouletteResultTitle').textContent=`${currentRouletteActivity.icon} ${currentRouletteActivity.title}`;document.getElementById('rouletteResultActivity').textContent=currentRouletteActivity.desc;result.classList.add('show');spinBtn.disabled=false;isSpinning=false;playSpecialChime();},3000);}
+    function handleRouletteStart(){if(!userIsMember&&checkIfFreeCompletionLimitExceeded()){if(window.gtag){gtag('event','upsell_trigger',{source:'roulette'});}showThirdClickUpsell();return;}if(currentRouletteActivity){if(!userIsMember)recordFreeCompletion();closeRoulette();startTimer(currentRouletteActivity.title,currentRouletteActivity.desc,currentRouletteActivity.mins);}}
+    document.getElementById('rouletteSpinBtn')?.addEventListener('click',spinRoulette);
+
+    // ── MOOD ACTIVITIES ──
+    const MOOD_ACTIVITIES={
+      excited:[{icon:'🌬️',title:"Power Breathing",mins:4,desc:"Channel that energy into focused breathing. In for 6, hold for 2, out for 8. Energy becomes focus!"},{icon:'💪',title:"Energy Release Dance",mins:5,desc:"Put on your favourite song and dance! Move that excited energy through your body fully."},{icon:'📝',title:"Goal Setting Spark",mins:5,desc:"You're fired up — write down 3 goals for this week and one brave thing you'll do today!"}],
+      happy:[{icon:'🙏',title:"Gratitude Stars",mins:3,desc:"Amplify your happy mood! Write 5 things you're grateful for and savour how good they feel."},{icon:'💌',title:"Share the Joy",mins:4,desc:"Write a kind note or text to someone. Sharing happiness multiplies it for both of you!"},{icon:'🌸',title:"Savouring Practice",mins:5,desc:"Slow down and really enjoy this good feeling. Notice where you feel it in your body. Breathe it in!"}],
+      okay:[{icon:'🌊',title:"5-4-3-2-1 Ground",mins:3,desc:"Anchor yourself in the present moment. Name 5 things you see, 4 touch, 3 hear, 2 smell, 1 taste."},{icon:'📖',title:"Feelings Journal",mins:5,desc:"Write about what 'okay' feels like for you today. Is there something below the surface? Explore it gently."},{icon:'🧘',title:"Body Check-In",mins:4,desc:"Sit quietly and scan your body from toes to head. Where do you feel tension? Breathe into those spots."}],
+      tired:[{icon:'😴',title:"Rest Ritual",mins:5,desc:"Lie down or sit comfortably. Do a slow body scan, releasing any tension. You have permission to rest."},{icon:'🧘',title:"Gentle Breathing",mins:3,desc:"Breathe in for 4, hold for 2, out for 6. The longer exhale activates your rest-and-digest system."},{icon:'💜',title:"Self-Compassion",mins:4,desc:"Place your hand on your heart. Say: 'I am tired. That's okay. I give myself permission to be gentle.'"}],
+      unsure:[{icon:'🌸',title:"Calming Visualization",mins:5,desc:"Close your eyes. Imagine a peaceful place where you feel completely safe. Visit it in your mind."},{icon:'💧',title:"Cold Water Reset",mins:2,desc:"Splash cold water on your face. This activates your dive reflex and instantly calms your nervous system."},{icon:'📝',title:"Write It Out",mins:5,desc:"Write down what feels uncertain. Getting it out of your head helps your brain process it more calmly."}],
+      cozy:[{icon:'☕',title:"Cozy Ritual",mins:5,desc:"Make a warm drink, wrap in a blanket, and sit quietly. Savour the warmth and softness around you."},{icon:'🌺',title:"Sensory Soothing",mins:4,desc:"Notice something soft, something warm, something pleasant to smell. Let your senses feel fully nurtured."},{icon:'💌',title:"Love Note to Self",mins:3,desc:"Write yourself the kindest note. What does your most loving, supportive self want you to hear right now?"}]
+    };
+
+    const GLOW_PATH_DATA={
+      breathe:{title:'Breathe & Release Activities',activities:[{icon:'🌬️',title:"Box Breathing",mins:4,desc:"In for 4, hold 4, out 4, hold 4. Repeat 4 times."},{icon:'💨',title:"Breath of Fire",mins:3,desc:"Short sharp exhales through the nose, fast rhythm, 30 times. Burns through tension!"},{icon:'🌊',title:"Ocean Breath",mins:5,desc:"Breathe deeply, exhale with a soft 'haaa' sound. Like ocean waves washing stress away."},{icon:'🤸',title:"Shake It Out",mins:3,desc:"Stand up and shake your hands, arms, legs, whole body. Physical shaking releases built-up stress hormones."},{icon:'💪',title:"Progressive Relaxation",mins:6,desc:"Tense each muscle group tightly for 5 seconds, then release. Work from feet to face."},{icon:'🌸',title:"Sighing Release",mins:2,desc:"Take a deep breath and let out a big sigh. Do this 5 times. Sighing is your body's natural stress reliever!"},{icon:'🎵',title:"Humming Calm",mins:3,desc:"Hum gently. The vibration activates your vagus nerve, creating calm throughout your body."},{icon:'🏃',title:"Energy Run",mins:5,desc:"Run on the spot, jump, do star jumps. Burn through anxious energy with movement!"}]},
+      ground:{title:'Ground & Center Activities',activities:[{icon:'🌊',title:"5-4-3-2-1 Grounding",mins:3,desc:"5 things you see, 4 touch, 3 hear, 2 smell, 1 taste. Brings you back to now!"},{icon:'🦶',title:"Feet on Floor",mins:2,desc:"Press your feet firmly into the floor. Feel the ground. You are here. You are safe."},{icon:'🌍',title:"Room Scan",mins:3,desc:"Slowly look around the room. Name 10 objects you can see. This anchors your brain in the present."},{icon:'🤲',title:"Hand Texture",mins:2,desc:"Run your fingers over different textures — soft, rough, smooth. Focus entirely on the sensations."},{icon:'🧊',title:"Temperature Anchor",mins:2,desc:"Hold something cold or warm. Focus on the temperature spreading through your hand."},{icon:'🌳',title:"Tree Visualization",mins:4,desc:"Imagine roots growing from your feet deep into the earth. Feel stable, grounded, and connected."},{icon:'💙',title:"Mindful Breathing",mins:4,desc:"Breathe naturally and just watch your breath. When your mind wanders, gently bring it back."},{icon:'🎯',title:"Here & Now",mins:3,desc:"Say out loud: 'Right now I am in [room]. Right now I am safe. Right now I am okay.'"}]},
+      soothe:{title:'Soothe & Comfort Activities',activities:[{icon:'🤗',title:"Self-Hug",mins:2,desc:"Cross your arms and hug yourself gently. Rock slowly if it feels good. You are safe."},{icon:'💜',title:"Self-Compassion",mins:4,desc:"Place your hand on your heart. Say 3 kind, understanding things to yourself like you'd say to a friend."},{icon:'☕',title:"Warm Drink Ritual",mins:5,desc:"Make something warm to drink. Hold the cup, feel its warmth, sip slowly. Let it comfort you."},{icon:'🌸',title:"Cozy Creation",mins:5,desc:"Build a cozy corner with blankets, pillows, and soft things. Give yourself permission to feel nurtured."},{icon:'🎵',title:"Comfort Playlist",mins:7,desc:"Put on music that makes you feel safe and understood. Let it wrap around you like a warm hug."},{icon:'💆',title:"Gentle Self-Massage",mins:4,desc:"Massage your hands, temples, or shoulders gently. Physical touch from yourself releases calming hormones."},{icon:'💌',title:"Love Letter to Self",mins:5,desc:"Write yourself the most loving, understanding letter. You deserve to hear beautiful things about yourself."},{icon:'🌺',title:"Sensory Comfort",mins:4,desc:"Wrap in your softest blanket, hold a favourite object. Let your senses feel fully cared for."}]},
+      express:{title:'Express & Process Activities',activities:[{icon:'📝',title:"Free Writing",mins:5,desc:"Write without stopping for 5 minutes. Don't edit, don't judge. Just let everything pour out."},{icon:'🎨',title:"Feelings Drawing",mins:6,desc:"Draw what your feeling looks like as colours, shapes, or images. No art skills needed — just honesty."},{icon:'🗑️',title:"Rip & Release",mins:3,desc:"Write down what's bothering you on paper, then rip it up. Sometimes we need to physically release things."},{icon:'🎵',title:"Emotion Song",mins:4,desc:"Find a song that matches exactly how you feel. Listen fully and let yourself feel it completely."},{icon:'📖',title:"Emotion Dictionary",mins:5,desc:"Describe your feeling in as many words as possible. The more precisely you name it, the less power it has."},{icon:'💬',title:"Talk to Yourself",mins:3,desc:"Say out loud what you're feeling. Hearing yourself speak your truth is incredibly powerful."},{icon:'🌊',title:"Emotional Wave",mins:4,desc:"Sit with your feeling without trying to change it. Just observe it like a wave. It will pass."},{icon:'🌟',title:"Reframe Practice",mins:4,desc:"Write the hard thing you're experiencing, then write one possible silver lining or lesson, however small."}]}
+    };
+
+    // ── MOOD SELECTOR ──
+    document.querySelectorAll('.glow-mood-item').forEach(btn=>{btn.addEventListener('click',function(){const mood=this.dataset.mood;document.querySelectorAll('.glow-mood-item').forEach(b=>b.classList.remove('active'));this.classList.add('active');const label=this.querySelector('.glow-mood-label').textContent.split('!')[0].trim();document.getElementById('glowMoodTitle').textContent=`Perfect for feeling ${label.toLowerCase()}`;document.getElementById('glowTasksGrid').innerHTML=(MOOD_ACTIVITIES[mood]||[]).map(taskCardHTML).join('');document.getElementById('glowActivitiesWrap').classList.add('show');});});
+
+    // ── GLOW PATH SELECTION ──
+    window.selectGlowPath=function(path){const data=GLOW_PATH_DATA[path];if(!data)return;document.querySelectorAll('.glow-path-card').forEach(c=>{c.style.transform='none';c.style.boxShadow='none';});const sel=document.querySelector(`[data-path="${path}"]`);if(sel){sel.style.transform='translateY(-6px)';sel.style.boxShadow='0 16px 40px rgba(15,82,186,.2)';}document.getElementById('pathwayTitle').textContent=data.title;document.getElementById('glowTasksGridPathway').innerHTML=data.activities.map(taskCardHTML).join('');document.getElementById('pathwayActivities').style.display='block';setTimeout(()=>{document.getElementById('pathwayActivities').scrollIntoView({behavior:'smooth',block:'start'});},100);};
+    window.showCalmPath=function(){document.getElementById('calmPaths').scrollIntoView({behavior:'smooth',block:'start'});};
+
+    function taskCardHTML(a){const t=String(a.title||'').replace(/'/g,"\\'").replace(/"/g,"&quot;"),d=String(a.desc||'').replace(/'/g,"\\'").replace(/"/g,"&quot;");return`<div class="glow-task-card"><div class="glow-task-time"><i class="fa-solid fa-clock"></i> ${a.mins} min</div><div class="glow-task-header"><div class="glow-task-icon">${a.icon}</div></div><div class="glow-task-content"><h4>${a.title}</h4><p>${a.desc}</p><button class="glow-start-btn" onclick="startActivityWithGating('${t}','${d}',${a.mins})">Start Activity ✨</button></div></div>`;}
+
+    // ── TIMER ──
+    let timerInterval=null,timerAwarded=false;
+    window.startTimer=function(title,desc,minutes){const modal=document.getElementById('timerModal');document.getElementById('timerTitle').textContent=title;document.getElementById('timerDesc').textContent=desc;modal.classList.add('show');timerAwarded=false;let seconds=minutes*60;const update=()=>{const m=Math.floor(seconds/60),s=seconds%60;document.getElementById('timerDisplay').textContent=`${m}:${s.toString().padStart(2,'0')}`;};update();if(timerInterval)clearInterval(timerInterval);timerInterval=setInterval(()=>{seconds--;if(seconds<=0){seconds=0;update();clearInterval(timerInterval);document.getElementById('timerDisplay').textContent='Complete! 💎';if(!timerAwarded){timerAwarded=true;awardGem(title, minutes);}return;}update();},1000);};
+    window.closeTimer=function(){if(timerInterval)clearInterval(timerInterval);timerAwarded=false;document.getElementById('timerModal').classList.remove('show');};
+
+    // ── AUDIO CHIMES ──
+    function playChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=880;osc.type='sine';gain.gain.setValueAtTime(.2,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.01,ctx.currentTime+.5);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+.5);}catch(e){}}
+    function playSpecialChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<4;i++){setTimeout(()=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=523.25+(i*200);osc.type='sine';gain.gain.setValueAtTime(.15,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+1);},i*150);}}catch(e){}}
+
+    // ── VOICE JOURNAL ──
+    let mediaRecorder=null,audioChunks=[];
+    function toggleVoiceRecording(){const btn=document.getElementById('voiceRecordBtn'),ta=document.getElementById('voiceJournalText');if(mediaRecorder&&mediaRecorder.state==='recording'){mediaRecorder.stop();btn.innerHTML='<i class="fa-solid fa-microphone"></i> Start Recording';btn.style.background='linear-gradient(135deg,var(--sapphire),var(--sapphire-light))';}else{navigator.mediaDevices?.getUserMedia({audio:true}).then(stream=>{mediaRecorder=new MediaRecorder(stream);audioChunks=[];mediaRecorder.ondataavailable=e=>audioChunks.push(e.data);mediaRecorder.onstop=()=>{const blob=new Blob(audioChunks,{type:'audio/wav'});const reader=new FileReader();reader.onload=()=>{};reader.readAsDataURL(blob);const recognition=window.webkitSpeechRecognition||window.SpeechRecognition;if(recognition){const r=new recognition();r.onresult=e=>ta.value+=(ta.value?' ':'')+e.results[0][0].transcript;r.start();}};mediaRecorder.start();btn.innerHTML='<i class="fa-solid fa-stop"></i> Stop Recording';btn.style.background='linear-gradient(135deg,#dc2626,#ef4444)';}).catch(()=>alert('Microphone access denied. Please type your feelings instead!'));}}
+    function downloadJournal(){const text=document.getElementById('voiceJournalText').value;if(!text.trim()){alert('Please write something first!');return;}const blob=new Blob([text],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-feelings-journal.txt';a.click();}
+    function clearJournal(){if(confirm('Clear your journal entry?'))document.getElementById('voiceJournalText').value='';}
+
+    // ── MOBILE MENU ──
+    const hamburgerBtn=document.getElementById('hamburgerBtn'),hamburgerBtnNav=document.getElementById('hamburgerBtnNav'),mobileMenu=document.getElementById('mobileMenu'),menuOverlay=document.getElementById('menuOverlay');
+    function toggleMobileMenu(){mobileMenu.classList.toggle('active');menuOverlay.classList.toggle('active');document.body.style.overflow=mobileMenu.classList.contains('active')?'hidden':'';}
+    hamburgerBtn?.addEventListener('click',toggleMobileMenu);hamburgerBtnNav?.addEventListener('click',toggleMobileMenu);menuOverlay?.addEventListener('click',toggleMobileMenu);
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(l=>l.addEventListener('click',toggleMobileMenu));
+
+    // ── BACK TO TOP ──
+    const backToTopBtn=document.getElementById('backToTopBtn');
+    window.addEventListener('scroll',()=>backToTopBtn.classList.toggle('show',window.scrollY>300));
+    backToTopBtn?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // ── CONTACT FORM ──
+    function openContactModal(){document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';}
+    function closeContactModal(){document.getElementById('contactModal').classList.remove('active');document.body.style.overflow='';document.getElementById('contactForm').reset();document.getElementById('formMessage').style.display='none';}
+    async function handleContactSubmit(event){
+      event.preventDefault();
+      const form = event.currentTarget;
+      const submitBtn = document.getElementById('submitBtn');
+      const messageDiv = document.getElementById('formMessage');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      messageDiv.style.display = 'none';
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value,
+            website: form.querySelector('[name="website"]')?.value || ''
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || 'Failed to send');
+        messageDiv.className = 'form-message success';
+        messageDiv.textContent = "✓ Message sent successfully. We'll get back to you soon.";
+        messageDiv.style.display = 'block';
+        setTimeout(() => closeContactModal(), 1800);
+      } catch (error) {
+        messageDiv.className = 'form-message error';
+        messageDiv.textContent = error.message || 'Failed to send. Please try again.';
+        messageDiv.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    }
+    document.getElementById('askQuestionBtn')?.addEventListener('click',openContactModal);
+    document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal();});
+
+    // ── AUTH (loaded from js/auth.js) ──
+    function handleSignUp(){window.location.href='signup.html';}
+    function showAuthModal(){const modal=document.createElement('div');modal.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1001;display:flex;align-items:center;justify-content:center;padding:20px;';modal.innerHTML=`<div style="background:white;border-radius:24px;padding:40px;max-width:460px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);text-align:center;"><div style="font-size:56px;margin-bottom:20px;">🔒</div><h2 style="font-size:28px;color:var(--ink);margin:0 0 14px;font-weight:700;">Sign In Required</h2><p style="font-size:17px;color:var(--slate);margin:0 0 28px;line-height:1.6;">Please sign up or sign in to access Sapphire Sanctuary activities!</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><button onclick="window.location.href='signup.html'" style="padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:17px;font-weight:700;cursor:pointer;flex:1;min-width:130px;">Sign Up</button><button onclick="window.location.href='sign-in.html'" style="padding:14px 28px;background:white;color:var(--ink);border:3px solid var(--rose);border-radius:12px;font-size:17px;font-weight:700;cursor:pointer;flex:1;min-width:130px;">Sign In</button></div><button onclick="this.closest('div[style*=fixed]').remove()" style="margin-top:16px;padding:10px 20px;background:transparent;color:var(--slate);border:none;font-size:15px;cursor:pointer;text-decoration:underline;">Close</button></div>`;document.body.appendChild(modal);modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});}
+    async function interceptPageClicks(){const { data }=await sb.auth.getSession();const ok=!!data.session;if(!ok){document.body.addEventListener('click',function(e){if(e.target.closest('header')||e.target.closest('#authBtn')||e.target.closest('.hamburger-btn')||e.target.id==='authBtn'||e.target.closest('[style*="fixed"]')||e.target.closest('#dailySparkleFab')||e.target.closest('#rouletteModal'))return;e.preventDefault();e.stopPropagation();showAuthModal();},true);}}
+
+    // ── INIT ──
+    document.addEventListener('DOMContentLoaded',function(){updateGemDisplay();renderChallenges();checkLoginState();});
+    checkLoginState();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

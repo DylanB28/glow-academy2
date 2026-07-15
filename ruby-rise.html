@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruby Rise - Leadership | Gem Glow Academy</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  <meta name="description" content="Build leadership skills, boost confidence, and unlock your personal growth potential in Ruby Rise!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gemglowacademy.com/ruby-rise.html" />
+  <link rel="alternate" hreflang="en-us" href="https://www.gemglowacademy.com/ruby-rise.html" />
+  <meta property="og:title" content="Ruby Rise - Leadership | Gem Glow Academy" />
+  <meta property="og:description" content="Build leadership skills, boost confidence, and unlock your personal growth potential in Ruby Rise!" />
+  <meta property="og:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta property="og:url" content="https://www.gemglowacademy.com/ruby-rise.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gem Glow Academy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ruby Rise - Leadership | Gem Glow Academy" />
+  <meta name="twitter:description" content="Build leadership skills, boost confidence, and unlock your personal growth potential in Ruby Rise!" />
+  <meta name="twitter:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta name="twitter:site" content="@gemglowacademy" />
+  <meta name="twitter:creator" content="@gemglowacademy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    /* Page-specific variable overrides */
+    :root { --ruby-light: #FF1F7D; }
+    body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#FFF5F8 0%,#F3E5F5 100%);background-attachment:fixed;font-weight:400;}
+    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,215,0,.03) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(233,30,99,.03) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(156,39,176,.02) 0%,transparent 50%);pointer-events:none;z-index:0;}
+    .container{width:min(1120px,92vw);margin:auto}
+
+    @keyframes modalSlideIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+    .sparkle{display:inline-block;animation:sparkle 2s ease-in-out infinite;color:#B8000F;filter:drop-shadow(0 0 6px #B8000F);}
+
+
+
+
+
+
+    main{min-height:55vh;padding-bottom:80px;}
+
+    /* ── Cards ── */
+    .card{background:white;border:2px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadowSoft);margin-bottom:40px;position:relative;overflow:hidden;}
+    .card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,215,0,.05) 0%,transparent 70%);pointer-events:none;}
+    .card>*{position:relative;}
+    .card h2{margin:0 0 16px;font-size:32px;color:var(--ink);font-weight:700;}
+    .card h3{margin:0 0 12px;font-size:24px;}
+    .card p{margin:0 0 16px;font-size:19px;color:var(--slate);}
+
+    /* ── Hero ── */
+    .hero-section{padding:45px 0 50px;text-align:center;}
+    .hero-title{font-size:83px;margin:0;font-weight:450;color:#B8000F;}
+    .hero-title{font-size:83px;margin:0;font-weight:450;color:#B8000F;}
+    .hero-powers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:850px;margin:0 auto;}
+    .hero-power-card{padding:26px 22px;border-radius:22px;cursor:pointer;transition:all .3s ease;text-align:left;position:relative;overflow:hidden;}
+    .hero-power-card:hover{transform:translateY(-8px);}
+
+    /* ── Why Leadership grid ── */
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+
+    /* ── Mood Selector ── */
+    .glow-mood-block{padding:24px 0;margin-bottom:40px;}
+    .glow-mood-shell{padding:28px;border-radius:var(--radius);border:2px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(252,228,236,.3));box-shadow:var(--shadowSoft);}
+    .glow-mood-head h3{margin:0 0 8px;font-size:26px;color:var(--rose);font-weight:700;}
+    .glow-mood-head p{margin:0;color:var(--slate);font-weight:500;font-size:17px;}
+    .glow-mood-row{margin:20px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;padding:10px 0;}
+    .glow-mood-item{display:grid;justify-items:center;gap:12px;padding:24px 16px;border-radius:20px;border:3px solid var(--line);background:white;cursor:pointer;user-select:none;transition:all .3s ease;min-height:200px;}
+    .glow-mood-item:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(233,30,99,.15);border-color:var(--pink);}
+    .glow-mood-item.active{border-color:var(--rose);background:linear-gradient(135deg,rgba(233,30,99,.12),rgba(255,255,255,.95));box-shadow:0 12px 28px rgba(233,30,99,.25);}
+    .glow-mood-emoji{font-size:56px;line-height:1;filter:drop-shadow(0 4px 8px rgba(233,30,99,.1));}
+    .glow-mood-label{font-weight:700;color:var(--ink);font-size:17px;text-align:center;}
+    .glow-mood-relatable{font-size:13px;color:var(--slate);font-weight:500;text-align:center;font-style:italic;}
+    .glow-activities-wrap{margin:24px 0 0;display:none;}
+    .glow-activities-wrap.show{display:block;}
+    .glow-activities-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+
+    /* ── Activity Cards ── */
+    .glow-tasks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .glow-task-card{padding:24px;border:3px solid var(--line);border-radius:20px;background:white;transition:all .3s ease;display:flex;flex-direction:column;position:relative;min-height:100%;}
+    .glow-task-time{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--gold);padding-bottom:12px;margin-bottom:12px;border-bottom:2px solid var(--gold);}
+    .glow-task-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .glow-task-icon{font-size:36px;flex-shrink:0;}
+    .glow-task-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);border-color:var(--rose);}
+    .glow-task-content{flex:1;display:flex;flex-direction:column;}
+    .glow-task-content h4{margin:0 0 8px;font-size:22px;font-weight:700;color:var(--ink);}
+    .glow-task-content p{margin:0 0 auto;font-size:18px;color:var(--slate);line-height:1.65;padding-bottom:16px;}
+    .glow-start-btn{padding:14px 24px;border-radius:14px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;font-weight:700;font-size:16px;transition:all .3s ease;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);margin-top:auto;}
+    .glow-start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,30,99,.4);}
+
+    /* ── Glow Path Cards ── */
+    .glow-path-card{padding:32px 28px;border-radius:20px;border:3px solid transparent;cursor:pointer;transition:all .3s ease;background:white;}
+    .glow-path-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(233,30,99,.15);}
+    .glow-path-card.morning{border-color:rgba(255,107,157,.2);background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(255,255,255,.95));}
+    .glow-path-card.morning:hover{border-color:var(--coral);}
+    .glow-path-card.kindness{border-color:rgba(240,98,146,.2);background:linear-gradient(135deg,rgba(240,98,146,.08),rgba(255,255,255,.95));}
+    .glow-path-card.kindness:hover{border-color:var(--pink);}
+    .glow-path-card.gratitude{border-color:rgba(156,39,176,.2);background:linear-gradient(135deg,rgba(156,39,176,.08),rgba(255,255,255,.95));}
+    .glow-path-card.gratitude:hover{border-color:var(--purple);}
+    .glow-path-card.wellness{border-color:rgba(78,205,196,.2);background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(255,255,255,.95));}
+    .glow-path-card.wellness:hover{border-color:var(--mint);}
+    .paths-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-bottom:40px;}
+
+    /* ── Gem Rewards ── */
+    .gem-rewards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px;}
+
+    /* ── Challenge Tracker ── */
+    .challenge-tracker{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:24px;}
+    .challenge-day{padding:20px 12px;border-radius:16px;border:3px solid var(--line);background:white;text-align:center;transition:all .3s ease;cursor:pointer;}
+    .challenge-day:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(233,30,99,.15);}
+    .challenge-day.completed{border-color:var(--gold);background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,255,255,.95));}
+    .challenge-day-num{font-size:14px;font-weight:700;color:var(--slate);margin-bottom:8px;}
+    .challenge-day-emoji{font-size:32px;margin-bottom:8px;filter:grayscale(100%);opacity:.3;transition:all .3s ease;}
+    .challenge-day.completed .challenge-day-emoji{filter:grayscale(0%);opacity:1;}
+    .challenge-day-label{font-size:12px;font-weight:600;color:var(--slate);}
+
+    /* ── Floating Button ── */
+    .floating-sparkle-btn{position:fixed;bottom:30px;left:30px;z-index:9998;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;border:3px solid var(--gold);background:white;box-shadow:0 14px 30px rgba(255,215,0,.25);cursor:pointer;transition:all .3s ease;font-family:inherit;}
+    .floating-sparkle-btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,215,0,.35);}
+    .floating-sparkle-btn .fab-ic{font-size:20px;color:var(--gold);}
+    .floating-sparkle-btn .fab-txt{font-weight:700;font-size:16px;color:var(--ink);}
+
+    /* ── Gem Toast ── */
+    .gem-toast{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2000;display:none;background:white;border:3px solid var(--gold);border-radius:20px;padding:28px 32px;box-shadow:0 22px 50px rgba(255,215,0,.35);min-width:400px;max-width:92vw;}
+    .gem-toast-content{display:flex;align-items:center;gap:16px;}
+    .gem-toast-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--amber));display:flex;align-items:center;justify-content:center;font-size:32px;}
+    .gem-toast-text{flex:1;}
+    .gem-toast-title{font-weight:700;font-size:20px;color:var(--ink);margin-bottom:4px;}
+    .gem-toast-subtitle{font-size:16px;color:var(--slate);font-weight:500;}
+    .gem-toast-close{background:transparent;border:none;color:var(--slate);font-size:24px;cursor:pointer;padding:4px 8px;opacity:.7;}
+    .gem-toast-close:hover{opacity:1;}
+
+    /* ── Timer Modal ── */
+    .timer-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .timer-modal.show{display:flex;}
+    .timer-content{background:white;border-radius:24px;border:3px solid var(--rose);padding:40px;max-width:500px;width:90%;box-shadow:0 20px 60px rgba(233,30,99,.3);text-align:center;position:relative;}
+    .timer-content h3{margin:0 0 12px;font-size:28px;color:var(--rose);font-weight:700;}
+    .timer-content p{margin:0 0 24px;font-size:17px;color:var(--slate);line-height:1.6;}
+    .timer-display{font-size:72px;font-weight:700;color:var(--rose);margin:24px 0;letter-spacing:-2px;font-family:monospace;}
+    .timer-close{padding:14px 28px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:16px;width:100%;box-shadow:0 6px 16px rgba(233,30,99,.3);transition:all .3s ease;}
+    .timer-close:hover{transform:translateY(-2px);}
+    .modal-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:999px;border:2px solid var(--line);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:var(--slate);transition:all .2s ease;z-index:10;}
+    .modal-x:hover{background:rgba(233,30,99,.08);border-color:var(--rose);transform:scale(1.1);}
+
+    /* ── Roulette ── */
+    .roulette-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(45,27,78,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .roulette-modal.show{display:flex;}
+    .roulette-content{background:white;border-radius:24px;border:3px solid var(--gold);padding:24px;max-width:500px;width:95%;box-shadow:0 20px 60px rgba(255,215,0,.3);text-align:center;position:relative;}
+    .roulette-wheel-container{position:relative;width:240px;height:240px;margin:20px auto;}
+    .roulette-wheel{width:100%;height:100%;border-radius:50%;border:5px solid var(--gold);background:conic-gradient(var(--coral) 0deg 45deg,var(--pink) 45deg 90deg,var(--purple) 90deg 135deg,var(--mint) 135deg 180deg,var(--lavender) 180deg 225deg,var(--gold) 225deg 270deg,var(--sky) 270deg 315deg,var(--rose) 315deg 360deg);box-shadow:0 0 0 8px white,0 12px 40px rgba(255,215,0,.3);transition:transform .5s ease;}
+    .roulette-wheel.spinning{animation:spin 3s cubic-bezier(.17,.67,.12,.99);}
+    .roulette-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:35px solid var(--rose);z-index:10;}
+    .roulette-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:5;}
+    .roulette-result{margin-top:20px;padding:18px;background:linear-gradient(135deg,rgba(255,215,0,.1),rgba(233,30,99,.1));border-radius:16px;border:2px solid var(--gold);display:none;}
+    .roulette-result.show{display:block;}
+    .roulette-result-title{font-size:22px;font-weight:700;color:var(--rose);margin-bottom:8px;}
+    .roulette-result-activity{font-size:16px;color:var(--slate);margin-bottom:14px;}
+    .roulette-btn{padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--ink);border:none;cursor:pointer;border-radius:14px;font-weight:700;font-size:17px;margin-top:14px;transition:all .3s ease;}
+    .roulette-btn:disabled{opacity:.5;cursor:not-allowed;}
+
+
+    /* ── Contact Modal ── */
+    .contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{background:white;border-radius:24px;padding:48px;max-width:580px;width:100%;box-shadow:0 24px 64px rgba(156,39,176,.35);position:relative;animation:modalSlideIn .3s ease;}
+    .modal-close{position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;}
+    .modal-close:hover{background:var(--line);color:var(--ink);}
+    .contact-modal h2{margin:0 0 12px;font-size:32px;color:var(--ink);}
+    .contact-modal p{margin:0 0 32px;color:var(--slate);font-size:18px;}
+    .contact-form{display:flex;flex-direction:column;gap:20px;}
+    .form-group{display:flex;flex-direction:column;gap:8px;}
+    .form-group label{font-weight:600;color:var(--ink);font-size:16px;}
+    .form-group input,.form-group textarea{padding:14px 16px;border:2px solid var(--line);border-radius:12px;font-family:inherit;font-size:16px;color:var(--ink);transition:all .2s ease;}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(233,30,99,.1);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-submit{padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;transition:all .3s ease;margin-top:12px;}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(233,30,99,.3);}
+    .form-message{padding:16px;border-radius:12px;font-size:16px;font-weight:600;margin-top:16px;display:none;}
+    .form-message.success{background:rgba(34,197,94,.1);color:#16a34a;border:2px solid rgba(34,197,94,.3);display:block;}
+    .form-message.error{background:rgba(239,68,68,.1);color:#dc2626;border:2px solid rgba(239,68,68,.3);display:block;}
+
+    /* ══════════════════════════════════════
+       TABLET (≤980px)
+    ══════════════════════════════════════ */
+    @media(max-width:968px){
+      #hamburgerBtn{display:block;}
+      #hamburgerBtnNav{display:none;}
+      .nav-links{display:none;}
+      .nav-actions{display:none;}
+      .brand{font-size:25px;}
+      .brand img{width:70px;height:70px;}
+      /* Grids */
+      .glow-tasks-grid{grid-template-columns:1fr 1fr;}
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);}
+      .why-grid{grid-template-columns:1fr;}
+      .gem-rewards-grid{grid-template-columns:1fr;}
+      .paths-grid{grid-template-columns:1fr;}
+      .hero-powers-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;}
+      /* Hero */
+      .hero-title{font-size:52px !important;}
+    }
+
+    /* ══════════════════════════════════════
+       MOBILE (≤768px)
+    ══════════════════════════════════════ */
+    @media(max-width:768px){
+      .container{width:94vw;}
+      main{padding-bottom:80px;}
+      section{padding-top:24px !important;padding-bottom:24px !important;}
+
+      /* Typography */
+      h1,.hero-title{font-size:38px !important;}
+      h2,.card h2{font-size:22px !important;}
+      h3{font-size:18px !important;}
+      p,.card p{font-size:16px !important;}
+
+      /* Cards */
+      .card{padding:18px;margin-bottom:24px;}
+
+      /* My Palace tab — flush + out 20% */
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:15px;padding:12px 12px;}
+
+      /* Gem counter */
+      .gem-counter-inner{width:48px;padding:10px;}
+      .gem-counter-amount{font-size:16px;}
+      .gem-icon{font-size:18px;}
+
+      /* Hero */
+      .hero-section{padding:24px 0 20px !important;}
+      .hero-title{font-size:36px !important;}
+      .hero-powers-grid{grid-template-columns:1fr;gap:12px;}
+      .hero-power-card{padding:18px 16px !important;}
+      .hero-power-card h3{font-size:18px !important;}
+      .hero-power-card p{font-size:14px !important;}
+      .hero-power-card .power-icon{font-size:32px !important;margin-bottom:8px !important;}
+
+      /* Why leadership grid */
+      .why-grid{grid-template-columns:1fr;gap:12px;}
+
+      /* Mood selector */
+      .glow-mood-shell{padding:16px;}
+      .glow-mood-row{grid-template-columns:repeat(2,1fr);gap:10px;}
+      .glow-mood-item{min-height:120px;padding:14px 10px;gap:8px;}
+      .glow-mood-emoji{font-size:36px;}
+      .glow-mood-label{font-size:14px;}
+      .glow-mood-relatable{font-size:11px;}
+
+      /* Activity cards */
+      .glow-tasks-grid{grid-template-columns:1fr;gap:12px;}
+      .glow-task-card{padding:16px;}
+      .glow-task-content h4{font-size:18px !important;}
+      .glow-task-content p{font-size:15px !important;}
+
+      /* Challenge tracker */
+      .challenge-tracker{grid-template-columns:repeat(4,1fr);gap:8px;}
+      .challenge-day{padding:10px 4px;}
+      .challenge-day-num{font-size:11px;}
+      .challenge-day-emoji{font-size:22px;margin-bottom:4px;}
+      .challenge-day-label{font-size:10px;}
+
+      /* Glow paths */
+      .paths-grid{grid-template-columns:1fr;gap:16px;}
+      .glow-path-card{padding:18px 14px;}
+      .glow-path-card .path-icon-box{width:48px !important;height:48px !important;font-size:26px !important;}
+      .glow-path-card h3{font-size:20px !important;}
+
+      /* Gem rewards */
+      .gem-rewards-grid{grid-template-columns:1fr;gap:12px;}
+      .gem-rewards-grid > div{padding:16px 12px !important;}
+      .gem-rewards-grid > div > div:first-child{font-size:36px !important;margin-bottom:10px !important;}
+      .gem-rewards-grid > div > p{font-size:13px !important;display:none;}
+
+      /* Roulette */
+      .roulette-content{width:96vw !important;max-width:96vw !important;padding:18px 14px;}
+      .roulette-wheel-container{width:180px;height:180px;}
+
+      /* Timer */
+      .timer-content{width:94vw !important;padding:24px 16px;}
+      .timer-display{font-size:52px !important;}
+
+      /* Gem toast */
+      .gem-toast{min-width:unset;width:90vw;padding:18px;}
+      .gem-toast-title{font-size:16px;}
+      .gem-toast-subtitle{font-size:13px;}
+
+      /* Fixed elements */
+      .floating-sparkle-btn{left:14px;bottom:18px;padding:12px 14px;}
+      .floating-sparkle-btn .fab-txt{display:none !important;}
+      .back-to-top{bottom:18px;right:14px;width:42px;height:42px;font-size:18px;}
+
+      .gem-journey-grid{grid-template-columns:repeat(3,1fr) !important;gap:10px !important;}
+      .gem-journey-card{padding:14px 10px !important;}
+      .gem-journey-emoji{font-size:32px !important;margin-bottom:8px !important;}
+      .gem-journey-name{font-size:14px !important;}
+      .gem-journey-count{font-size:13px !important;}
+      .gem-journey-desc{display:none;}
+      /* Footer */
+      footer{padding:32px 0;margin-top:40px;}
+
+      /* Contact modal */
+      .contact-modal-content{padding:28px 18px;}
+      .contact-modal h2{font-size:24px;}
+    }
+
+    /* ══════════════════════════════════════
+       SMALL PHONES (≤480px)
+    ══════════════════════════════════════ */
+    @media(max-width:480px){
+      .container{width:96vw;}
+      .card{padding:14px;}
+      h1,.hero-title{font-size:30px !important;}
+      h2,.card h2{font-size:20px !important;}
+      /* Dashboard tab smaller */
+      .dashboard-tab a{transform:translateX(-20%) !important;font-size:14px;padding:12px 10px;}
+      /* Mood - single col */
+      .glow-mood-row{grid-template-columns:1fr;}
+      .glow-mood-item{min-height:auto;display:flex;flex-direction:row;align-items:center;text-align:left;padding:12px 14px;gap:12px;justify-content:flex-start;}
+      .glow-mood-emoji{font-size:28px;flex-shrink:0;}
+      /* Challenge - 2 col */
+      .challenge-tracker{grid-template-columns:repeat(2,1fr);gap:6px;}
+      .challenge-day-emoji{font-size:20px;}
+      /* Timer */
+      .timer-display{font-size:44px !important;}
+    }
+    .challenge-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;}
+    .challenge-row select{width:100%;box-sizing:border-box;}
+    @media(max-width:480px){
+      .challenge-row{grid-template-columns:1fr;}
+      .challenge-row button{width:100%;}
+    }
+    .select-wrap{position:relative;}
+    .select-wrap::after{content:'';position:absolute;right:16px;top:50%;width:8px;height:8px;transform:translateY(-75%) rotate(45deg);border-right:2.5px solid #777;border-bottom:2.5px solid #777;pointer-events:none;}
+    .select-wrap select{appearance:none;-webkit-appearance:none;}
+  </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/assets/js/config.js"></script>
+<script src="/assets/supabase-config.js"></script>
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/supabase-progress.js"></script>
+</head>
+<body>
+
+  <div class="dashboard-tab palace-link" id="palaceTab" style="display:none;"><a href="palace.html" aria-label="My Palace"><span>💎</span><span>My Palace</span></a></div>
+
+  <div class="gem-counter" id="gemCounter">
+    <div class="gem-counter-inner">
+      <div class="gem-counter-amount"><span class="gem-icon">💎</span><span class="gem-total-number" id="gemTotal">0</span></div>
+      <div class="gem-progress"><div class="gem-progress-bar" id="gemProgressBar" style="height:0%"></div></div>
+      <div class="gem-milestone" id="gemMilestone">Next: Ring at 50</div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-home ic-home"></i> Home</a>
+    <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+    <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+    <a class="nav-link active" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+    <a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring ic-support"></i> Support</a>
+    <a class="nav-link" id="signOutBtnMobile" style="display:flex;cursor:pointer;"><i class="fa-solid fa-spinner fa-spin"></i></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <picture>
+  <source srcset="assets/logo-96.webp" type="image/webp">
+  <img src="assets/logo-96.png" alt="Gem Glow Academy logo" width="85" height="85" onerror="this.style.display='none'">
+</picture>
+        <span>Gem Glow</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+        <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+        <a class="nav-link active" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn" id="authBtn" type="button" style="display:flex;padding:10px 20px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:16px;align-items:center;gap:8px;"><i class="fa-solid fa-spinner fa-spin"></i></button>
+        <button class="hamburger-btn" id="hamburgerBtnNav" aria-label="Open menu" style="margin-left:12px;"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <div style="max-width:850px;margin:0 auto 40px;">
+          <div style="display:inline-flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap;justify-content:center;">
+            <i class="fa-solid fa-gem sparkle" style="font-size:48px;"></i>
+            <h1 class="hero-title">Ruby Rise</h1>
+            <i class="fa-solid fa-gem sparkle" style="font-size:48px;"></i>
+          </div>
+          <p style="font-size:22px;color:var(--slate);line-height:1.5;font-weight:600;margin-bottom:16px;">Become the confident leader you were born to be!</p>
+          <p style="font-size:17px;color:var(--muted);line-height:1.6;margin:0 auto 28px;">In Ruby Rise, you'll discover your inner strength, learn to speak up with confidence, and develop the skills that great leaders use every day. Every challenge earns you gems on your journey to becoming unstoppable!</p>
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:linear-gradient(135deg,rgba(224,17,95,.15),rgba(255,31,125,.15));border:3px solid var(--ruby);border-radius:18px;">
+            <span style="font-size:26px;">💎</span>
+            <span style="font-weight:700;font-size:17px;color:var(--ink);">Complete challenges = Earn gems!</span>
+          </div>
+        </div>
+
+        <!-- Leadership Powers Grid -->
+        <div class="hero-powers-grid">
+          <div class="hero-power-card" onclick="showLeadershipPath('voice')" style="background:linear-gradient(135deg,rgba(224,17,95,.12),white);border:4px solid rgba(224,17,95,.4);">
+            <div style="position:absolute;top:-18px;right:-18px;font-size:90px;opacity:.06;">🎤</div>
+            <div class="power-icon" style="font-size:40px;margin-bottom:10px;position:relative;z-index:1;">🎤</div>
+            <h3 style="font-size:21px;margin:0 0 8px;color:var(--ruby);font-weight:700;position:relative;z-index:1;">Find Your Voice</h3>
+            <p style="margin:0;font-size:14px;color:var(--slate);line-height:1.5;position:relative;z-index:1;">Share your ideas boldly, speak up in groups, and let the world hear your unique perspective!</p>
+          </div>
+          <div class="hero-power-card" onclick="showLeadershipPath('brave')" style="background:linear-gradient(135deg,rgba(255,31,125,.12),white);border:4px solid rgba(255,31,125,.4);">
+            <div style="position:absolute;top:-18px;right:-18px;font-size:90px;opacity:.06;">🦁</div>
+            <div class="power-icon" style="font-size:40px;margin-bottom:10px;position:relative;z-index:1;">🦁</div>
+            <h3 style="font-size:21px;margin:0 0 8px;color:var(--ruby-light);font-weight:700;position:relative;z-index:1;">Be Brave</h3>
+            <p style="margin:0;font-size:14px;color:var(--slate);line-height:1.5;position:relative;z-index:1;">Face your fears, try new things, and show courage even when it feels scary. Bravery is a superpower!</p>
+          </div>
+          <div class="hero-power-card" onclick="showLeadershipPath('lead')" style="background:linear-gradient(135deg,rgba(233,30,99,.12),white);border:4px solid rgba(233,30,99,.4);">
+            <div style="position:absolute;top:-18px;right:-18px;font-size:90px;opacity:.06;">👑</div>
+            <div class="power-icon" style="font-size:40px;margin-bottom:10px;position:relative;z-index:1;">👑</div>
+            <h3 style="font-size:21px;margin:0 0 8px;color:var(--rose);font-weight:700;position:relative;z-index:1;">Lead with Heart</h3>
+            <p style="margin:0;font-size:14px;color:var(--slate);line-height:1.5;position:relative;z-index:1;">Guide others with kindness, make decisions with confidence, and inspire your team!</p>
+          </div>
+          <div class="hero-power-card" onclick="showLeadershipPath('goals')" style="background:linear-gradient(135deg,rgba(156,39,176,.12),white);border:4px solid rgba(156,39,176,.4);">
+            <div style="position:absolute;top:-18px;right:-18px;font-size:90px;opacity:.06;">🎯</div>
+            <div class="power-icon" style="font-size:40px;margin-bottom:10px;position:relative;z-index:1;">🎯</div>
+            <h3 style="font-size:21px;margin:0 0 8px;color:var(--purple);font-weight:700;position:relative;z-index:1;">Dream & Achieve</h3>
+            <p style="margin:0;font-size:14px;color:var(--slate);line-height:1.5;position:relative;z-index:1;">Set powerful goals, create action plans, and turn your biggest dreams into reality!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Leadership Matters -->
+    <section style="padding:40px 0;background:linear-gradient(135deg,rgba(224,17,95,.05),rgba(255,255,255,.8));">
+      <div class="container">
+        <div style="max-width:950px;margin:0 auto;">
+          <h2 style="text-align:center;font-size:32px;color:var(--ruby);margin-bottom:12px;">Why Build Leadership Skills? 👑</h2>
+          <p style="text-align:center;font-size:17px;color:var(--slate);margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">Leadership isn't about being in charge — it's about being confident, kind, and brave enough to make a positive difference!</p>
+          <div class="why-grid">
+            <div style="padding:24px 18px;background:white;border:3px solid rgba(224,17,95,.3);border-radius:18px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:10px;">💪</div>
+              <h3 style="margin:0 0 8px;font-size:19px;color:var(--ink);">Build Confidence</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.5;">Believe in yourself and your abilities. Confidence helps you take on any challenge!</p>
+            </div>
+            <div style="padding:24px 18px;background:white;border:3px solid rgba(255,31,125,.3);border-radius:18px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:10px;">🌟</div>
+              <h3 style="margin:0 0 8px;font-size:19px;color:var(--ink);">Inspire Others</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.5;">When you lead with kindness, you motivate friends to be their best too!</p>
+            </div>
+            <div style="padding:24px 18px;background:white;border:3px solid rgba(156,39,176,.3);border-radius:18px;text-align:center;">
+              <div style="font-size:44px;margin-bottom:10px;">🚀</div>
+              <h3 style="margin:0 0 8px;font-size:19px;color:var(--ink);">Reach Your Dreams</h3>
+              <p style="margin:0;font-size:15px;color:var(--slate);line-height:1.5;">Leaders know how to set goals and make them happen. Turn dreams into reality!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7-Day Leadership Challenge -->
+    <section style="padding:40px 0;">
+      <div class="container">
+        <div class="card" style="background:linear-gradient(135deg,rgba(224,17,95,.08),white);border-color:var(--ruby);max-width:900px;margin:0 auto 40px;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <h2 style="color:var(--ruby);font-size:34px;margin-bottom:12px;">🏆 7-Day Leadership Challenge 🏆</h2>
+            <p style="font-size:18px;color:var(--slate);">Pick one leadership skill to practise every day for a week. You've got this!</p>
+          </div>
+          <div style="padding:18px;background:rgba(224,17,95,.05);border-radius:16px;border:2px solid rgba(224,17,95,.3);margin-bottom:20px;">
+            <label style="display:block;font-weight:700;color:var(--ink);font-size:17px;margin-bottom:10px;">Choose Your Challenge:</label>
+            <div class="challenge-row">
+              <div class="select-wrap">
+                <select id="challengeHabit" style="padding:13px 48px 13px 16px;border:3px solid var(--line);border-radius:14px;font-size:16px;font-family:inherit;font-weight:600;background-color:white;">
+                  <option value="">Pick a leadership challenge...</option>
+                  <option value="Speak up in class at least once">🎤 Speak up in class at least once</option>
+                  <option value="Compliment 3 different people">💝 Compliment 3 different people</option>
+                  <option value="Try one new thing that scares me">🦁 Try one new thing that scares me</option>
+                  <option value="Help organize a group activity">👑 Help organise a group activity</option>
+                  <option value="Stand up for someone">💪 Stand up for someone</option>
+                  <option value="Lead a team project or game">🎯 Lead a team project or game</option>
+                  <option value="Share my ideas confidently">✨ Share my ideas confidently</option>
+                  <option value="Make a decision and stick with it">🌟 Make a decision and stick with it</option>
+                </select>
+              </div>
+              <button id="addChallengeBtn" type="button" style="display:none;padding:13px 24px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:14px;font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;box-shadow:0 6px 16px rgba(233,30,99,.3);white-space:nowrap;">+ Add</button>
+            </div>
+          </div>
+          <div id="challengesContainer"></div>
+          <div style="margin-top:20px;padding:18px;background:rgba(255,215,0,.2);border-radius:14px;border:3px solid var(--gold);text-align:center;">
+            <p style="margin:0;font-size:18px;color:var(--ink);font-weight:700;">🏆 Complete all 7 days and celebrate your consistency with a new challenge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confidence Check-In -->
+    <section class="glow-mood-block" id="activitiesStart">
+      <div class="container">
+        <div class="glow-mood-shell">
+          <div class="glow-mood-head">
+            <h3>How confident are you feeling today? 💪</h3>
+            <p>Tell us how you're feeling right now, and we'll show you the perfect leadership activities to help you grow!</p>
+          </div>
+          <div class="glow-mood-row" role="group" aria-label="Confidence level selector">
+            <button class="glow-mood-item" type="button" data-mood="excited"><div class="glow-mood-emoji">🚀</div><div class="glow-mood-label">Super Confident<br><span class="glow-mood-relatable">I can do anything!</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="happy"><div class="glow-mood-emoji">😊</div><div class="glow-mood-label">Feeling Good<br><span class="glow-mood-relatable">Ready to try!</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="okay"><div class="glow-mood-emoji">😌</div><div class="glow-mood-label">Pretty Good<br><span class="glow-mood-relatable">I'm doing okay</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="tired"><div class="glow-mood-emoji">😐</div><div class="glow-mood-label">Not Sure<br><span class="glow-mood-relatable">Need a boost</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="unsure"><div class="glow-mood-emoji">😰</div><div class="glow-mood-label">Nervous<br><span class="glow-mood-relatable">Feeling shy</span></div></button>
+            <button class="glow-mood-item" type="button" data-mood="cozy"><div class="glow-mood-emoji">🤗</div><div class="glow-mood-label">Want Support<br><span class="glow-mood-relatable">Need encouragement</span></div></button>
+          </div>
+          <div class="glow-activities-wrap" id="glowActivitiesWrap">
+            <div class="glow-activities-title"><span>💫</span><span id="glowMoodTitle">Perfect leadership activities for you</span></div>
+            <div class="glow-tasks-grid" id="glowTasksGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Paths -->
+    <section style="padding:40px 0;" id="glowPaths">
+      <div class="container">
+        <div class="card">
+          <div style="text-align:center;margin-bottom:32px;">
+            <h2 style="font-size:34px;color:var(--ruby);margin-bottom:10px;">Choose Your Leadership Path 👑</h2>
+            <p style="font-size:18px;color:var(--slate);">Each path has powerful activities to build your confidence and leadership skills. Pick the one that calls to you today!</p>
+          </div>
+          <div class="paths-grid">
+            <div class="glow-path-card morning" data-path="voice" onclick="selectGlowPath('voice')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,#B8000F,#E0115F);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;">🎤</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Voice Power</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Speak up confidently and share your ideas!</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">Practice expressing yourself clearly and confidently in class, conversations, and groups.</p>
+              <div style="background:rgba(224,17,95,.08);padding:14px;border-radius:12px;border-left:4px solid var(--ruby);">
+                <p style="margin:0 0 8px;font-weight:700;color:var(--ink);font-size:14px;">✨ Skills you'll develop:</p>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>💬</span><span>Public speaking confidence</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>🎯</span><span>Clear communication</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>✨</span><span>Assertiveness without aggression</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glow-path-card kindness" data-path="courage" onclick="selectGlowPath('courage')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,#FF1F7D,#FF6B9D);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;">🦁</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Courage Builder</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Face fears and step outside your comfort zone!</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">Build resilience by trying new things and learning that mistakes are stepping stones to growth.</p>
+              <div style="background:rgba(255,31,125,.08);padding:14px;border-radius:12px;border-left:4px solid var(--ruby-light);">
+                <p style="margin:0 0 8px;font-weight:700;color:var(--ink);font-size:14px;">💪 Skills you'll develop:</p>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>🎯</span><span>Risk-taking in safe ways</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>💎</span><span>Resilience and grit</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>🌟</span><span>Growth mindset</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glow-path-card gratitude" data-path="leader" onclick="selectGlowPath('leader')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--rose),#F06292);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;">👑</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Team Leader</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Guide others with kindness and confidence!</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">Learn to organise groups, delegate tasks, resolve conflicts, and inspire others to be their best.</p>
+              <div style="background:rgba(233,30,99,.08);padding:14px;border-radius:12px;border-left:4px solid var(--rose);">
+                <p style="margin:0 0 8px;font-weight:700;color:var(--ink);font-size:14px;">👑 Skills you'll develop:</p>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>🤝</span><span>Team collaboration</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>⚖️</span><span>Conflict resolution</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>🎯</span><span>Decision-making skills</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glow-path-card wellness" data-path="goals" onclick="selectGlowPath('goals')">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                <div class="path-icon-box" style="width:58px;height:58px;background:linear-gradient(135deg,var(--purple),#BA68C8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;">🎯</div>
+                <h3 style="margin:0;font-size:24px;font-weight:700;color:var(--ink);">Goal Achiever</h3>
+              </div>
+              <p style="margin:0 0 10px;font-size:15px;color:var(--slate);font-style:italic;font-weight:600;">Dream big and make it happen!</p>
+              <p style="margin:0 0 16px;font-size:15px;color:var(--slate);line-height:1.6;">Master goal-setting, planning, and follow-through. Break big dreams into small steps and celebrate wins!</p>
+              <div style="background:rgba(156,39,176,.08);padding:14px;border-radius:12px;border-left:4px solid var(--purple);">
+                <p style="margin:0 0 8px;font-weight:700;color:var(--ink);font-size:14px;">🚀 Skills you'll develop:</p>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>📋</span><span>Strategic planning</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>⏰</span><span>Time management</span></div>
+                  <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--slate);font-weight:600;"><span>💪</span><span>Perseverance and commitment</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="pathwayActivities" style="display:none;margin-top:32px;">
+            <h3 id="pathwayTitle" style="margin:0 0 20px;font-size:26px;font-weight:700;color:var(--rose);text-align:center;"></h3>
+            <div class="glow-tasks-grid" id="glowTasksGridPathway"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Gem Journey (compact, near footer) -->
+    <section style="padding:8px 0 48px;">
+      <div class="container">
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,.08),white);border:2px solid var(--gold);border-radius:var(--radius);padding:20px;box-shadow:var(--shadowSoft);">
+          <div style="text-align:center;margin-bottom:16px;">
+            <h2 style="color:var(--gold);font-size:24px;margin:0 0 4px;font-weight:700;font-family:'Pacifico',cursive;">✨ Your Gem Journey ✨</h2>
+            <p style="font-size:14px;color:var(--slate);margin:0;">Spend gems on 100 items and make your palace your own!</p>
+          </div>
+          <div class="gem-journey-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--gold);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">💍</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--gold);">First Palace Pick</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">20 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Choose your first shop item!</p>
+            </div>
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--rose);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">👑</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--rose);">Room Refresh</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">75 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Build a room that feels like you!</p>
+            </div>
+            <div class="gem-journey-card" style="text-align:center;padding:16px 12px;background:white;border:2px solid var(--purple);border-radius:16px;">
+              <div class="gem-journey-emoji" style="font-size:36px;margin-bottom:8px;">🏰</div>
+              <div class="gem-journey-name" style="font-size:15px;font-weight:700;color:var(--purple);">Royal Collection</div>
+              <div class="gem-journey-count" style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;">150 Gems</div>
+              <p class="gem-journey-desc" style="margin:0;font-size:12px;color:var(--slate);">Keep collecting — the shop can keep growing!</p>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:10px;background:rgba(255,215,0,.1);border-radius:10px;border:2px solid var(--gold);">
+            <p style="margin:0;text-align:center;font-size:13px;color:var(--ink);font-weight:600;">💎 Each activity earns 1 gem — timer must reach 0 to collect! ✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="floating-sparkle-btn" id="dailySparkleFab" type="button" aria-label="Open activity roulette" onclick="openRoulette()">
+    <span class="fab-ic">✨</span><span class="fab-txt">Spin the Wheel!</span>
+  </button>
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Timer Modal -->
+  <div class="timer-modal" id="timerModal">
+    <div class="timer-content">
+      <button class="modal-x" onclick="closeTimer()" aria-label="Close">×</button>
+      <h3 id="timerTitle"></h3>
+      <p id="timerDesc"></p>
+      <p style="margin:0 0 16px;color:var(--slate);font-size:14px;line-height:1.5;">💎 Your gem is earned when the timer reaches 0. Stay with it!</p>
+      <div class="timer-display" id="timerDisplay">0:00</div>
+      <button class="timer-close" onclick="closeTimer()">Close</button>
+    </div>
+  </div>
+
+  <!-- Roulette Modal -->
+  <div class="roulette-modal" id="rouletteModal">
+    <div class="roulette-content">
+      <button class="modal-x" onclick="closeRoulette()" aria-label="Close">×</button>
+      <h2 style="font-size:26px;color:var(--gold);margin:0 0 8px;font-weight:700;">🎡 Activity Roulette! 🎡</h2>
+      <p style="font-size:15px;color:var(--slate);margin:0 0 16px;">Spin the wheel and let fate choose your next challenge!</p>
+      <div class="roulette-wheel-container">
+        <div class="roulette-pointer"></div>
+        <div class="roulette-wheel" id="rouletteWheel">
+          <div class="roulette-center"><button class="roulette-btn" id="rouletteSpinBtn" style="width:90px;padding:8px 10px;font-size:13px;border-radius:999px;">Spin!</button></div>
+        </div>
+      </div>
+      <div class="roulette-result" id="rouletteResult">
+        <div class="roulette-result-title" id="rouletteResultTitle"></div>
+        <div class="roulette-result-activity" id="rouletteResultActivity"></div>
+        <button class="glow-start-btn" id="rouletteStartBtn" onclick="handleRouletteStart()">Start This Activity ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gem Toast -->
+  <div class="gem-toast" id="gemToast">
+    <div class="gem-toast-content">
+      <div class="gem-toast-icon">💎</div>
+      <div class="gem-toast-text"><div class="gem-toast-title">Gem earned!</div><div class="gem-toast-subtitle" id="gemToastSub">Amazing work! Keep shining!</div></div>
+      <button class="gem-toast-close" id="closeGemToast" aria-label="Close">×</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand"><div class="brand" style="color:#FFF;font-size:28px;"><span>💎</span><span>Gem Glow Academy</span></div><div class="tagline">Shine Bright, Build Strong!</div></div>
+        <div class="foot-col"><h4>Explore</h4><div class="foot-links"><a href="about-us.html">About Us</a><a href="privacy.html">Privacy</a><a href="terms-and-conditions.html">Terms and Conditions</a><a href="support.html">Support</a></div></div>
+        <div class="foot-col"><h4>Contact</h4><div class="contact-pill" role="button" id="askQuestionBtn"><span>Ask a question</span><i class="fa-solid fa-arrow-right"></i></div><div class="foot-links" style="margin-top:14px;"><a href="#" aria-label="Instagram">Instagram</a><a href="palace.html" aria-label="My Palace">My Palace</a></div></div>
+      </div>
+      <div style="text-align:center;margin:10px 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);color:#F8BBD0;font-size:16px;">© 2026 Gem Glow Academy. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Sign-In Upsell Modal -->
+  <div class="contact-modal" id="thirdClickModal" style="display:none;"><div class="contact-modal-content" style="max-width:500px;text-align:center;padding:48px 40px;"><button class="modal-close" onclick="event.stopPropagation(); closeThirdClickModal();" aria-label="Close modal" style="position:absolute;top:20px;right:20px;background:transparent;border:none;font-size:28px;color:var(--muted);cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:all .2s ease;padding:0;">×</button><div style="font-size:64px;margin-bottom:16px;">✨</div><h2 style="margin:0 0 12px;font-size:28px;color:var(--rose);font-family:'Pacifico',cursive;font-weight:400;">Ready to Start Your Gem Journey?</h2><p style="margin:0 0 20px;color:var(--slate);font-size:17px;line-height:1.6;">You've used your 3 free activities! 💎 A parent can create the family membership, then you can earn gems and choose from 100 palace items.</p><div style="background:linear-gradient(135deg,rgba(233,30,99,.08),white);border:2px solid var(--rose);border-radius:16px;padding:16px;margin-bottom:24px;"><p style="margin:0;font-size:15px;color:var(--ink);font-weight:600;">✓ Access all 40+ activities<br>✓ Earn gems forever<br>✓ Decorate and save your own palace<br>✓ Track your 7-day challenges</p></div><div style="display:flex;gap:12px;flex-direction:column;"><button onclick="startCheckout(window.GGA_PRICES.monthly); closeThirdClickModal();" style="display:inline-block;padding:16px 32px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;box-shadow:0 8px 20px rgba(233,30,99,.3);font-family:inherit;">Unlock Unlimited 💎</button><a href="sign-in.html" onclick="closeThirdClickModal()" style="display:inline-block;padding:16px 32px;background:white;color:var(--rose);border:3px solid var(--rose);border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s ease;text-align:center;">Sign In</a></div></div></div>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <h2>Get in Touch</h2>
+      <p>Have a question or need support? We're here to help!</p>
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+        <div class="form-group"><label for="contactName">Name *</label><input type="text" id="contactName" name="name" required placeholder="Your name"></div>
+        <div class="form-group"><label for="contactEmail">Email *</label><input type="email" id="contactEmail" name="email" required placeholder="your@email.com"></div>
+        <div class="form-group"><label for="contactMessage">Message *</label><textarea id="contactMessage" name="message" required placeholder="How can we help you?"></textarea></div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    let userIsLoggedIn = false;
+    let userIsMember = false;
+    (async () => {
+      try {
+        userIsLoggedIn = await checkLoginState();
+        const status = await checkMembershipStatus();
+        userIsMember = status.isMember && status.role === 'child';
+        if (userIsMember) { await progressFetch(); updateGemDisplay(); }
+      } catch(e) {}
+    })();
+
+    function getFreeCompletionCount() {
+      const stored = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_KEY) || '0', 10);
+      const timestamp = parseInt(localStorage.getItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY) || '0', 10);
+      const now = Date.now();
+      if (timestamp > 0 && (now - timestamp) > RESET_TIMEOUT_MS) {
+        localStorage.setItem(ACTIVITY_COMPLETION_KEY, '0');
+        localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now));
+        return 0;
+      }
+      return stored;
+    }
+    function recordFreeCompletion() {
+      const c = getFreeCompletionCount();
+      if (c < FREE_ACTIVITY_COMPLETIONS) { const now = Date.now(); localStorage.setItem(ACTIVITY_COMPLETION_KEY, String(c + 1)); localStorage.setItem(ACTIVITY_COMPLETION_TIMESTAMP_KEY, String(now)); }
+    }
+    function checkIfFreeCompletionLimitExceeded() { return getFreeCompletionCount() >= FREE_ACTIVITY_COMPLETIONS; }
+    function closeThirdClickModal() { document.getElementById('thirdClickModal').style.display = 'none'; document.body.style.overflow = ''; }
+    function showThirdClickUpsell() { document.getElementById('thirdClickModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function startActivityWithGating(title, desc, mins) {
+      if (userIsMember) { startTimer(title, desc, mins); return; }
+      if (checkIfFreeCompletionLimitExceeded()) {
+        if (window.gtag) { gtag('event', 'upsell_trigger', { source: 'task' }); }
+        showThirdClickUpsell();
+        return;
+      }
+      recordFreeCompletion();
+      if (window.gtag) { gtag('event', 'activity_start', { activity: title }); }
+      startTimer(title, desc, mins);
+    }
+
+    // ── GEM SYSTEM ──
+    function getGemTotal(){return Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);}
+    
+    function updateGemDisplay(){
+      const total=getGemTotal();document.getElementById('gemTotal').textContent=total;
+      const next=GEM_MILESTONES.find(m=>m.gems>total)||GEM_MILESTONES[GEM_MILESTONES.length-1];
+      const prev=GEM_MILESTONES.filter(m=>m.gems<=total).pop();
+      const start=prev?prev.gems:0,end=next.gems;
+      const pct=((total-start)/(end-start))*100;
+      document.getElementById('gemProgressBar').style.height=Math.min(100,Math.max(0,pct))+'%';
+      document.getElementById('gemMilestone').textContent=total>=150?'100 palace items are waiting in the shop':`Next glow goal: ${next.reward} at ${next.gems}`;
+    }
+    function showGemToast(subtitle){
+      const toast=document.getElementById('gemToast'),sub=document.getElementById('gemToastSub');
+      if(!toast)return;if(subtitle)sub.textContent=subtitle;
+      toast.style.display='block';toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';
+      requestAnimationFrame(()=>{toast.style.transition='opacity .3s ease,transform .3s ease';toast.style.opacity='1';toast.style.transform='translate(-50%,-50%) scale(1)';});
+      setTimeout(()=>hideGemToast(),3500);
+    }
+    function hideGemToast(){const toast=document.getElementById('gemToast');if(!toast)return;toast.style.opacity='0';toast.style.transform='translate(-50%,-50%) scale(.9)';setTimeout(()=>{toast.style.display='none';},300);}
+    document.getElementById('closeGemToast')?.addEventListener('click',hideGemToast);
+    async function awardGem(title, durationMinutes = 0){
+      const result = await progressAwardGem('leadership', title, durationMinutes);
+      if (!result.ok) {
+        if (result.status === 401) {
+          showGemToast('🔐 Sign in with your child PIN to save this activity and earn gems.');
+          setTimeout(() => { window.location.href = 'child-login.html'; }, 1200);
+        } else if (result.status === 402) {
+          showGemToast('Ask your parent to reactivate the family membership.');
+        } else {
+          showGemToast('We could not save this activity, so no gem was changed. Please try again.');
+        }
+        return;
+      }
+      const n = result.wallet.gemBalance;
+      updateGemDisplay();
+      if (result.duplicate) {
+        showGemToast(`✓ "${title}" is complete. You already earned its gem today.`);
+        playChime();
+        return;
+      }
+      if (typeof createGemSparkle === 'function') createGemSparkle();
+      showGemToast(`💎 +1 gem for "${title}" — ${n} gems available to spend`);
+      playChime();
+    }
+
+    // ── CHALLENGE TRACKER ──
+    function getChallengesData(){const d=localStorage.getItem('gga_challenges_data');return d?JSON.parse(d):[];}
+    function setChallengesData(d){localStorage.setItem('gga_challenges_data',JSON.stringify(d));}
+    function getTodayDate(){const d=new Date();return d.toISOString().split('T')[0];}
+    function addChallenge(habit){
+      const challenges=getChallengesData();
+      if(challenges.find(c=>c.habit===habit)){showGemToast('⚠️ You are already tracking this challenge!');return;}
+      challenges.push({habit,lastMarkedDate:'',currentDay:0});
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function removeChallenge(idx){
+      const challenges=getChallengesData();
+      challenges.splice(idx,1);
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function markDay(habitIndex){
+      const challenges=getChallengesData();
+      if(!challenges[habitIndex]){return;}
+      const today=getTodayDate();
+      if(challenges[habitIndex].lastMarkedDate===today){
+        showGemToast('⏰ You already marked today! Come back tomorrow to mark the next day.');
+        return;
+      }
+      challenges[habitIndex].currentDay++;
+      challenges[habitIndex].lastMarkedDate=today;
+      showGemToast(`🌟 Day ${challenges[habitIndex].currentDay} complete! Awesome work on "${challenges[habitIndex].habit}"!`);playChime();
+      if(challenges[habitIndex].currentDay===7){
+        showGemToast('🏆 7-DAY CHALLENGE COMPLETE! Choose your next challenge.');
+        playSpecialChime();
+        challenges.splice(habitIndex,1);
+      }
+      setChallengesData(challenges);
+      renderChallenges();
+    }
+    function renderChallenges(){
+      const container=document.getElementById('challengesContainer');
+      const challenges=getChallengesData();
+      const today=getTodayDate();
+      container.innerHTML='';
+      challenges.forEach((c,idx)=>{
+        const card=document.createElement('div');
+        card.style.cssText='margin-bottom:24px;padding:18px;background:white;border-radius:16px;border:3px solid var(--rose);box-shadow:0 4px 12px rgba(233,30,99,.15);position:relative;';
+        const header=document.createElement('div');
+        header.style.cssText='display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:8px;';
+        const title=document.createElement('h4');
+        title.textContent=c.habit;
+        title.style.cssText='margin:0;font-size:18px;font-weight:700;color:var(--ink);flex:1;';
+        const removeBtn=document.createElement('button');
+        removeBtn.type='button';
+        removeBtn.innerHTML='&times;';
+        removeBtn.title='Remove challenge';
+        removeBtn.style.cssText='background:none;border:none;font-size:22px;line-height:1;color:#aaa;cursor:pointer;padding:0 2px;flex-shrink:0;transition:color .2s;';
+        removeBtn.onmouseover=()=>{removeBtn.style.color='#e53935';};
+        removeBtn.onmouseout=()=>{removeBtn.style.color='#aaa';};
+        removeBtn.onclick=(e)=>{e.preventDefault();e.stopPropagation();removeChallenge(idx);};
+        header.appendChild(title);header.appendChild(removeBtn);
+        card.appendChild(header);
+        const tracker=document.createElement('div');
+        tracker.style.cssText='display:grid;grid-template-columns:repeat(7,1fr);gap:8px;';
+        for(let day=1;day<=7;day++){
+          const dayBox=document.createElement('button');
+          dayBox.type='button';
+          const isCompleted=day<=c.currentDay;
+          const isToday=day===c.currentDay+1&&c.lastMarkedDate!==today;
+          const isFuture=day>c.currentDay+1;
+          dayBox.style.cssText=`padding:12px 8px;border-radius:12px;border:2px solid var(--line);background:${isCompleted?'linear-gradient(135deg,var(--gold),var(--amber))':isToday?'linear-gradient(135deg,var(--rose),var(--pink))':'rgba(0,0,0,.05)'};text-align:center;cursor:${isToday?'pointer':'not-allowed'};font-weight:700;font-size:14px;transition:all .3s ease;color:${isCompleted||isToday?'white':'var(--muted)'};opacity:${isFuture?'0.5':'1'}`;
+          dayBox.textContent=isCompleted?`✅\nDay ${day}`:isToday?`Day ${day}`:`Day ${day}`;
+          dayBox.disabled=!isToday;
+          if(isToday){dayBox.onclick=(e)=>{e.preventDefault();e.stopPropagation();markDay(idx);};dayBox.style.cursor='pointer';}
+          tracker.appendChild(dayBox);
+        }
+        card.appendChild(tracker);
+        container.appendChild(card);
+      });
+    }
+    document.getElementById('challengeHabit')?.addEventListener('change',function(){
+      if(this.value){
+        const addBtn=document.getElementById('addChallengeBtn');
+        if(addBtn)addBtn.style.display='block';
+      }
+    });
+    document.getElementById('addChallengeBtn')?.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      const select=document.getElementById('challengeHabit');
+      if(!select.value){showGemToast('⚠️ Choose a challenge first!');return;}
+      addChallenge(select.value);
+      select.value='';
+      this.style.display='none';
+    });
+
+    // ── ROULETTE ──
+    const ALL_ACTIVITIES=[
+      {icon:'🎤',title:"Speak Your Mind",mins:3,desc:"Share your opinion on something out loud. Say it clearly and confidently!"},
+      {icon:'🦁',title:"Try Something New",mins:8,desc:"Do one thing that scares you a little. Growth happens outside your comfort zone!"},
+      {icon:'💌',title:"Compliment Someone",mins:2,desc:"Give a genuine compliment to someone. Notice something great about them!"},
+      {icon:'👑',title:"Lead an Activity",mins:10,desc:"Organise a game or activity with friends. Get everyone involved!"},
+      {icon:'📔',title:"Goal Journal",mins:5,desc:"Write down a big goal and 3 small steps to get there. Start today!"},
+      {icon:'🤝',title:"Include Someone",mins:4,desc:"Notice who's on their own and invite them to join. Leaders include everyone!"},
+      {icon:'💪',title:"Brave Challenge",mins:6,desc:"Choose one fear and take one brave step toward facing it!"},
+      {icon:'🧘',title:"Mindful Breathing",mins:5,desc:"Sit quietly and breathe. Leaders take care of their minds."},
+      {icon:'🌟',title:"Celebrate a Win",mins:3,desc:"Write down something you're proud of achieving recently. Celebrate you!"},
+      {icon:'📢',title:"Presentation Practice",mins:6,desc:"Practice presenting something for 1 minute. Record yourself!"},
+      {icon:'🎯',title:"Make a Decision",mins:4,desc:"Make one decision today without asking for permission. Trust yourself!"},
+      {icon:'🌸',title:"Self-Care Check",mins:4,desc:"Check in with yourself. Have you eaten? Rested? Taken care of you?"}
+    ];
+    let currentRouletteActivity=null,lastActivityIndex=-1,isSpinning=false;
+    function openRoulette(){document.getElementById('rouletteModal').classList.add('show');document.getElementById('rouletteResult').classList.remove('show');}
+    function closeRoulette(){document.getElementById('rouletteModal').classList.remove('show');isSpinning=false;}
+    function spinRoulette(){if(isSpinning)return;isSpinning=true;const wheel=document.getElementById('rouletteWheel'),spinBtn=document.getElementById('rouletteSpinBtn'),result=document.getElementById('rouletteResult');spinBtn.disabled=true;result.classList.remove('show');let ni;do{ni=Math.floor(Math.random()*ALL_ACTIVITIES.length);}while(ni===lastActivityIndex&&ALL_ACTIVITIES.length>1);lastActivityIndex=ni;currentRouletteActivity=ALL_ACTIVITIES[ni];const deg=360/ALL_ACTIVITIES.length,offset=Math.random()*deg,tr=(ni*deg)+offset+1080;wheel.style.transform='rotate(0deg)';wheel.classList.add('spinning');playChime();setTimeout(()=>{wheel.classList.remove('spinning');wheel.style.transform=`rotate(${tr}deg)`;document.getElementById('rouletteResultTitle').textContent=`${currentRouletteActivity.icon} ${currentRouletteActivity.title}`;document.getElementById('rouletteResultActivity').textContent=currentRouletteActivity.desc;result.classList.add('show');spinBtn.disabled=false;isSpinning=false;playSpecialChime();},3000);}
+    function handleRouletteStart(){if(!userIsMember&&checkIfFreeCompletionLimitExceeded()){if(window.gtag){gtag('event','upsell_trigger',{source:'roulette'});}showThirdClickUpsell();return;}if(currentRouletteActivity){if(!userIsMember)recordFreeCompletion();closeRoulette();startTimer(currentRouletteActivity.title,currentRouletteActivity.desc,currentRouletteActivity.mins);}}
+    document.getElementById('rouletteSpinBtn')?.addEventListener('click',spinRoulette);
+
+    // ── MOOD ACTIVITIES ──
+    const MOOD_ACTIVITIES={
+      excited:[{icon:'🌟',title:"Leadership Challenge",mins:5,desc:"Create your own mini challenge for today. Set a goal and crush it!"},{icon:'💝',title:"Inspire Someone",mins:3,desc:"Do something kind to lift someone else up. You have the power to brighten someone's day!"},{icon:'📝',title:"Power Goals",mins:4,desc:"Write 3 bold goals for this week. What amazing things will you achieve?"}],
+      happy:[{icon:'🎤',title:"Share Your Voice",mins:3,desc:"Share an idea or opinion with someone. Speak up — your thoughts matter!"},{icon:'💪',title:"Body Power",mins:5,desc:"Do power poses for 2 minutes! Stand tall, hands on hips — feel your confidence grow."},{icon:'👑',title:"Lead Something",mins:6,desc:"Organise an activity. It can be small — a game, a task, anything. Lead it!"}],
+      okay:[{icon:'💧',title:"Energy Boost",mins:2,desc:"Drink water and take 5 deep breaths. Get ready for your next great thing!"},{icon:'📚',title:"Leadership Reading",mins:10,desc:"Read about a leader you admire. What can you learn from them?"},{icon:'🎨',title:"Vision Board",mins:8,desc:"Draw or collage your future self as a confident leader. What does she look like?"}],
+      tired:[{icon:'😴',title:"Rest & Reflect",mins:5,desc:"Rest is part of leadership! Sit quietly and think of one thing you're proud of today."},{icon:'🧘',title:"Calm Breathing",mins:3,desc:"Breathe slowly. In for 4, hold for 4, out for 4. Reset and recharge."},{icon:'🌙',title:"Evening Plan",mins:5,desc:"Plan one brave thing to do tomorrow. Go to sleep excited to try it!"}],
+      unsure:[{icon:'🌸',title:"Courage Check",mins:4,desc:"Write down what's making you nervous. Then write one tiny brave step you could take."},{icon:'📖',title:"Confidence Journal",mins:5,desc:"Write 3 things you're good at. Read them out loud to yourself!"},{icon:'🎯',title:"Small Win",mins:3,desc:"Choose the easiest brave thing and just do that one thing. Every step counts!"}],
+      cozy:[{icon:'☕',title:"Quiet Reflection",mins:5,desc:"Find a cozy spot and think about what kind of leader you want to be. Dream big!"},{icon:'🌺',title:"Gratitude Leader",mins:4,desc:"Notice 3 things going well in your life right now. Leaders count their blessings."},{icon:'💌',title:"Kind Note",mins:3,desc:"Write an encouraging note to yourself or someone you want to lift up."}]
+    };
+
+    const GLOW_PATH_DATA={
+      voice:{title:'Voice Power Activities',activities:[
+        {icon:'🎤',title:"Share Your Opinion",mins:3,desc:"In class or at home, share your opinion on something. It's okay if others disagree!"},
+        {icon:'💬',title:"Ask a Question",mins:2,desc:"Ask a question out loud even if you're nervous. Questions show intelligence!"},
+        {icon:'📣',title:"Speak Up Exercise",mins:4,desc:"Practice speaking clearly in front of a mirror. Project your voice!"},
+        {icon:'🗣️',title:"Introduce Yourself",mins:3,desc:"Introduce yourself to someone new with confidence. Eye contact and smile!"},
+        {icon:'🎯',title:"Express a Need",mins:2,desc:"Ask for what you need clearly. 'I need help with this' or 'Can we try it my way?'"},
+        {icon:'💭',title:"Share an Idea",mins:5,desc:"Present an idea to a group. Explain why you think it's good!"},
+        {icon:'🎙️',title:"Presentation Practice",mins:6,desc:"Present something for 1 minute. Record yourself and watch it back!"},
+        {icon:'✨',title:"Compliment Out Loud",mins:2,desc:"Give someone a genuine compliment using your voice. Say it clearly!"},
+        {icon:'📢',title:"Disagree Respectfully",mins:4,desc:"Practice saying 'I see it differently'. You can be kind AND honest!"}
+      ]},
+      courage:{title:'Courage Builder Activities',activities:[
+        {icon:'🦁',title:"Try Something New",mins:8,desc:"Do one thing today that scares you a little. New food, activity, or friend!"},
+        {icon:'💪',title:"Face a Fear",mins:5,desc:"Choose a small fear and face it. Take one brave step!"},
+        {icon:'🎯',title:"Mistake Practice",mins:4,desc:"Try something you might fail at. Mistakes teach us! What can you learn today?"},
+        {icon:'🌟',title:"Comfort Zone Challenge",mins:6,desc:"Do one thing outside your comfort zone. Growth happens when we stretch!"},
+        {icon:'🚀',title:"Bold Choice",mins:3,desc:"Make a decision without asking for permission (something safe!). Trust yourself!"},
+        {icon:'💎',title:"Stand Up For Yourself",mins:5,desc:"If something feels wrong, speak up! Practice saying 'I don't like that.'"},
+        {icon:'⚡',title:"Risk & Reflect",mins:7,desc:"Take a small risk, then write about how it felt. What did you learn?"},
+        {icon:'🎪',title:"Volunteer to Go First",mins:4,desc:"Be the first to answer, present, or try something. Leaders go first!"},
+        {icon:'🔥',title:"Brave Conversation",mins:6,desc:"Have a conversation you've been avoiding. You can do hard things!"}
+      ]},
+      leader:{title:'Team Leader Activities',activities:[
+        {icon:'👑',title:"Organise an Activity",mins:10,desc:"Organise a game or activity with friends. Explain the rules and include everyone!"},
+        {icon:'🤝',title:"Include Someone",mins:4,desc:"Notice who's left out and invite them to join. Great leaders include everyone!"},
+        {icon:'⚖️',title:"Solve a Conflict",mins:6,desc:"Help two friends who disagree. Listen to both sides and help find a solution!"},
+        {icon:'📋',title:"Delegate Tasks",mins:5,desc:"Share responsibilities with others. Assign tasks and trust your team!"},
+        {icon:'🎯',title:"Make a Group Decision",mins:7,desc:"Lead a group in making a decision. Get everyone's input, then choose together!"},
+        {icon:'💡',title:"Teach Something",mins:8,desc:"Teach someone something you're good at. Patient teaching is leadership!"},
+        {icon:'🌟',title:"Recognise Others",mins:3,desc:"Point out when someone does something well. Good leaders celebrate their team!"},
+        {icon:'🗳️',title:"Lead by Example",mins:6,desc:"Be the change you want to see. Work hard, be kind, and others will follow!"},
+        {icon:'🎪',title:"Group Clean-Up",mins:10,desc:"Get friends to help clean up together. Make it fun and everyone contributes!"}
+      ]},
+      goals:{title:'Goal Achiever Activities',activities:[
+        {icon:'🎯',title:"Set a Weekly Goal",mins:5,desc:"Choose one goal for this week. Write it down and plan steps to achieve it!"},
+        {icon:'📝',title:"Break It Down",mins:6,desc:"Take a big goal and break it into small steps. What's the first tiny action?"},
+        {icon:'📅',title:"Create a Plan",mins:8,desc:"Make a schedule for your goal. When will you work on it? Put it in your calendar!"},
+        {icon:'✅',title:"Daily Win Tracker",mins:3,desc:"Track one small win every day toward your goal. Celebrate progress!"},
+        {icon:'⏰',title:"Time Management",mins:7,desc:"Schedule 30 minutes today for working on your goal. Set a timer and focus!"},
+        {icon:'🎖️',title:"Progress Check",mins:4,desc:"Review your progress. How far have you come? What needs adjustment?"},
+        {icon:'💎',title:"Obstacle Planning",mins:6,desc:"Think of obstacles you might face. How will you overcome them? Plan ahead!"},
+        {icon:'🌟',title:"Vision Board Piece",mins:8,desc:"Create or add to a vision board. Draw or collect images of your dreams!"},
+        {icon:'🏆',title:"Celebrate Milestone",mins:5,desc:"Reached a milestone? Celebrate it! Reward yourself for progress made!"}
+      ]},
+      brave:{title:'Courage Builder Activities',activities:[
+        {icon:'🦁',title:"Try Something New",mins:8,desc:"Do one thing today that scares you a little!"},
+        {icon:'💪',title:"Face a Fear",mins:5,desc:"Choose a small fear and take one brave step toward facing it!"},
+        {icon:'🌟',title:"Comfort Zone Challenge",mins:6,desc:"Do one thing outside your comfort zone today!"}
+      ]},
+      lead:{title:'Team Leader Activities',activities:[
+        {icon:'👑',title:"Organise an Activity",mins:10,desc:"Organise a game or activity with friends. Explain the rules and include everyone!"},
+        {icon:'🤝',title:"Include Someone",mins:4,desc:"Notice who's left out and invite them to join. Great leaders include everyone!"},
+        {icon:'🎯',title:"Make a Group Decision",mins:7,desc:"Lead a group in making a decision. Get everyone's input!"}
+      ]}
+    };
+
+    function taskCardHTML(a){const t=String(a.title).replace(/'/g,"\\'").replace(/"/g,"&quot;"),d=String(a.desc).replace(/'/g,"\\'").replace(/"/g,"&quot;");return`<div class="glow-task-card"><div class="glow-task-time"><i class="fa-solid fa-clock"></i> ${a.mins} min</div><div class="glow-task-header"><div class="glow-task-icon">${a.icon}</div></div><div class="glow-task-content"><h4>${a.title}</h4><p>${a.desc}</p><button class="glow-start-btn" onclick="startActivityWithGating('${t}','${d}',${a.mins})">Start Activity ✨</button></div></div>`;}
+
+    document.querySelectorAll('.glow-mood-item').forEach(btn=>{
+      btn.addEventListener('click',function(){
+        const mood=this.dataset.mood;
+        document.querySelectorAll('.glow-mood-item').forEach(b=>b.classList.remove('active'));
+        this.classList.add('active');
+        const label=this.querySelector('.glow-mood-label').textContent.split('!')[0].trim();
+        document.getElementById('glowMoodTitle').textContent=`Perfect for feeling ${label.toLowerCase()}`;
+        document.getElementById('glowTasksGrid').innerHTML=(MOOD_ACTIVITIES[mood]||[]).map(taskCardHTML).join('');
+        document.getElementById('glowActivitiesWrap').classList.add('show');
+      });
+    });
+
+    window.selectGlowPath=function(path){
+      const data=GLOW_PATH_DATA[path];if(!data)return;
+      document.querySelectorAll('.glow-path-card').forEach(c=>{c.style.transform='none';c.style.boxShadow='none';});
+      const sel=document.querySelector(`[data-path="${path}"]`);
+      if(sel){sel.style.transform='translateY(-6px)';sel.style.boxShadow='0 16px 40px rgba(233,30,99,.2)';}
+      document.getElementById('pathwayTitle').textContent=data.title;
+      document.getElementById('glowTasksGridPathway').innerHTML=data.activities.map(taskCardHTML).join('');
+      document.getElementById('pathwayActivities').style.display='block';
+      setTimeout(()=>{document.getElementById('pathwayActivities').scrollIntoView({behavior:'smooth',block:'start'});},100);
+    };
+    window.showLeadershipPath=function(path){selectGlowPath(path);setTimeout(()=>{document.getElementById('glowPaths').scrollIntoView({behavior:'smooth',block:'start'});},100);};
+
+    // ── TIMER ──
+    let timerInterval=null,timerAwarded=false;
+    window.startTimer=function(title,desc,minutes){
+      const modal=document.getElementById('timerModal');
+      document.getElementById('timerTitle').textContent=title;document.getElementById('timerDesc').textContent=desc;
+      modal.classList.add('show');timerAwarded=false;let seconds=minutes*60;
+      const update=()=>{const m=Math.floor(seconds/60),s=seconds%60;document.getElementById('timerDisplay').textContent=`${m}:${s.toString().padStart(2,'0')}`;};
+      update();if(timerInterval)clearInterval(timerInterval);
+      timerInterval=setInterval(()=>{seconds--;if(seconds<=0){seconds=0;update();clearInterval(timerInterval);document.getElementById('timerDisplay').textContent='Complete! 💎';if(!timerAwarded){timerAwarded=true;awardGem(title, minutes);}return;}update();},1000);
+    };
+    window.closeTimer=function(){if(timerInterval)clearInterval(timerInterval);timerAwarded=false;document.getElementById('timerModal').classList.remove('show');};
+
+    // ── CHIMES ──
+    function playChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=880;osc.type='sine';gain.gain.setValueAtTime(.2,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.01,ctx.currentTime+.5);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+.5);}catch(e){}}
+    function playSpecialChime(){try{const ctx=new(window.AudioContext||window.webkitAudioContext)();for(let i=0;i<4;i++){setTimeout(()=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.connect(gain);gain.connect(ctx.destination);osc.frequency.value=523.25+(i*200);osc.type='sine';gain.gain.setValueAtTime(.15,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1);osc.start(ctx.currentTime);osc.stop(ctx.currentTime+1);},i*150);}}catch(e){}}
+
+    // ── MOBILE MENU ──
+    const hamburgerBtn=document.getElementById('hamburgerBtn'),hamburgerBtnNav=document.getElementById('hamburgerBtnNav'),mobileMenu=document.getElementById('mobileMenu'),menuOverlay=document.getElementById('menuOverlay');
+    function toggleMobileMenu(){mobileMenu.classList.toggle('active');menuOverlay.classList.toggle('active');document.body.style.overflow=mobileMenu.classList.contains('active')?'hidden':'';}
+    hamburgerBtn?.addEventListener('click',toggleMobileMenu);hamburgerBtnNav?.addEventListener('click',toggleMobileMenu);menuOverlay?.addEventListener('click',toggleMobileMenu);
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(l=>l.addEventListener('click',toggleMobileMenu));
+
+    // ── BACK TO TOP ──
+    const backToTopBtn=document.getElementById('backToTopBtn');
+    window.addEventListener('scroll',()=>backToTopBtn.classList.toggle('show',window.scrollY>300));
+    backToTopBtn?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // ── CONTACT ──
+    function openContactModal(){document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden';}
+    function closeContactModal(){document.getElementById('contactModal').classList.remove('active');document.body.style.overflow='';document.getElementById('contactForm').reset();document.getElementById('formMessage').style.display='none';}
+    async function handleContactSubmit(event){
+      event.preventDefault();
+      const form = event.currentTarget;
+      const submitBtn = document.getElementById('submitBtn');
+      const messageDiv = document.getElementById('formMessage');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      messageDiv.style.display = 'none';
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value,
+            website: form.querySelector('[name="website"]')?.value || ''
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || 'Failed to send');
+        messageDiv.className = 'form-message success';
+        messageDiv.textContent = "✓ Message sent successfully. We'll get back to you soon.";
+        messageDiv.style.display = 'block';
+        setTimeout(() => closeContactModal(), 1800);
+      } catch (error) {
+        messageDiv.className = 'form-message error';
+        messageDiv.textContent = error.message || 'Failed to send. Please try again.';
+        messageDiv.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    }
+    document.getElementById('askQuestionBtn')?.addEventListener('click',openContactModal);
+    document.getElementById('contactModal')?.addEventListener('click',function(e){if(e.target===this)closeContactModal();});
+
+    function handleSignUp(){window.location.href='sign-in.html';}
+
+    // ── INIT ──
+    document.addEventListener('DOMContentLoaded',function(){
+      updateGemDisplay();
+      renderChallenges();
+      checkLoginState();
+    });
+    checkLoginState();
+    
+    // Reset function for testing - window.resetGGA()
+    window.resetGGA=function(){
+      localStorage.clear();
+      sessionStorage.clear();
+      console.log('✅ All localStorage and sessionStorage cleared. Page reset to new visitor state. Refreshing...');
+      setTimeout(()=>location.reload(),500);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help & Support | Gem Glow Academy</title>
+  <meta name="description" content="Get help with Gem Glow Academy. Find answers to common questions and learn how to make the most of your journey!" />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gemglowacademy.com/support.html" />
+  <link rel="alternate" hreflang="en-us" href="https://www.gemglowacademy.com/support.html" />
+  <meta property="og:title" content="Help & Support | Gem Glow Academy" />
+  <meta property="og:description" content="Get help with Gem Glow Academy. Find answers to common questions and learn how to make the most of your journey!" />
+  <meta property="og:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta property="og:url" content="https://www.gemglowacademy.com/support.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gem Glow Academy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Help & Support | Gem Glow Academy" />
+  <meta name="twitter:description" content="Get help with Gem Glow Academy. Find answers to common questions and learn how to make the most of your journey!" />
+  <meta name="twitter:image" content="https://www.gemglowacademy.com/assets/logo-og.png" />
+  <meta name="twitter:site" content="@gemglowacademy" />
+  <meta name="twitter:creator" content="@gemglowacademy" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+
+
+
+    body{
+      font-family:'Quicksand',system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
+      min-height:100vh;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+
+
+
+
+
+    .nav-link.active{
+      border-color:transparent;
+      background:transparent;
+      color:var(--rose);
+    }
+
+
+
+
+    
+
+
+    /* ── Contact Modal ── */
+    .contact-modal{
+      display:none;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(15,23,42,.85);
+      backdrop-filter:blur(8px);
+      z-index:1000;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .contact-modal.active{display:flex;}
+    .contact-modal-content{
+      background:white;
+      border-radius:24px;
+      padding:48px;
+      max-width:580px;
+      width:100%;
+      box-shadow:0 24px 64px rgba(156,39,176,.35);
+      position:relative;
+    }
+    .modal-close{
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:transparent;
+      border:none;
+      font-size:28px;
+      color:var(--muted);
+      cursor:pointer;
+      width:40px;
+      height:40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      transition:all .2s ease;
+    }
+    .modal-close:hover{
+      background:var(--line);
+      color:var(--ink);
+    }
+    .contact-form{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .form-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .form-group label{
+      font-weight:600;
+      color:var(--ink);
+      font-size:16px;
+    }
+    .form-group input,.form-group textarea{
+      padding:14px 16px;
+      border:2px solid var(--line);
+      border-radius:12px;
+      font-family:inherit;
+      font-size:16px;
+      color:var(--ink);
+      transition:all .2s ease;
+    }
+    .form-group input:focus,.form-group textarea:focus{
+      outline:none;
+      border-color:var(--rose);
+      box-shadow:0 0 0 3px rgba(233,30,99,.1);
+    }
+    .form-group textarea{
+      resize:vertical;
+      min-height:120px;
+    }
+    .form-submit{
+      padding:16px 32px;
+      background:linear-gradient(135deg,var(--rose),var(--pink));
+      color:white;
+      border:none;
+      border-radius:12px;
+      font-size:18px;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .3s ease;
+      margin-top:12px;
+    }
+    .form-submit:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(233,30,99,.3);
+    }
+    .form-message{
+      padding:16px;
+      border-radius:12px;
+      font-size:16px;
+      font-weight:600;
+      margin-top:16px;
+      display:none;
+    }
+    .form-message.success{
+      background:rgba(34,197,94,.1);
+      color:#16a34a;
+      border:2px solid rgba(34,197,94,.3);
+      display:block;
+    }
+    .form-message.error{
+      background:rgba(239,68,68,.1);
+      color:#dc2626;
+      border:2px solid rgba(239,68,68,.3);
+      display:block;
+    }
+
+
+    .hero{
+      padding:60px 0 50px;
+      text-align:center;
+      background:linear-gradient(180deg, rgba(255,105,180,.05) 0%, transparent 100%);
+    }
+
+    .hero h1{
+      font-size:56px;
+      margin-bottom:16px;
+      background:linear-gradient(135deg,var(--rose),var(--purple));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      font-size:22px;
+      color:var(--slate);
+      max-width:700px;
+      margin:0 auto 32px;
+    }
+
+    /* Quick Links */
+    .quick-links{
+      padding:50px 0;
+    }
+
+    .quick-links h2{
+      text-align:center;
+      font-size:36px;
+      color:var(--rose);
+      margin-bottom:36px;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+    }
+
+    .quick-card{
+      background:white;
+      padding:28px;
+      border-radius:20px;
+      border:3px solid var(--line);
+      text-align:center;
+      transition:all .3s;
+      cursor:pointer;
+      text-decoration:none;
+      color:inherit;
+      display:block;
+    }
+
+    .quick-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 32px rgba(233,30,99,.15);
+      border-color:var(--rose);
+    }
+
+    .quick-card-icon{
+      font-size:52px;
+      margin-bottom:16px;
+    }
+
+    .quick-card h3{
+      font-size:22px;
+      margin-bottom:8px;
+      color:var(--ink);
+    }
+
+    .quick-card p{
+      font-size:15px;
+      color:var(--slate);
+      margin:0;
+    }
+
+    /* Card */
+    .card{
+      background:white;
+      border:2px solid var(--line);
+      border-radius:var(--radius);
+      padding:32px;
+      box-shadow:var(--shadowSoft);
+      margin-bottom:32px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* FAQ Section */
+    .faq-section{
+      padding:50px 0;
+      background:white;
+    }
+
+    .faq-section h2{
+      text-align:center;
+      font-size:36px;
+      color:var(--rose);
+      margin-bottom:36px;
+    }
+
+    .faq-container{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    .faq-category{
+      margin-bottom:40px;
+    }
+
+    .faq-category h3{
+      font-size:28px;
+      color:var(--purple);
+      margin-bottom:20px;
+      padding-bottom:12px;
+      border-bottom:3px solid var(--line);
+    }
+
+    .faq-item{
+      background:var(--bg);
+      border:3px solid var(--line);
+      border-radius:16px;
+      margin-bottom:16px;
+      overflow:hidden;
+      transition:all .2s;
+    }
+
+    .faq-question{
+      padding:20px 24px;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:700;
+      font-size:18px;
+      color:var(--ink);
+      transition:all .2s;
+    }
+
+    .faq-question:hover{
+      background:white;
+    }
+
+    .faq-question i{
+      font-size:20px;
+      color:var(--rose);
+      transition:transform .3s;
+    }
+
+    .faq-item.active .faq-question i{
+      transform:rotate(180deg);
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .3s ease;
+    }
+
+    .faq-item.active .faq-answer{
+      max-height:500px;
+    }
+
+    .faq-answer-content{
+      padding:0 24px 24px;
+      color:var(--slate);
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .faq-answer-content strong{
+      color:var(--ink);
+    }
+
+    .faq-answer-content ul{
+      margin:12px 0;
+      padding-left:24px;
+    }
+
+    .faq-answer-content li{
+      margin-bottom:8px;
+    }
+
+    /* Contact Section */
+    .contact-section{
+      padding:50px 0;
+    }
+
+    .contact-section h2{
+      text-align:center;
+      font-size:36px;
+      color:var(--rose);
+      margin-bottom:16px;
+    }
+
+    .contact-section p{
+      text-align:center;
+      font-size:18px;
+      color:var(--slate);
+      max-width:600px;
+      margin:0 auto 36px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:24px;
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    .contact-card{
+      background:white;
+      padding:32px;
+      border-radius:20px;
+      border:3px solid var(--line);
+      text-align:center;
+    }
+
+    .contact-card i{
+      font-size:48px;
+      margin-bottom:16px;
+      color:var(--rose);
+    }
+
+    .contact-card h3{
+      font-size:22px;
+      margin-bottom:12px;
+      color:var(--ink);
+    }
+
+    .contact-card p{
+      font-size:15px;
+      color:var(--slate);
+      margin-bottom:20px;
+    }
+
+    .btn-primary{
+      display:inline-block;
+      padding:14px 28px;
+      background:linear-gradient(135deg,var(--rose),var(--purple));
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:700;
+      font-size:16px;
+      border:none;
+      cursor:pointer;
+      transition:transform .2s;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+
+    /* Responsive */
+    @media (max-width:968px){
+      .nav-links{display:none;}
+      .nav-actions{display:none;}
+      #hamburgerBtn{display:block;}
+      .brand{font-size:25px;}
+      .brand img{width:70px;height:70px;}
+      .footer-grid{grid-template-columns:1fr;}
+      .approach-grid{grid-template-columns:1fr !important;}
+    }
+
+    @media (max-width:768px){
+      .hamburger-btn{display:block;}
+      
+      .hero h1{font-size:40px;}
+      .hero p{font-size:18px;}
+      
+      .quick-grid{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;}
+      
+      .faq-question{font-size:16px;padding:16px 20px;}
+      .faq-answer-content{font-size:15px;}
+      
+      .gem-counter{top:22%;}
+      .gem-counter-inner{padding:14px 14px;width:55px;}
+      .gem-counter:hover .gem-counter-inner{padding:16px 14px;width:auto;}
+      .gem-counter-amount{font-size:20px;}
+      .gem-icon{font-size:20px;}
+
+      footer{padding:32px 0;margin-top:40px;}
+
+      .contact-modal-content{padding:32px;}
+    }
+  </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/assets/supabase-config.js"></script>
+<script src="/assets/js/auth.js"></script>
+</head>
+<body>
+
+  <!-- Gem Counter Tab -->
+  <div class="gem-counter" id="gemCounter">
+    <div class="gem-counter-inner">
+      <div class="gem-counter-amount">
+        <span class="gem-icon">💎</span>
+        <span class="gem-total-number" id="gemTotal">0</span>
+      </div>
+      <div class="gem-progress">
+        <div class="gem-progress-bar" id="gemProgressBar" style="height:0%"></div>
+      </div>
+      <div class="gem-milestone" id="gemMilestone">Next: Ring at 50</div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-home ic-home"></i> Home</a>
+    <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+    <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+    <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+    <a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring ic-support"></i> Support</a>
+    <a class="nav-link" id="signOutBtnMobile" style="display:flex;cursor:pointer;"><i class="fa-solid fa-spinner fa-spin"></i></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <picture>
+  <source srcset="assets/logo-96.webp" type="image/webp">
+  <img src="assets/logo-96.png" alt="Gem Glow Academy logo" width="85" height="85" onerror="this.style.display='none'">
+</picture>
+        <span>Gem Glow</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="nav-link" href="emerald-eden.html"><i class="fa-solid fa-gem ic-habits"></i> Emerald Eden</a>
+        <a class="nav-link" href="sapphire-sanctuary.html"><i class="fa-solid fa-gem ic-feelings"></i> Sapphire Sanctuary</a>
+        <a class="nav-link" href="ruby-rise.html"><i class="fa-solid fa-gem ic-leader"></i> Ruby Rise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn" id="authBtn" type="button" style="display:flex;padding:10px 20px;background:linear-gradient(135deg,var(--rose),var(--pink));color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:16px;align-items:center;gap:8px;"><i class="fa-solid fa-spinner fa-spin"></i></button>
+        <button class="hamburger-btn" id="hamburgerBtnNav" aria-label="Open menu" style="margin-left:12px;"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 style="padding-top:20px;">💎 How Can We Help?</h1>
+      <p>We're here to make your Gem Glow journey amazing! Whether you're just starting out or want to level up your skills, we've got all the answers you need. Let's find what you're looking for! ✨</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section style="padding:50px 0;">
+    <div class="container">
+      <div class="card" style="background:linear-gradient(135deg, rgba(233,30,99,.05), white);border-color:var(--rose);">
+        <div style="text-align:center;">
+          <h2 style="color:var(--rose);font-size:42px;margin-bottom:20px;">Our Mission 🌟</h2>
+          <p style="font-size:22px;color:var(--slate);line-height:1.8;max-width:850px;margin:0 auto;">
+            To empower girls to become confident, emotionally intelligent, and kind leaders through engaging, evidence-based activities that make personal growth fun and achievable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why We Exist -->
+  <section style="padding:50px 0;background:white;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:38px;color:var(--rose);margin-bottom:50px;">Why Gem Glow Academy Exists 💖</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;">
+        <div style="padding:32px;border-radius:20px;background:linear-gradient(135deg,rgba(80,200,120,.08),white);border:3px solid rgba(80,200,120,.25);text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">🌱</div>
+          <h3 style="margin:0 0 16px;font-size:24px;color:var(--ink);">Building Strong Foundations</h3>
+          <p style="margin:0;color:var(--slate);font-size:18px;line-height:1.7;">The habits and skills girls develop between ages 7-12 shape who they become. We provide the tools to build confidence, resilience, and emotional intelligence during these crucial years.</p>
+        </div>
+
+        <div style="padding:32px;border-radius:20px;background:linear-gradient(135deg,rgba(15,82,186,.08),white);border:3px solid rgba(15,82,186,.25);text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">💙</div>
+          <h3 style="margin:0 0 16px;font-size:24px;color:var(--ink);">Understanding Emotions</h3>
+          <p style="margin:0;color:var(--slate);font-size:18px;line-height:1.7;">Girls face unique emotional challenges. We create a safe space to explore feelings, learn calming techniques, and develop self-compassion without judgment.</p>
+        </div>
+
+        <div style="padding:32px;border-radius:20px;background:linear-gradient(135deg,rgba(224,17,95,.08),white);border:3px solid rgba(224,17,95,.25);text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">👑</div>
+          <h3 style="margin:0 0 16px;font-size:24px;color:var(--ink);">Inspiring Leadership</h3>
+          <p style="margin:0;color:var(--slate);font-size:18px;line-height:1.7;">Every girl has leadership potential. We help them find their voice, build courage, and learn that true leaders are kind, inclusive, and confident.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Three Gates -->
+  <section class="quick-links">
+    <div class="container">
+      <h2>The Three Areas of Growth 🌟</h2>
+      <div class="quick-grid">
+        <a href="emerald-eden.html" class="quick-card">
+          <div class="quick-card-icon">💚</div>
+          <h3>Emerald Eden</h3>
+          <p>Build positive daily habits that make you shine from the inside out!</p>
+        </a>
+        
+        <a href="sapphire-sanctuary.html" class="quick-card">
+          <div class="quick-card-icon">💙</div>
+          <h3>Sapphire Sanctuary</h3>
+          <p>Your safe space to understand emotions and find inner calm</p>
+        </a>
+        
+        <a href="ruby-rise.html" class="quick-card">
+          <div class="quick-card-icon">❤️</div>
+          <h3>Ruby Rise</h3>
+          <p>Discover your leadership voice and build unshakeable confidence</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section style="padding:50px 0;background:var(--bg);">
+    <div class="container">
+      <h2 style="text-align:center;font-size:38px;color:var(--rose);margin-bottom:50px;">How Gem Glow Academy Works ✨</h2>
+      
+      <div style="max-width:900px;margin:0 auto;display:grid;gap:28px;">
+        <div style="padding:32px;background:white;border-radius:20px;border:3px solid var(--gold);box-shadow:var(--shadowSoft);display:flex;align-items:start;gap:24px;">
+          <div style="font-size:48px;flex-shrink:0;">1️⃣</div>
+          <div>
+            <h3 style="margin:0 0 12px;font-size:26px;color:var(--ink);">Choose Your Focus</h3>
+            <p style="margin:0;font-size:19px;color:var(--slate);line-height:1.7;">Pick from Emerald Eden (habits), Sapphire Sanctuary (emotions), or Ruby Rise (leadership) based on what you want to work on today!</p>
+          </div>
+        </div>
+
+        <div style="padding:32px;background:white;border-radius:20px;border:3px solid var(--rose);box-shadow:var(--shadowSoft);display:flex;align-items:start;gap:24px;">
+          <div style="font-size:48px;flex-shrink:0;">2️⃣</div>
+          <div>
+            <h3 style="margin:0 0 12px;font-size:26px;color:var(--ink);">Complete Fun Activities</h3>
+            <p style="margin:0;font-size:19px;color:var(--slate);line-height:1.7;">Each activity takes just 2-10 minutes! Follow the timer, do the activity, and watch yourself grow stronger every single day.</p>
+          </div>
+        </div>
+
+        <div style="padding:32px;background:white;border-radius:20px;border:3px solid var(--purple);box-shadow:var(--shadowSoft);display:flex;align-items:start;gap:24px;">
+          <div style="font-size:48px;flex-shrink:0;">3️⃣</div>
+          <div>
+            <h3 style="margin:0 0 12px;font-size:26px;color:var(--ink);">Earn Gems & Unlock Treasures</h3>
+            <p style="margin:0;font-size:19px;color:var(--slate);line-height:1.7;">Every completed activity earns you 1 gem! Collect 50 for your First Palace Pick 💍, 150 for your Room Refresh 👑, and 300 for your Royal Collection 🏰!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section style="padding:50px 0;">
+    <div class="container">
+      <div class="card">
+        <h2 style="text-align:center;color:var(--rose);margin-bottom:28px;font-size:38px;">Our Approach: Science Meets Magic 🔬✨</h2>
+        
+        <p style="font-size:20px;color:var(--slate);line-height:1.8;margin-bottom:40px;text-align:center;max-width:850px;margin-left:auto;margin-right:auto;">
+          Every activity at Gem Glow Academy is based on real psychology, neuroscience, and positive youth development research. We make proven techniques fun, accessible, and age-appropriate for girls aged 7-12.
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;" class="approach-grid">
+          <div style="padding:28px;background:rgba(233,30,99,.06);border-radius:16px;border-left:5px solid var(--rose);">
+            <h4 style="margin:0 0 12px;font-size:22px;color:var(--ink);">🧠 Psychology-Based</h4>
+            <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Our activities use evidence-based techniques from cognitive behavioral therapy, mindfulness, and positive psychology.</p>
+          </div>
+
+          <div style="padding:28px;background:rgba(156,39,176,.06);border-radius:16px;border-left:5px solid var(--purple);">
+            <h4 style="margin:0 0 12px;font-size:22px;color:var(--ink);">💖 Age-Appropriate</h4>
+            <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Every word, activity, and concept is carefully designed for 7-12 year old girls' developmental stage.</p>
+          </div>
+
+          <div style="padding:28px;background:rgba(78,205,196,.06);border-radius:16px;border-left:5px solid var(--mint);">
+            <h4 style="margin:0 0 12px;font-size:22px;color:var(--ink);">🎯 Bite-Sized & Achievable</h4>
+            <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Short 2-10 minute activities fit into busy lives and build confidence through small, consistent wins.</p>
+          </div>
+
+          <div style="padding:28px;background:rgba(255,215,0,.08);border-radius:16px;border-left:5px solid var(--gold);">
+            <h4 style="margin:0 0 12px;font-size:22px;color:var(--ink);">✨ Engaging & Fun</h4>
+            <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Gamification, gems, and magical themes make personal growth exciting and rewarding!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section style="padding:50px 0;background:white;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:38px;color:var(--rose);margin-bottom:50px;">Our Core Values 💫</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:36px;">
+        <div style="text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">🌈</div>
+          <h3 style="margin:0 0 14px;font-size:24px;color:var(--ink);">Inclusivity</h3>
+          <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Every girl deserves to shine, regardless of background, ability, or circumstances.</p>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">💪</div>
+          <h3 style="margin:0 0 14px;font-size:24px;color:var(--ink);">Empowerment</h3>
+          <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">We help girls discover their inner strength and realize they can achieve amazing things.</p>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">🤗</div>
+          <h3 style="margin:0 0 14px;font-size:24px;color:var(--ink);">Kindness</h3>
+          <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">True leadership starts with compassion, for yourself and for others.</p>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:64px;margin-bottom:20px;">🌱</div>
+          <h3 style="margin:0 0 14px;font-size:24px;color:var(--ink);">Growth</h3>
+          <p style="margin:0;font-size:17px;color:var(--slate);line-height:1.7;">Small, consistent steps lead to big transformations. Progress over perfection, always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions 🤔</h2>
+      
+      <div class="faq-container">
+        <div class="faq-category">
+          <h3>Getting Started</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>What age is Gem Glow Academy designed for?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Gem Glow Academy is designed specifically for girls aged 7-12. All activities, language, and concepts are carefully developed to match this developmental stage. If your daughter is outside this age range, we may still have resources that could help, but the program is optimized for 7-12 year olds.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Do I need to create an account to use Gem Glow Academy?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Creating an account is optional but recommended! An account lets you track progress, earn gems, and unlock achievements across sessions. If you'd rather not create an account, you can still explore the activities, but your progress won't be saved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Using the App</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>How long do activities take?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Most activities take between 2-10 minutes. We designed them this way because we know girls are busy! Short activities fit easily into daily schedules, making it realistic to build positive habits. The timer guides you through each activity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>What are the three areas and how do I choose?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>The three areas are:</p>
+                <ul>
+                  <li><strong>Emerald Eden:</strong> Focus on building positive daily habits that strengthen you from the inside</li>
+                  <li><strong>Sapphire Sanctuary:</strong> Explore and manage emotions in a safe, supportive space</li>
+                  <li><strong>Ruby Rise:</strong> Develop confidence, courage, and leadership skills</li>
+                </ul>
+                <p>You can visit any focus area anytime based on what you need that day. Some days you might focus on habits, other days on emotions or leadership. It's totally up to you!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>How do I earn gems and what are they for?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>You can earn 1 gem for a completed activity. Your spendable balance is saved to your child profile and can be used in the palace shop.</p>
+                <ul>
+                  <li><strong>100 collectible items</strong> across furniture, lighting, rugs, plants, art, pets and magic.</li>
+                  <li><strong>Five starter items</strong> are included with every child profile.</li>
+                  <li><strong>No final reward screen:</strong> your room and future collections can keep growing.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Can I do activities multiple times?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Absolutely! Activities are designed to be repeated. In fact, repetition is how habits form and skills develop. You can do the same activity multiple times and earn gems each time you complete it. Feel free to revisit your favorites!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Safety & Privacy</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Is my data safe and private?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Yes! We take privacy seriously. Your data is encrypted, never sold to third parties, and handled with care. We comply with all child privacy laws including COPPA. Read our full Privacy Policy for details on how we protect your information.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Can parents/guardians monitor progress?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>We're developing a parent/guardian dashboard so adults can see progress and support their daughters. For now, feel free to ask your daughter how she's using Gem Glow Academy! We recommend open conversations about the activities and what she's learning.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Is Gem Glow Academy a replacement for professional help?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>No.</strong> Gem Glow Academy is a tool for personal growth and habit-building. It's not a replacement for therapy, counseling, or professional mental health support. If a girl is experiencing serious emotional struggles, please reach out to a qualified professional. Gem Glow Academy works best alongside professional support when needed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Support & Feedback</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>What if I'm not sure which activity to try?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>We recommend taking the Mood Check-In quiz when you first visit each area. It asks how you're feeling and suggests activities that match your current state. You can also spin the Activity Roulette wheel to let fate choose for you — sometimes surprise challenges are the most fun!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>How can I give feedback or suggest new activities?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>We'd love to hear from you! Visit our Support page or use the "Ask a Question" button in the footer. Tell us what you love, what you'd like to see improved, or suggest new activities. Your feedback helps us make Gem Glow Academy better for all girls.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>What if I find an activity inappropriate or uncomfortable?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Your comfort matters! If any activity feels wrong or makes you uncomfortable, skip it and try another one. We have tons of options. Please also let us know by contacting Support — we want to hear about it so we can improve.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="window.toggleFAQ(this)">
+              <span>Who can I contact if I have questions?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Great question! You can reach us via the Support page or by clicking "Ask a Question" in the footer. We aim to respond to all inquiries within 24-48 hours. You can also email us directly at <strong>hello@gemglowacademy.com</strong> or find us on Instagram <strong>@gemglowacademy</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Still Need Help?</h2>
+      <p>Can't find the answer you're looking for? We're here to help!</p>
+      
+      <div class="contact-grid" style="max-width:500px;">
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>Send us an email and we'll get back to you within 24 hours!</p>
+          <button class="btn-primary" id="contactSectionBtn">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <h2 style="margin:0 0 12px;font-size:28px;color:var(--ink);">Get in Touch</h2>
+      <p style="margin:0 0 28px;color:var(--slate);font-size:17px;">Have a question or need support? We're here to help!</p>
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+        <input type="text" name="website" style="display:none">
+        <div class="form-group"><label for="contactName">Name *</label><input type="text" id="contactName" name="name" required placeholder="Your name"></div>
+        <div class="form-group"><label for="contactEmail">Email *</label><input type="email" id="contactEmail" name="email" required placeholder="your@email.com"></div>
+        <div class="form-group"><label for="contactMessage">Message *</label><textarea id="contactMessage" name="message" required placeholder="How can we help you?"></textarea></div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand">
+          <div class="brand" style="color:#FFF;font-size:28px;"><span>💎</span><span>Gem Glow Academy</span></div>
+          <div class="tagline">Shine Bright, Build Strong!</div>
+        </div>
+        <div class="foot-col">
+          <h4>Explore</h4>
+          <div class="foot-links">
+            <a href="about-us.html">About Us</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <div class="contact-pill" role="button" id="askQuestionBtn"><span>Ask a question</span><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="foot-links" style="margin-top:14px;">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="profile.html" aria-label="Profile">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:10px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);color:#F8BBD0;font-size:16px;">© 2026 Gem Glow Academy. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+    <script>
+window.toggleFAQ=function(element){
+  const faqItem=element.parentElement;
+  const wasActive=faqItem.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.classList.remove('active');
+  });
+  if(!wasActive){
+    faqItem.classList.add('active');
+  }
+};
+
+function updateGemDisplay(){
+  const total=Number(window.GGA_WALLET?.gemBalance ?? localStorage.getItem('gga_gem_balance') ?? 0);
+  const gemTotal = document.getElementById('gemTotal');
+  if (gemTotal) gemTotal.textContent = total;
+
+  const GEM_MILESTONES=[
+    {gems:20,reward:"First Palace Pick"},
+    {gems:75,reward:"Room Refresh"},
+    {gems:150,reward:"Royal Collection"}
+  ];
+
+  const next=GEM_MILESTONES.find(m=>m.gems>total)||GEM_MILESTONES[GEM_MILESTONES.length-1];
+  const prev=GEM_MILESTONES.filter(m=>m.gems<=total).pop();
+
+  const start=prev?prev.gems:0;
+  const end=next.gems;
+  const pct=((total-start)/(end-start))*100;
+
+  const bar = document.getElementById('gemProgressBar');
+  if (bar) bar.style.height = Math.min(100,Math.max(0,pct))+'%';
+
+  document.getElementById('gemMilestone').textContent=
+    total>=150 ? '100 palace items are waiting in the shop' : `Next glow goal: ${next.reward} at ${next.gems}`;
+}
+
+updateGemDisplay();
+
+function openContactModal(){
+  document.getElementById('contactModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+function closeContactModal(){
+  document.getElementById('contactModal').classList.remove('active');
+  document.body.style.overflow='';
+  document.getElementById('contactForm').reset();
+  document.getElementById('formMessage').style.display='none';
+}
+
+async function handleContactSubmit(event){
+  event.preventDefault();
+
+  const submitBtn=document.getElementById('submitBtn');
+  const messageDiv=document.getElementById('formMessage');
+
+  submitBtn.disabled=true;
+  submitBtn.textContent='Sending...';
+  messageDiv.style.display='none';
+
+  const honeypot=document.querySelector('input[name="website"]');
+
+  try{
+    const response=await fetch('/api/contact',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        name:document.getElementById('contactName').value,
+        email:document.getElementById('contactEmail').value,
+        message:document.getElementById('contactMessage').value,
+        website:honeypot ? honeypot.value : ""
+      })
+    });
+
+    const data=await response.json();
+
+    if(response.ok){
+      messageDiv.className='form-message success';
+      messageDiv.textContent="✓ Message sent successfully!";
+      messageDiv.style.display='block';
+      setTimeout(()=>closeContactModal(),3000);
+    }else{
+      throw new Error(data.error || "Submission failed");
+    }
+
+  }catch(error){
+    messageDiv.className='form-message error';
+    messageDiv.textContent='✗ Failed to send. Please try again.';
+    messageDiv.style.display='block';
+
+    submitBtn.disabled=false;
+    submitBtn.textContent='Send Message';
+  }
+}
+
+document.getElementById('askQuestionBtn')?.addEventListener('click',openContactModal);
+document.getElementById('contactSectionBtn')?.addEventListener('click',openContactModal);
+
+document.getElementById('contactModal')?.addEventListener('click',function(e){
+  if(e.target===this) closeContactModal();
+});
+
+function handleSignUp(){
+  window.location.href='signup.html';
+}
+
+const hamburgerBtn=document.getElementById('hamburgerBtn');
+const hamburgerBtnNav=document.getElementById('hamburgerBtnNav');
+const mobileMenu=document.getElementById('mobileMenu');
+const menuOverlay=document.getElementById('menuOverlay');
+
+function toggleMobileMenu(){
+  mobileMenu.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
+  document.body.style.overflow=mobileMenu.classList.contains('active')?'hidden':'';
+}
+
+hamburgerBtn?.addEventListener('click',toggleMobileMenu);
+hamburgerBtnNav?.addEventListener('click',toggleMobileMenu);
+menuOverlay?.addEventListener('click',toggleMobileMenu);
+
+document.querySelectorAll('.mobile-menu .nav-link').forEach(l=>{
+  l.addEventListener('click',toggleMobileMenu);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard.html
+Disallow: /palace.html
+Disallow: /profile.html
+Disallow: /child-login.html
+Disallow: /success.html
+Disallow: /sign-in.html
+Disallow: /signup.html
+
+Sitemap: https://www.gemglowacademy.com/sitemap.xml
