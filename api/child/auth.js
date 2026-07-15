@@ -14,6 +14,8 @@ import {
   verifyPin
 } from '../_lib/server.js';
 
+const DUMMY_PIN_HASH = 'scrypt$MDEyMzQ1Njc4OWFiY2RlZg$PVMcZ7OD8zDUjPRzqiIpDj0bcYWzj0PaDTtgFmYtcvskdxnZJnph7IaKHX17tY7MCV1GgQO3PdhODbepYfTF8Q';
+
 function actionFrom(req) {
   return cleanText(req.query?.action || '', 20).toLocaleLowerCase('en-GB');
 }
@@ -77,11 +79,13 @@ async function login(req, res) {
     }
   }
 
-  const success = Boolean(child && credential && verifyPin(pin, credential.pin_hash));
-  await supabaseAdmin.from('child_login_attempts').insert([
+  const pinMatches = verifyPin(pin, credential?.pin_hash || DUMMY_PIN_HASH);
+  const success = Boolean(child && credential && pinMatches);
+  const { error: auditError } = await supabaseAdmin.from('child_login_attempts').insert([
     { fingerprint, success },
     { fingerprint: globalFingerprint, success }
   ]);
+  if (auditError) throw auditError;
 
   if (!success) {
     return sendJson(res, 401, { error: 'Those details do not match. Check the family code, name and PIN.' });
